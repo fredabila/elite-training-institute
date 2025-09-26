@@ -1,0 +1,647 @@
+/* ACLS Course Page Styles */
+.acls-course-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Container */
+/* Container styles now in Global.css */
+
+/* Hero Section */
+.acls-course-page .course-hero {
+  background: #0b192c;
+  position: relative;
+  padding: 120px 0 80px;
+  overflow: hidden;
+}
+
+/* Advanced Cardiac Pattern Overlay */
+.acls-course-page .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(11, 25, 44, 0.7), rgba(11, 25, 44, 0.5)),
+    url('https://i.ibb.co/1fPrG6Mb/Whats-App-Image-2025-09-22-at-16-04-59-10d96c26.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.acls-course-page .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Breadcrumb Navigation */
+.acls-course-page .breadcrumb {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.acls-course-page .breadcrumb-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.acls-course-page .breadcrumb-link:hover {
+  color: #ffffff;
+}
+
+.acls-course-page .breadcrumb-separator {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 4px;
+}
+
+.acls-course-page .breadcrumb-current {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Hero Main Content */
+.acls-course-page .hero-main {
+  text-align: center;
+}
+
+.acls-course-page .aha-logo-container {
+  margin-bottom: 30px;
+}
+
+.acls-course-page .aha-hero-logo {
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 
+    0 0 30px rgba(220, 38, 38, 0.3),
+    0 0 60px rgba(220, 38, 38, 0.1);
+  filter: drop-shadow(0 4px 20px rgba(220, 38, 38, 0.2));
+}
+
+.acls-course-page .hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Course Overview Section */
+.acls-course-page .course-overview {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.acls-course-page .course-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Main Content */
+.acls-course-page .course-main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Description Box */
+.acls-course-page .description-box {
+  background: #f8fbff;
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.05);
+  position: relative;
+}
+
+.acls-course-page .description-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  border-radius: 20px 20px 0 0;
+}
+
+.acls-course-page .course-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Course Sections */
+.acls-course-page .course-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  position: relative;
+}
+
+.acls-course-page .course-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #dc2626, #ef4444);
+  border-radius: 2px;
+}
+
+.acls-course-page .section-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.acls-course-page .section-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.acls-course-page .section-icon.target-audience,
+.acls-course-page .section-icon.curriculum,
+.acls-course-page .section-icon.details {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.acls-course-page .section-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.acls-course-page .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #104aa4;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.acls-course-page .section-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Curriculum List */
+.acls-course-page .curriculum-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.acls-course-page .curriculum-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #475569;
+  line-height: 1.6;
+  padding: 15px;
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border-radius: 12px;
+  border: 1px solid rgba(220, 38, 38, 0.1);
+}
+
+.acls-course-page .curriculum-icon {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+}
+
+.acls-course-page .curriculum-icon svg {
+  width: 14px;
+  height: 14px;
+  color: #ffffff;
+  stroke-width: 3;
+}
+
+/* Details Grid */
+.acls-course-page .details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.acls-course-page .detail-item {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  position: relative;
+}
+
+.acls-course-page .detail-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  border-radius: 0 0 3px 3px;
+}
+
+.acls-course-page .detail-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.acls-course-page .detail-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #dc2626;
+}
+
+/* Pricing Sidebar */
+.acls-course-page .pricing-sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.acls-course-page .pricing-card {
+  background: #ffffff;
+  border: 3px solid #dc2626;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 
+    0 12px 40px rgba(220, 38, 38, 0.15),
+    0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.acls-course-page .pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+.acls-course-page .pricing-header {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #104aa4;
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.acls-course-page .pricing-details {
+  margin-bottom: 30px;
+}
+
+.acls-course-page .price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
+}
+
+.acls-course-page .price-item:last-child {
+  border-bottom: none;
+}
+
+.acls-course-page .price-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.acls-course-page .price-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.acls-course-page .register-btn {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  border: none;
+  border-radius: 25px;
+  padding: 16px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  margin-bottom: 20px;
+}
+
+.acls-course-page .register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+  background: linear-gradient(135deg, #b91c1c, #dc2626);
+}
+
+.acls-course-page .payment-link {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.acls-course-page .pay-note {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  border-radius: 25px;
+  font-style: italic;
+}
+
+/* Course Highlights */
+.acls-course-page .course-highlights {
+  margin-bottom: 30px;
+  padding-top: 25px;
+  border-top: 2px solid rgba(220, 38, 38, 0.1);
+}
+
+.acls-course-page .highlights-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #104aa4;
+  margin: 0 0 15px 0;
+}
+
+.acls-course-page .highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.acls-course-page .highlights-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #475569;
+  position: relative;
+  padding-left: 20px;
+}
+
+.acls-course-page .highlights-list li::before {
+  content: '♥';
+  position: absolute;
+  left: 0;
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Contact Info */
+.acls-course-page .contact-info {
+  padding-top: 25px;
+  border-top: 2px solid rgba(220, 38, 38, 0.1);
+}
+
+.acls-course-page .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.acls-course-page .contact-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.acls-course-page .contact-icon svg {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+}
+
+.acls-course-page .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.acls-course-page .contact-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.acls-course-page .contact-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #104aa4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.acls-course-page .contact-link:hover {
+  color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .acls-course-page .course-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .acls-course-page .pricing-sidebar {
+    position: static;
+    order: -1;
+  }
+  
+  .acls-course-page .pricing-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .acls-course-page .hero-title {
+    font-size: 36px;
+  }
+  
+  .acls-course-page .aha-hero-logo {
+    width: 120px;
+  }
+  
+  .acls-course-page .course-hero {
+    padding: 80px 0 60px;
+  }
+  
+  .acls-course-page .course-overview {
+    padding: 60px 0;
+  }
+  
+  .acls-course-page .course-section {
+    padding: 30px 20px;
+  }
+  
+  .acls-course-page .section-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .acls-course-page .section-title {
+    font-size: 24px;
+  }
+  
+  .acls-course-page .details-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .acls-course-page .pricing-card {
+    padding: 25px 20px;
+  }
+  
+  .acls-course-page .price-value {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Container responsive styles now in Global.css */
+  
+  .acls-course-page .hero-title {
+    font-size: 28px;
+  }
+  
+  .acls-course-page .aha-hero-logo {
+    width: 100px;
+  }
+  
+  .acls-course-page .course-hero {
+    padding: 60px 0 40px;
+  }
+  
+  .acls-course-page .course-main {
+    gap: 30px;
+  }
+  
+  .acls-course-page .course-section {
+    padding: 25px 15px;
+  }
+  
+  .acls-course-page .section-title {
+    font-size: 20px;
+  }
+  
+  .acls-course-page .curriculum-item {
+    font-size: 14px;
+    padding: 12px;
+  }
+  
+  .acls-course-page .breadcrumb {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .acls-course-page .pricing-card {
+    padding: 20px 15px;
+  }
+  
+  .acls-course-page .pricing-header {
+    font-size: 20px;
+  }
+}
+
+/* Animation for course sections */
+@media (prefers-reduced-motion: no-preference) {
+  .acls-course-page .course-section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 0.6s ease forwards;
+  }
+  
+  .acls-course-page .course-section:nth-child(1) { animation-delay: 0.1s; }
+  .acls-course-page .course-section:nth-child(2) { animation-delay: 0.2s; }
+  .acls-course-page .course-section:nth-child(3) { animation-delay: 0.3s; }
+  .acls-course-page .course-section:nth-child(4) { animation-delay: 0.4s; }
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

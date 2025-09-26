@@ -1,0 +1,155 @@
+.hero {
+  position: relative;
+  height: calc(100vh - 72px);
+  overflow: hidden;
+}
+
+/* Animated gradient background */
+.hero__gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #0b192c, #104aa4);
+  background-size: 200% 200%;
+  animation: gradientShift 16s ease-in-out infinite;
+  filter: saturate(110%);
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating medical icons with subtle parallax */
+.hero__icons { position: absolute; inset: 0; pointer-events: none; }
+.icon {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: 0.08;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.25));
+  transform: translate(
+    calc(var(--parallax-x, 0) * 12px),
+    calc(var(--parallax-y, 0) * 12px)
+  );
+  transition: transform 0.2s ease-out;
+}
+.icon--stethoscope { top: 8%; left: 6%; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path opacity="0.9" d="M6.5 3C6.77614 3 7 3.22386 7 3.5V8C7 9.38071 8.11929 10.5 9.5 10.5C10.8807 10.5 12 9.38071 12 8V3.5C12 3.22386 12.2239 3 12.5 3C12.7761 3 13 3.22386 13 3.5V8C13 10.2091 11.2091 12 9.5 12C7.79086 12 6 10.2091 6 8V3.5C6 3.22386 6.22386 3 6.5 3Z"/><path opacity="0.9" d="M16.5 12C18.433 12 20 13.567 20 15.5V16.25C20 18.3211 18.3211 20 16.25 20H14.75C12.6789 20 11 18.3211 11 16.25V13H12.5V16.25C12.5 17.4926 13.5074 18.5 14.75 18.5H16.25C17.4926 18.5 18.5 17.4926 18.5 16.25V15.5C18.5 14.3954 17.6046 13.5 16.5 13.5C15.3954 13.5 14.5 14.3954 14.5 15.5V16H13V15.5C13 13.567 14.567 12 16.5 12Z"/></svg>') center/contain no-repeat; }
+.icon--heart { bottom: 10%; left: 20%; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff3131"><path d="M12.1 21.35l-1.1-1.01C5.14 15.24 2 12.39 2 8.99 2 6.24 4.24 4 6.99 4c1.74 0 3.41.81 4.46 2.09A6 6 0 0 1 15.91 4C18.66 4 20.9 6.24 20.9 8.99c0 3.4-3.14 6.25-8.01 11.35l-0.79.74z"/></svg>') center/contain no-repeat; }
+.icon--cross { top: 18%; right: 8%; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M11 2h2v20h-2z"/><path d="M2 11h20v2H2z"/></svg>') center/contain no-repeat; }
+
+/* Slides */
+.slides { position: relative; height: 100%; }
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background: var(--slide-bg) center/cover no-repeat;
+}
+.slide::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.28) 70%, rgba(0,0,0,0.35) 100%); pointer-events: none; }
+.slide.is-active { opacity: 1; }
+.slide::before { content: ""; position: absolute; inset: 0; opacity: 0.15; }
+
+.bg-medical-pattern::before { background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px); background-size: 24px 24px; }
+.bg-heart-rhythm::before { background-image: linear-gradient(transparent 96%, rgba(255,255,255,0.18) 96%), repeating-linear-gradient(90deg, rgba(255,255,255,0.12) 0 2px, transparent 2px 6px); }
+.bg-calendar-clock::before { background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px); background-size: 30px 30px; }
+.bg-healthcare-pros::before { background-image: linear-gradient(to bottom, rgba(16,74,164,0.15), rgba(11,25,44,0.15)); }
+.bg-career::before { background-image: linear-gradient(135deg, rgba(255,255,255,0.08) 25%, transparent 25%), linear-gradient(225deg, rgba(255,255,255,0.08) 25%, transparent 25%); background-size: 32px 32px; background-position: 0 0, 16px 16px; }
+
+.slide__content {
+  position: relative;
+  max-width: 1100px;
+  padding: 28px 36px;
+  text-align: center;
+  border-radius: 18px;
+  background: rgba(11, 25, 44, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+.slide__title {
+  margin: 0 0 16px 0;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+.slide__subtitle {
+  margin: 0 auto 24px auto;
+  font-size: 24px;
+  color: #a8c7ff;
+}
+.slide__badge {
+  width: 120px;
+  height: 120px;
+  margin: 16px auto 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(255,255,255,0.7)) , url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="58" font-size="34" text-anchor="middle" font-family="Poppins" fill="%23e00000">AHA</text></svg>') center/60% no-repeat;
+  box-shadow: 0 10px 30px rgba(224,0,0,0.35), 0 0 0 8px rgba(224,0,0,0.15);
+}
+
+/* Controls */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: grid; place-items: center; cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.arrow:hover { transform: translateY(-50%) scale(1.06); background: rgba(255,255,255,0.18); }
+.arrow--left { left: 24px; }
+.arrow--right { right: 24px; }
+.arrow span { width: 12px; height: 12px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); display: block; box-sizing: border-box; }
+.arrow--left span { transform: translateX(0) rotate(-135deg); }
+.arrow--right span { transform: translateX(-2.5px) rotate(45deg); }
+
+.dots { display: none; }
+
+/* CTA */
+.cta {
+  position: absolute;
+  left: 50%;
+  bottom: 72px;
+  height: 60px;
+  width: 200px;
+  border-radius: 14px;
+  background: #ff3131;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  display: grid; place-items: center;
+  box-shadow: 0 12px 24px rgba(255, 49, 49, 0.35), 0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, 0);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta:hover { transform: translate(-50%, -2px); box-shadow: 0 18px 32px rgba(255,49,49,0.42), 0 10px 16px rgba(0,0,0,0.3); }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .slide__title { font-size: 32px !important; }
+  .slide__subtitle { font-size: 18px; }
+  .slide__content { padding: 20px 20px; border-radius: 14px; }
+  .cta { height: 56px; width: 190px; }
+}
+
+@media (max-width: 600px) {
+  .hero { height: calc(80vh - 72px); }
+  .slide__content { margin: 0 16px; padding: 16px; border-radius: 12px; }
+  .icon { width: 80px; height: 80px; }
+  .arrow { display: none; }
+  .cta { bottom: 56px; width: min(200px, calc(100% - 32px)); }
+}
+
+

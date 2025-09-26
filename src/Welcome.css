@@ -1,0 +1,97 @@
+.welcome {
+  position: relative;
+  background: #ffffff;
+  padding: 120px 16px;
+  overflow: hidden;
+}
+
+.welcome__pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 20%, rgba(16, 74, 164, 0.05) 2px, transparent 2px),
+    radial-gradient(circle at 80% 40%, rgba(16, 74, 164, 0.05) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(16, 74, 164, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(16, 74, 164, 0.04) 1px, transparent 1px);
+  background-size: 140px 140px, 180px 180px, 120px 120px, 120px 120px;
+  pointer-events: none;
+}
+
+.welcome__container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome__heading {
+  position: relative;
+  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-weight: 800;
+  color: #104aa4;
+  font-size: 56px;
+  margin: 0 0 40px 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 4px 18px rgba(16, 74, 164, 0.18);
+}
+.welcome__underline {
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  height: 3px;
+  width: 0;
+  background: #104aa4;
+  transform: translateX(-50%);
+  transition: width 0.6s ease;
+}
+.welcome__heading.is-underline .welcome__underline { width: 160px; }
+
+.welcome__text {
+  margin: 0 auto;
+  max-width: 900px;
+  color: #333333;
+  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.welcome__text .blue { color: #104aa4; font-weight: 700; }
+
+/* Floating icons */
+.welcome__icons { position: absolute; inset: 0; pointer-events: none; }
+.wicon {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: 0.2;
+  color: #104aa4;
+  animation: floatY 6s ease-in-out infinite;
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.wicon::before { content: ""; position: absolute; inset: 0; background-size: contain; background-repeat: no-repeat; background-position: center; }
+.wicon--stethoscope { top: 16%; left: 6%; }
+.wicon--stethoscope::before { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23104aa4"><path d="M6.5 3C6.78 3 7 3.22 7 3.5V8C7 9.38 8.12 10.5 9.5 10.5C10.88 10.5 12 9.38 12 8V3.5C12 3.22 12.22 3 12.5 3C12.78 3 13 3.22 13 3.5V8C13 10.21 11.21 12 9.5 12C7.79 12 6 10.21 6 8V3.5C6 3.22 6.22 3 6.5 3Z"/><path d="M16.5 12C18.43 12 20 13.57 20 15.5V16.25C20 18.32 18.32 20 16.25 20H14.75C12.68 20 11 18.32 11 16.25V13H12.5V16.25C12.5 17.49 13.51 18.5 14.75 18.5H16.25C17.49 18.5 18.5 17.49 18.5 16.25V15.5C18.5 14.39 17.6 13.5 16.5 13.5C15.4 13.5 14.5 14.39 14.5 15.5V16H13V15.5C13 13.57 14.57 12 16.5 12Z"/></svg>'); }
+.wicon--heartbeat { bottom: 12%; right: 12%; animation-delay: 0.6s; }
+.wicon--heartbeat::before { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="%23104aa4" fill="none" stroke-width="2"><path d="M4 12h3l2 3 3-6 2 3h6"/><path d="M20.84 4.61a5.5 5.5 0 0 1 0 7.78L12 21.23l-8.84-8.84a5.5 5.5 0 0 1 7.78-7.78l1.06 1.06 1.06-1.06a5.5 5.5 0 0 1 7.78 0z"/></svg>'); }
+.wicon--cross { top: 10%; right: 30%; animation-delay: 1.2s; }
+.wicon--cross::before { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23104aa4"><path d="M11 2h2v20h-2z"/><path d="M2 11h20v2H2z"/></svg>'); }
+
+/* Accent lines */
+.welcome__accents { margin-top: 28px; display: flex; justify-content: center; gap: 16px; }
+.welcome__accents span { display: block; width: 60px; height: 2px; background: #ff3131; opacity: 0.9; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .welcome { padding: 80px 16px; }
+  .welcome__heading { font-size: 40px; }
+  .welcome__text { font-size: 18px; }
+}
+
+@media (max-width: 600px) {
+  .welcome { padding: 64px 14px; }
+  .welcome__heading { font-size: 32px; margin-bottom: 28px; }
+  .welcome__text { font-size: 16px; }
+  .wicon { width: 80px; height: 80px; }
+}
+
+

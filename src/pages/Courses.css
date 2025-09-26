@@ -1,0 +1,1136 @@
+/* Courses Page Styles */
+.courses-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Container */
+/* Container styles now in Global.css */
+
+/* Hero Section */
+.courses-page .courses-hero {
+  background: linear-gradient(135deg, #0b192c 0%, #104aa4 100%);
+  position: relative;
+  padding: 100px 0 80px;
+  overflow: hidden;
+}
+
+/* Medical Pattern Overlay */
+.courses-page .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"><circle cx="30" cy="30" r="20"/><path d="M30 10v40M10 30h40"/></g></svg>');
+  background-size: 300px 300px, 200px 200px, 60px 60px;
+  background-position: 0 0, 150px 150px, 0 0;
+  opacity: 0.6;
+}
+
+.courses-page .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.courses-page .hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.courses-page .hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 50px 0;
+  line-height: 1.4;
+}
+
+/* Filter Bar */
+.courses-page .filter-bar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.courses-page .filter-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.courses-page .filter-pill {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.filter-pill:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.filter-pill.courses-page .active {
+  background: #ff3131;
+  border-color: #ff3131;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 49, 49, 0.4);
+}
+
+.courses-page .search-sort-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.courses-page .search-bar {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  max-width: calc(100% - 240px);
+}
+
+.courses-page .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
+
+.courses-page .search-input {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 16px 16px 16px 48px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ff3131;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 4px rgba(255, 49, 49, 0.2);
+}
+
+.courses-page .sort-dropdown {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 16px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+.sort-dropdown:focus {
+  outline: none;
+  border-color: #ff3131;
+  box-shadow: 0 0 0 4px rgba(255, 49, 49, 0.2);
+}
+
+.sort-dropdown option {
+  background: #104aa4;
+  color: #ffffff;
+  padding: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Section Styling */
+.aha-provider-section,
+.aha-instructor-section,
+.courses-page .medical-programs-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.courses-page .aha-instructor-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.courses-page .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.courses-page .header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.courses-page .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #104aa4;
+  margin: 0;
+}
+
+.courses-page .section-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff !important;
+  margin: 10px 0 0 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+.courses-page .aha-authorized {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.courses-page .aha-authorized-image {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.courses-page .accent-line {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff3131, #ff6b6b);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Course Cards Grid */
+.courses-page .courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.courses-page .course-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border: 1px solid rgba(16, 74, 164, 0.1);
+  padding: 0 !important;
+  min-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  position: relative !important;
+}
+
+.courses-page .course-card .card-background {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 1 !important;
+}
+
+.courses-page .course-card .background-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.courses-page .course-card .card-content {
+  position: relative !important;
+  z-index: 2 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 15px !important;
+  margin: 25px !important;
+  margin-top: auto !important;
+  padding: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  max-height: 60% !important;
+  overflow-y: auto !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.course-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(16, 74, 164, 0.3);
+}
+
+/* Removed - now using background images */
+
+.courses-page .course-logo-image {
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Removed - now using background images */
+
+.courses-page .card-content {
+  padding: 30px;
+}
+
+.courses-page .course-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin: 0 0 15px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.6) !important;
+  line-height: 1.3;
+}
+
+.courses-page .course-highlights {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff !important;
+  margin: 0 0 15px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.5) !important;
+  line-height: 1.5;
+}
+
+.courses-page .course-details {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff !important;
+  margin: 0 0 20px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.courses-page .pricing-section {
+  margin: 15px 0 !important;
+}
+
+.courses-page .pricing-box {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 10px 15px !important;
+  margin: 10px 0 !important;
+}
+
+.courses-page .price-label {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.courses-page .price-value {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.6) !important;
+}
+
+.courses-page .pricing-box {
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 74, 164, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pricing-box.courses-page .large {
+  padding: 20px;
+  justify-content: center;
+}
+
+.courses-page .price-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.courses-page .price-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #104aa4;
+}
+
+.price-value.courses-page .large {
+  font-size: 28px;
+}
+
+.courses-page .price-separator {
+  color: #ffffff !important;
+  font-weight: 300;
+  margin: 0 4px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+.courses-page .duration-badge {
+  display: inline-block;
+  background: #104aa4;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.courses-page .requirements-badge {
+  display: inline-block;
+  background: #fbbf24;
+  color: #92400e;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 8px 0;
+  margin-left: 8px;
+}
+
+.courses-page .course-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff !important;
+  margin: 15px 0 25px 0;
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+.courses-page .register-btn {
+  width: 100% !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #ff3131, #ff6b6b) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 16px !important;
+  height: 45px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 15px rgba(255, 49, 49, 0.4) !important;
+  margin-top: 15px !important;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 49, 49, 0.4);
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+/* Instructor Cards */
+.courses-page .instructor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+.courses-page .instructor-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.courses-page .instructor-card .card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.courses-page .instructor-card .background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.courses-page .instructor-card .card-content {
+  position: relative !important;
+  z-index: 2 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 15px !important;
+  margin: 25px !important;
+  margin-top: auto !important;
+  padding: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  max-height: 60% !important;
+  overflow-y: auto !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.courses-page .instructor-card {
+  padding: 0 !important;
+  min-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+}
+
+.instructor-card.courses-page .premium {
+  border: 3px solid #fbbf24;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+}
+
+.instructor-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+}
+
+.courses-page .premium-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #92400e;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.courses-page .instructor-btn {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #92400e;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  border: none;
+  border-radius: 25px;
+  padding: 16px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.instructor-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Medical Programs */
+.courses-page .medical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.courses-page .medical-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(16, 74, 164, 0.1);
+}
+
+.courses-page .medical-card .card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.courses-page .medical-card .background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.courses-page .medical-card .card-content {
+  position: relative !important;
+  z-index: 2 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 15px !important;
+  margin: 25px !important;
+  margin-top: auto !important;
+  padding: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  max-height: 60% !important;
+  overflow-y: auto !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Custom scrollbar for content containers */
+.courses-page .card-content::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.courses-page .card-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 3px !important;
+}
+
+.courses-page .card-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 3px !important;
+}
+
+.courses-page .card-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.courses-page .medical-card {
+  padding: 0 !important;
+  min-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+}
+
+.medical-card.courses-page .available {
+  border-color: #10b981;
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.15);
+}
+
+.medical-card.courses-page .coming-soon {
+  opacity: 0.8;
+}
+
+.medical-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.courses-page .availability-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 3;
+}
+
+.availability-badge.courses-page .available {
+  background: #10b981;
+  color: #ffffff;
+  animation: pulse 2s infinite;
+}
+
+.availability-badge.courses-page .coming-soon {
+  background: #64748b;
+  color: #ffffff;
+}
+
+.courses-page .card-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-page .image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  position: relative;
+}
+
+.image-placeholder.courses-page .healthcare-aide {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.image-placeholder.courses-page .medical-assistant {
+  background: linear-gradient(135deg, #fce7f3, #f9a8d4);
+}
+
+.courses-page .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 116, 139, 0.4);
+}
+
+.courses-page .special-pricing {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border: 2px solid #ff3131;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.courses-page .special-price-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.courses-page .special-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #dc2626;
+  text-transform: uppercase;
+}
+
+.courses-page .special-price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #dc2626;
+}
+
+.courses-page .original-price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff !important;
+  text-decoration: line-through;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+.courses-page .urgency-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #dc2626;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.courses-page .program-details {
+  margin: 20px 0;
+}
+
+.duration-info,
+.courses-page .prerequisites {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff !important;
+  margin: 8px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+  line-height: 1.4;
+}
+
+.courses-page .certification-info {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #104aa4;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.courses-page .program-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff !important;
+  margin: 15px 0 25px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+  line-height: 1.5;
+}
+
+.courses-page .enroll-btn {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff3131, #ff6b6b);
+  border: none;
+  border-radius: 25px;
+  padding: 16px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 49, 49, 0.3);
+}
+
+.enroll-btn.courses-page .pulse {
+  animation: pulse 2s infinite;
+}
+
+.enroll-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 49, 49, 0.4);
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+.courses-page .notify-btn {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: #e2e8f0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+  border: 2px solid #cbd5e1;
+  border-radius: 25px;
+  padding: 16px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.notify-btn:hover {
+  background: #cbd5e1;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
+/* Call-to-Action Section */
+.courses-page .courses-cta {
+  background: linear-gradient(135deg, #104aa4, #1e40af);
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.08) 0%, transparent 40%);
+  background-size: 300px 300px, 200px 200px;
+}
+
+.courses-page .cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.courses-page .cta-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.courses-page .cta-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 40px 0;
+  line-height: 1.4;
+}
+
+.courses-page .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.courses-page .cta-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 200px;
+}
+
+.cta-btn.courses-page .primary {
+  background: linear-gradient(135deg, #ff3131, #ff6b6b);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 49, 49, 0.3);
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 49, 49, 0.4);
+}
+
+.cta-btn.courses-page .secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.cta-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.courses-page .cta-phone {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.cta-phone a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-phone a:hover {
+  border-color: #ffffff;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 49, 49, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 49, 49, 0.5);
+  }
+}
+
+/* Medium screen adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .courses-page .search-bar {
+    max-width: calc(100% - 260px);
+  }
+  
+  .courses-page .sort-dropdown {
+    min-width: 240px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .courses-page .hero-title {
+    font-size: 36px;
+  }
+  
+  .courses-page .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .courses-page .filter-bar {
+    padding: 20px;
+  }
+  
+  .courses-page .search-sort-container {
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .courses-page .search-bar {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .courses-page .sort-dropdown {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .courses-page .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .courses-page .section-title {
+    font-size: 28px;
+  }
+  
+  .courses-page .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .courses-page .instructor-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .courses-page .medical-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .courses-page .cta-title {
+    font-size: 32px;
+  }
+  
+  .courses-page .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .courses-page .cta-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Container responsive styles now in Global.css */
+  
+  .courses-page .courses-hero {
+    padding: 60px 0 50px;
+  }
+  
+  .courses-page .hero-title {
+    font-size: 28px;
+  }
+  
+  .courses-page .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .courses-page .filter-pills {
+    justify-content: center;
+  }
+  
+  .courses-page .filter-pill {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  
+  .courses-page .section-title {
+    font-size: 24px;
+  }
+  
+  .courses-page .course-title {
+    font-size: 18px;
+  }
+  
+  .aha-provider-section,
+  .aha-instructor-section,
+  .courses-page .medical-programs-section {
+    padding: 60px 0;
+  }
+  
+  .courses-page .courses-cta {
+    padding: 60px 0;
+  }
+  
+  .courses-page .cta-title {
+    font-size: 26px;
+  }
+}
+
+/* Course Card Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .course-card,
+  .instructor-card,
+  .courses-page .medical-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 0.6s ease forwards;
+  }
+  
+  .course-card:nth-child(1) { animation-delay: 0.1s; }
+  .course-card:nth-child(2) { animation-delay: 0.2s; }
+  .course-card:nth-child(3) { animation-delay: 0.3s; }
+  .course-card:nth-child(4) { animation-delay: 0.4s; }
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,947 @@
+/* About Page Styles - Elite Training Institute */
+
+.about-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Hero Section */
+.about-page .about-hero {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(rgba(11, 25, 44, 0.7), rgba(11, 25, 44, 0.3)), 
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="medical" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/><path d="M20 20 L80 80 M80 20 L20 80" stroke="%23ffffff" stroke-width="1" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="url(%23medical)"/></svg>');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.about-page .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #0b192c 0%, transparent 100%);
+  z-index: 1;
+}
+
+.about-page .about-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.about-page .breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-page .breadcrumb a:hover {
+  color: #ff3131;
+}
+
+.about-page .breadcrumb .separator {
+  margin: 0 10px;
+  color: #94a3b8;
+}
+
+.about-page .hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.about-page .hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #e2e8f0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Main Story Section */
+.about-page .main-story {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.about-page .story-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-page .opening-statement {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-page .opening-statement .highlight {
+  color: #104aa4;
+  font-weight: 600;
+}
+
+/* Mission & Vision Section */
+.about-page .mission-vision {
+  padding: 80px 0;
+  background: #f8fbff;
+}
+
+.about-page .mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-page .mission-card,
+.about-page .vision-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #104aa4;
+}
+
+.about-page .mission-card:hover,
+.about-page .vision-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
+}
+
+.about-page .card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.about-page .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff3131, #ff5252);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-page .card-icon {
+  width: 32px;
+  height: 32px;
+  color: white;
+  stroke-width: 2.5;
+}
+
+.about-page .card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #104aa4;
+  margin: 0;
+}
+
+.about-page .card-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Our Team Section */
+.about-page .our-team {
+  padding: 80px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.about-page .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #104aa4;
+  margin: 0 0 20px 0;
+}
+
+.about-page .team-placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0 0 40px 0;
+}
+
+.about-page .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Why Choose Elite Section */
+.about-page .why-choose-elite {
+  padding: 80px 0;
+  background: #f8fbff;
+}
+
+.about-page .why-choose-elite .section-title {
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 60px;
+}
+
+.about-page .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-page .benefit-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.about-page .benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-page .benefit-icon {
+  width: 50px;
+  height: 50px;
+  color: #ff3131;
+  margin: 0 auto 20px;
+  flex-shrink: 0;
+}
+
+.about-page .benefit-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2.5;
+}
+
+.about-page .benefit-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #104aa4;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.about-page .benefit-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Accreditations Section */
+.about-page .accreditations {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.about-page .accreditations .section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.about-page .accreditations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-page .accreditation-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #f1f5f9;
+}
+
+.about-page .accreditation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: #104aa4;
+}
+
+.about-page .accreditation-card.aha-card {
+  border-color: #ff3131;
+  background: linear-gradient(135deg, #fff5f5, #ffffff);
+}
+
+.about-page .accreditation-icon {
+  width: 60px;
+  height: 60px;
+  color: #104aa4;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-page .accreditation-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about-page .aha-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-page .accreditation-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #104aa4;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.about-page .accreditation-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+
+.about-page .verified-badge {
+  display: inline-block;
+  background: #ff3131;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-page .verify-link {
+  color: #104aa4;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.about-page .verify-link:hover {
+  color: #ff3131;
+}
+
+/* Manicare Affiliate Section */
+.about-page .manicare-affiliate {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.about-page .manicare-affiliate .section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.about-page .affiliate-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-page .affiliate-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+.about-page .partnership-benefits {
+  text-align: left;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-page .partnership-benefits h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #104aa4;
+  margin: 0 0 15px 0;
+}
+
+.about-page .partnership-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-page .partnership-benefits li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0 0 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.about-page .partnership-benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff3131;
+  font-weight: 600;
+}
+
+/* Student Success Section */
+.about-page .student-success {
+  padding: 80px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.about-page .student-success .section-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.about-page .success-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.about-page .stat-item {
+  text-align: center;
+}
+
+.about-page .stat-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff3131;
+  margin: 0 0 10px 0;
+}
+
+.about-page .stat-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+  margin: 0;
+}
+
+.about-page .success-cta {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #104aa4;
+  margin: 0;
+}
+
+/* Location & Facilities Section */
+.about-page .location-facilities {
+  padding: 80px 0;
+  background: #f8fbff;
+}
+
+.about-page .location-facilities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-page .location-title,
+.about-page .facilities-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #104aa4;
+  margin: 0 0 30px 0;
+}
+
+.about-page .address {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.about-page .location-benefits {
+  margin-bottom: 30px;
+}
+
+.about-page .benefit-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.about-page .benefit-item .benefit-icon {
+  width: 20px;
+  height: 20px;
+  color: #ff3131;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.about-page .benefit-item span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.about-page .hours-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #104aa4;
+  margin: 0 0 20px 0;
+}
+
+.about-page .hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-page .hours-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.about-page .hours-item.special {
+  background: linear-gradient(135deg, #ff3131, #ff5252);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.about-page .clock-icon {
+  width: 20px;
+  height: 20px;
+  color: #ff3131;
+  flex-shrink: 0;
+}
+
+.about-page .hours-item.special .clock-icon {
+  color: #ffffff;
+}
+
+.about-page .day {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  min-width: 80px;
+}
+
+.about-page .hours-item.special .day {
+  color: #ffffff;
+}
+
+.about-page .time {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.about-page .hours-item.special .time {
+  color: #ffffff;
+}
+
+.about-page .facilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-page .facility-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.about-page .facility-icon {
+  width: 24px;
+  height: 24px;
+  color: #ff3131;
+  flex-shrink: 0;
+}
+
+.about-page .facility-item span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+/* Call to Action Section */
+.about-page .cta-section {
+  padding: 80px 0;
+  background: #0b192c;
+  text-align: center;
+}
+
+.about-page .cta-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+.about-page .cta-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #e2e8f0;
+  margin: 0 0 40px 0;
+}
+
+.about-page .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.about-page .cta-btn {
+  height: 60px;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.about-page .cta-btn.btn--primary {
+  background: #ff3131;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(255, 49, 49, 0.3);
+}
+
+.about-page .cta-btn.btn--primary:hover {
+  background: #e31616;
+  box-shadow: 0 12px 30px rgba(255, 49, 49, 0.4);
+  transform: translateY(-2px);
+}
+
+.about-page .cta-btn.btn--secondary {
+  background: transparent;
+  color: #104aa4;
+  border: 2px solid #104aa4;
+}
+
+.about-page .cta-btn.btn--secondary:hover {
+  background: #104aa4;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.about-page .cta-hours {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Social Proof Footer */
+.about-page .social-proof {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0b192c 0%, #142842 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .social-proof::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="socialPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23socialPattern)"/></svg>');
+  opacity: 0.3;
+}
+
+.about-page .social-proof .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .social-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-page .social-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #e2e8f0;
+  margin: 0 0 50px 0;
+}
+
+.about-page .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.about-page .social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-width: 140px;
+  justify-content: center;
+}
+
+.about-page .social-link:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-page .social-link svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.about-page .social-link:hover svg {
+  transform: scale(1.1);
+}
+
+.about-page .social-link.facebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  color: #ffffff;
+}
+
+.about-page .social-link.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+  color: #ffffff;
+}
+
+.about-page .social-link.tiktok:hover {
+  background: #ff0050;
+  border-color: #ff0050;
+  color: #ffffff;
+}
+
+.about-page .social-link.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-page .hero-title {
+    font-size: 48px;
+  }
+  
+  .about-page .hero-subtitle {
+    font-size: 24px;
+  }
+  
+  .about-page .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .about-page .location-facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-page .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-page .success-stats {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page .about-hero {
+    height: 60vh;
+  }
+  
+  .about-page .hero-title {
+    font-size: 36px;
+  }
+  
+  .about-page .hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .about-page .opening-statement {
+    font-size: 18px;
+  }
+  
+  .about-page .card-title {
+    font-size: 24px;
+  }
+  
+  .about-page .card-text {
+    font-size: 16px;
+  }
+  
+  .about-page .section-title {
+    font-size: 32px;
+  }
+  
+  .about-page .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-page .accreditations-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-page .success-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .about-page .social-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .about-page .cta-btn {
+    min-width: 200px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .hero-title {
+    font-size: 28px;
+  }
+  
+  .about-page .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .about-page .card-title {
+    font-size: 20px;
+  }
+  
+  .about-page .section-title {
+    font-size: 28px;
+  }
+  
+  .about-page .cta-title {
+    font-size: 32px;
+  }
+  
+  .about-page .cta-subtitle {
+    font-size: 18px;
+  }
+  
+  .about-page .cta-btn {
+    min-width: 180px;
+    height: 45px;
+    font-size: 14px;
+  }
+}

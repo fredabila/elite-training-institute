@@ -1,0 +1,150 @@
+/* Global Common Styles - Elite Training Institute */
+
+/* ===== CONTAINER STYLES ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: #ff3131;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(255, 49, 49, 0.25);
+}
+
+.btn--primary:hover {
+  background: #e31616;
+  box-shadow: 0 12px 22px rgba(255, 49, 49, 0.35);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.btn--secondary {
+  background: #104aa4;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(16, 74, 164, 0.25);
+}
+
+.btn--secondary:hover {
+  background: #0d3a8a;
+  box-shadow: 0 12px 22px rgba(16, 74, 164, 0.35);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.btn--disabled {
+  background: #e5e7eb;
+  color: #7b7e85;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn--disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===== SECTION STYLES ===== */
+.section {
+  padding: 60px 0;
+}
+
+.section--dark {
+  background: linear-gradient(135deg, #0b192c 0%, #142842 100%);
+  color: #ffffff;
+}
+
+.section--light {
+  background: #ffffff;
+  color: #333333;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #104aa4;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ===== CARD STYLES ===== */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .btn {
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+}
