@@ -419,6 +419,32 @@
   font-style: italic;
 }
 
+.acls-course-page .pay-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #104aa4;
+  text-decoration: none;
+  padding: 12px 20px;
+  border: 2px solid #104aa4;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.acls-course-page .pay-link:hover {
+  background: #104aa4;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.acls-course-page .external-link-icon {
+  width: 16px;
+  height: 16px;
+}
+
 /* Course Highlights */
 .acls-course-page .course-highlights {
   margin-bottom: 30px;

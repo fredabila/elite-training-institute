@@ -341,13 +341,29 @@ function Contact() {
       {/* Embedded Map Section */}
       <section className="map-section">
         <div className="container">
+          <div className="map-header">
+            <h2 className="map-title">Find Us</h2>
+            <p className="map-subtitle">Visit our training center in Union, New Jersey</p>
+          </div>
           <div className="map-container">
-            <div className="map-placeholder">
-              <svg className="map-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              Interactive Map - 2165 Morris Ave, Suite 15, Union, NJ 07083
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.1234567890123!2d-74.2634!3d40.6975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b8c8c8c8c8c8%3A0x1234567890abcdef!2s2165%20Morris%20Ave%20Suite%2015%2C%20Union%2C%20NJ%2007083!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Elite Training Institute Location"
+            ></iframe>
+            <div className="map-info">
+              <div className="address-info">
+                <h3>Elite Training Institute</h3>
+                <p>2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
+                <a href="https://maps.google.com/?q=2165+Morris+Ave+Suite+15+Union+NJ+07083" target="_blank" rel="noopener noreferrer" className="directions-btn">
+                  Get Directions
+                </a>
+              </div>
             </div>
           </div>
         </div>

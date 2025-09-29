@@ -4,7 +4,6 @@ import './Courses.css'
 function Courses() {
   const [activeFilter, setActiveFilter] = useState('All Courses')
   const [searchTerm, setSearchTerm] = useState('')
-  const [sortBy, setSortBy] = useState('Alphabetical')
 
   const filters = ['All Courses', 'AHA Certifications', 'Medical Programs', 'Available Now', 'Coming Soon']
 
@@ -29,8 +28,8 @@ function Courses() {
     { id: 'pharmacy', title: 'Pharmacy Technician', category: 'Medical Programs', status: 'coming-soon', price: 0, duration: '4 months' }
   ], [])
 
-  // Filter and sort courses
-  const filteredAndSortedCourses = useMemo(() => {
+  // Filter courses
+  const filteredCourses = useMemo(() => {
     let filtered = allCourses
 
     // Apply category filter
@@ -51,30 +50,15 @@ function Courses() {
       )
     }
 
-    // Apply sorting
-    switch (sortBy) {
-      case 'Alphabetical':
-        filtered.sort((a, b) => a.title.localeCompare(b.title))
-        break
-      case 'Price (Low to High)':
-        filtered.sort((a, b) => a.price - b.price)
-        break
-      case 'Duration':
-        filtered.sort((a, b) => a.duration.localeCompare(b.duration))
-        break
-      case 'Popularity':
-        // For now, just keep original order as popularity
-        break
-      default:
-        break
-    }
+    // Sort alphabetically by default
+    filtered.sort((a, b) => a.title.localeCompare(b.title))
 
     return filtered
-  }, [activeFilter, searchTerm, sortBy, allCourses])
+  }, [activeFilter, searchTerm, allCourses])
 
   // Check if course should be visible
   const shouldShowCourse = (courseId) => {
-    return filteredAndSortedCourses.some(course => course.id === courseId)
+    return filteredCourses.some(course => course.id === courseId)
   }
 
   return (
@@ -101,7 +85,7 @@ function Courses() {
                 ))}
               </div>
               
-              <div className="search-sort-container">
+              <div className="search-container">
                 <div className="search-bar">
                   <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <circle cx="11" cy="11" r="8"/>
@@ -115,17 +99,6 @@ function Courses() {
                     className="search-input"
                   />
                 </div>
-                
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="sort-dropdown"
-                >
-                  <option value="Alphabetical">Sort by: Alphabetical</option>
-                  <option value="Price (Low to High)">Sort by: Price (Low to High)</option>
-                  <option value="Duration">Sort by: Duration</option>
-                  <option value="Popularity">Sort by: Popularity</option>
-                </select>
               </div>
             </div>
           </div>
@@ -155,7 +128,7 @@ function Courses() {
               <div className="card-content">
                 <h3 className="course-title">Basic Life Support (BLS)</h3>
                 <p className="course-highlights">Same-day certification • 4-hour course • Healthcare professionals</p>
-                <p className="course-details">The AHA's BLS course trains participants to promptly recognize several life-threatening emergencies, give high-quality chest compressions, deliver appropriate ventilations and provide early use of an AED.</p>
+                <p className="course-details">CPR, AED use, and emergency response training</p>
                 
                 <div className="pricing-section">
                   <div className="pricing-box">
@@ -168,8 +141,6 @@ function Courses() {
                 </div>
                 
                 <div className="duration-badge">4 hours</div>
-                
-                <p className="course-description">Learn CPR, AED use, and emergency response</p>
                 
                 <button className="register-btn" onClick={() => window.open('/bls-course', '_blank')}>REGISTER</button>
               </div>
@@ -198,8 +169,6 @@ function Courses() {
                 
                 <div className="duration-badge">2 days</div>
                 
-                <p className="course-description">Advanced cardiac emergency management and pharmacology</p>
-                
                 <button className="register-btn" onClick={() => window.open('/acls-course', '_blank')}>REGISTER</button>
               </div>
             </div>
@@ -227,8 +196,6 @@ function Courses() {
                 
                 <div className="duration-badge">2 days</div>
                 
-                <p className="course-description">Pediatric resuscitation and emergency response</p>
-                
                 <button className="register-btn" onClick={() => window.open('/pals-course', '_blank')}>REGISTER</button>
               </div>
             </div>
@@ -255,8 +222,6 @@ function Courses() {
                 </div>
                 
                 <div className="duration-badge">6 hours</div>
-                
-                <p className="course-description">Basic CPR and first aid for everyday emergencies</p>
                 
                 <button className="register-btn" onClick={() => window.open('/heartsaver-course', '_blank')}>REGISTER</button>
               </div>
@@ -296,8 +261,6 @@ function Courses() {
                 <div className="duration-badge">2-3 weeks</div>
                 <div className="requirements-badge">Current BLS required</div>
                 
-                <p className="course-description">Includes manual, student teaching, ongoing support</p>
-                
                 <button className="instructor-btn" onClick={() => window.open('/bls-instructor-initial', '_blank')}>REGISTER</button>
               </div>
             </div>
@@ -322,8 +285,6 @@ function Courses() {
                 </div>
                 
                 <div className="duration-badge">1 day</div>
-                
-                <p className="course-description">Continue your instructor certification with updated training</p>
                 
                 <button className="instructor-btn" onClick={() => window.open('/bls-instructor-renewal', '_blank')}>REGISTER</button>
               </div>
@@ -368,8 +329,6 @@ function Courses() {
                   <div className="prerequisites">18+ • High school diploma • Background check</div>
                 </div>
                 
-                <p className="program-description">Includes materials, registration, clinical practice</p>
-                
                 <button className="enroll-btn pulse" onClick={() => window.open('/chha-program', '_blank')}>ENROLL NOW</button>
               </div>
             </div>
@@ -391,8 +350,6 @@ function Courses() {
                   <div className="duration-info">5 months</div>
                   <div className="prerequisites">18+ • High school diploma • Entrance assessment</div>
                 </div>
-                
-                <p className="program-description">Launching soon - join waitlist</p>
                 
                 <button className="notify-btn" onClick={() => window.open('/ma-program', '_blank')}>COMING SOON</button>
               </div>

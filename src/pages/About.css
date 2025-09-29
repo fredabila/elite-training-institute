@@ -10,7 +10,7 @@
   position: relative;
   height: 70vh;
   background: linear-gradient(rgba(11, 25, 44, 0.7), rgba(11, 25, 44, 0.3)), 
-              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="medical" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/><path d="M20 20 L80 80 M80 20 L20 80" stroke="%23ffffff" stroke-width="1" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="url(%23medical)"/></svg>');
+              url('https://www.oecd.org/adobe/dynamicmedia/deliver/dm-aid--757adc79-d680-43f0-96df-c9231a5318c2/shutterstock-2261501289.jpg?quality=80&preferwebp=true');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -498,14 +498,14 @@
 /* Location & Facilities Section */
 .about-page .location-facilities {
   padding: 80px 0;
-  background: #f8fbff;
+  background: #ffffff;
 }
 
 .about-page .location-facilities-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -527,31 +527,6 @@
   line-height: 1.5;
 }
 
-.about-page .location-benefits {
-  margin-bottom: 30px;
-}
-
-.about-page .benefit-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  gap: 12px;
-}
-
-.about-page .benefit-item .benefit-icon {
-  width: 20px;
-  height: 20px;
-  color: #ff3131;
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.about-page .benefit-item span {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #666666;
-}
 
 .about-page .hours-title {
   font-family: 'Poppins', sans-serif;
@@ -575,7 +550,7 @@
 }
 
 .about-page .hours-item.special {
-  background: linear-gradient(135deg, #ff3131, #ff5252);
+  background: linear-gradient(135deg, #dc2626, #ef4444);
   color: #ffffff;
   padding: 12px 16px;
   border-radius: 8px;
@@ -585,7 +560,7 @@
 .about-page .clock-icon {
   width: 20px;
   height: 20px;
-  color: #ff3131;
+  color: #dc2626;
   flex-shrink: 0;
 }
 
@@ -632,7 +607,7 @@
 .about-page .facility-icon {
   width: 24px;
   height: 24px;
-  color: #ff3131;
+  color: #dc2626;
   flex-shrink: 0;
 }
 
@@ -642,6 +617,92 @@
   font-weight: 400;
   color: #666666;
 }
+
+/* New Card Styles */
+.about-page .location-card,
+.about-page .hours-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .location-card::before,
+.about-page .hours-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+.about-page .card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 30px 30px 20px 30px;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
+}
+
+.about-page .card-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.about-page .card-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+
+.about-page .card-content {
+  padding: 30px;
+}
+
+.about-page .address-section {
+  margin-bottom: 25px;
+}
+
+.about-page .address-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #104aa4;
+  margin: 0 0 10px 0;
+}
+
+.about-page .directions-btn {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.about-page .directions-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+  background: linear-gradient(135deg, #b91c1c, #dc2626);
+}
+
 
 /* Call to Action Section */
 .about-page .cta-section {
@@ -721,114 +782,6 @@
   margin: 0;
 }
 
-/* Social Proof Footer */
-.about-page .social-proof {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #0b192c 0%, #142842 100%);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-page .social-proof::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="socialPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23socialPattern)"/></svg>');
-  opacity: 0.3;
-}
-
-.about-page .social-proof .container {
-  position: relative;
-  z-index: 2;
-}
-
-.about-page .social-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 20px 0;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.about-page .social-subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: #e2e8f0;
-  margin: 0 0 50px 0;
-}
-
-.about-page .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.about-page .social-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 24px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  text-decoration: none;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  min-width: 140px;
-  justify-content: center;
-}
-
-.about-page .social-link:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-.about-page .social-link svg {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
-}
-
-.about-page .social-link:hover svg {
-  transform: scale(1.1);
-}
-
-.about-page .social-link.facebook:hover {
-  background: #1877f2;
-  border-color: #1877f2;
-  color: #ffffff;
-}
-
-.about-page .social-link.linkedin:hover {
-  background: #0077b5;
-  border-color: #0077b5;
-  color: #ffffff;
-}
-
-.about-page .social-link.tiktok:hover {
-  background: #ff0050;
-  border-color: #ff0050;
-  color: #ffffff;
-}
-
-.about-page .social-link.instagram:hover {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  border-color: transparent;
-  color: #ffffff;
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -847,7 +800,7 @@
   
   .about-page .location-facilities-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
   
   .about-page .cta-buttons {
@@ -902,10 +855,6 @@
     gap: 30px;
   }
   
-  .about-page .social-links {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
   
   .about-page .cta-btn {
     min-width: 200px;

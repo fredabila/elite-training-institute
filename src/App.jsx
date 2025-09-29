@@ -1,5 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
+import ScrollToTop from './ScrollToTop'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
@@ -27,6 +28,7 @@ import './Global.css'
 function App() {
   return (
     <div className="app-root">
+      <ScrollToTop />
       <Header />
       <main>
         <Routes>

@@ -254,28 +254,7 @@ function About() {
               <h3 className="location-title">Our Training Center</h3>
               <div className="address-info">
                 <p className="address">2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
-                <div className="location-benefits">
-                  <div className="benefit-item">
-                    <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                      <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    <span>Convenient Union location</span>
-                  </div>
-                  <div className="benefit-item">
-                    <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M16 3h5v5"/>
-                      <path d="M21 3l-7 7"/>
-                    </svg>
-                    <span>Public transportation accessible</span>
-                  </div>
-                  <div className="benefit-item">
-                    <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    </svg>
-                    <span>Free parking available</span>
-                  </div>
-                </div>
+               
               </div>
               <div className="hours-info">
                 <h4 className="hours-title">Hours of Operation</h4>
@@ -315,48 +294,6 @@ function About() {
               </div>
             </div>
 
-            <div className="facilities-info">
-              <h3 className="facilities-title">Modern Training Facilities</h3>
-              <div className="facilities-list">
-                <div className="facility-item">
-                  <svg className="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                  </svg>
-                  <span>State-of-the-art simulation labs</span>
-                </div>
-                <div className="facility-item">
-                  <svg className="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                  </svg>
-                  <span>Small class sizes (maximum 12 students)</span>
-                </div>
-                <div className="facility-item">
-                  <svg className="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                  </svg>
-                  <span>Latest medical equipment for hands-on training</span>
-                </div>
-                <div className="facility-item">
-                  <svg className="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9,22 9,12 15,12 15,22"/>
-                  </svg>
-                  <span>Comfortable learning environments</span>
-                </div>
-                <div className="facility-item">
-                  <svg className="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21"/>
-                    <line x1="12" y1="17" x2="12" y2="21"/>
-                  </svg>
-                  <span>Technology-enabled classrooms</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
