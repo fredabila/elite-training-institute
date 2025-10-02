@@ -6,7 +6,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [active, setActive] = useState('HOME')
 
-  const navItems = ['HOME', 'COURSES', 'ABOUT US', 'CONTACT US']
+  const navItems = ['HOME', 'COURSES', 'ABOUT US', 'BLOG', 'STUDENT PORTAL', 'CONTACT US']
 
   return (
     <header className="eti-header">
@@ -26,13 +26,13 @@ function Header() {
             </span>
             <span className="eti-contact__text eti-contact__text--phone">848.280.1169</span>
           </a>
-          <a className="eti-contact__item" href="mailto:infoateliteti@gmail.com" aria-label="Email infoateliteti@gmail.com">
+          <a className="eti-contact__item" href="mailto:info@trainatelite.com" aria-label="Email info@trainatelite.com">
             <span className="eti-icon eti-icon--email" aria-hidden="true">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#ff3131"/>
               </svg>
             </span>
-            <span className="eti-contact__text eti-contact__text--email">infoateliteti@gmail.com</span>
+            <span className="eti-contact__text eti-contact__text--email">info@trainatelite.com</span>
           </a>
         </div>
 
@@ -57,12 +57,14 @@ function Header() {
                     item === 'HOME' ? '/' :
                     item === 'COURSES' ? '/courses' :
                     item === 'ABOUT US' ? '/about' :
+                    item === 'BLOG' ? '/blog' :
+                    item === 'STUDENT PORTAL' ? 'https://trainatelite.talentlms.com/' :
                     item === 'CONTACT US' ? '/contact' :
-                    item === 'STUDENT PORTAL' ? '/student-portal' :
-                    '/blog'
+                    '/'
                   }
-                  className={({ isActive }) => `eti-nav__link ${isActive ? 'is-active' : ''}`}
+                  className={({ isActive }) => `eti-nav__link ${isActive ? 'is-active' : ''} ${item === 'CONTACT US' ? 'contact-us-red' : ''}`}
                   onClick={() => setMenuOpen(false)}
+                  {...(item === 'STUDENT PORTAL' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 >
                   {item}
                 </NavLink>

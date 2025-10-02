@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import './InstructorCourse.css'
+import RegistrationModal from '../RegistrationModal'
 
 function InstructorCourse() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
   return (
     <main className="instructor-course-page">
       {/* Hero Section */}
@@ -11,9 +17,9 @@ function InstructorCourse() {
             {/* Breadcrumb Navigation */}
             <nav className="breadcrumb">
               <a href="/" className="breadcrumb-link">Home</a>
-              <span className="breadcrumb-separator">></span>
+              <span className="breadcrumb-separator">{'>'}</span>
               <a href="/courses" className="breadcrumb-link">Courses</a>
-              <span className="breadcrumb-separator">></span>
+              <span className="breadcrumb-separator">{'>'}</span>
               <span className="breadcrumb-current">Instructor Course</span>
             </nav>
             
@@ -180,6 +186,37 @@ function InstructorCourse() {
                 </div>
               </div>
 
+              {/* Course Details Section */}
+              <div className="course-section">
+                <div className="section-header">
+                  <div className="section-icon details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 6v6l4 2"/>
+                    </svg>
+                  </div>
+                  <h2 className="section-title">Course Details</h2>
+                </div>
+                <div className="details-grid">
+                  <div className="detail-item">
+                    <div className="detail-label">Duration</div>
+                    <div className="detail-value">2 Days</div>
+                  </div>
+                  <div className="detail-item">
+                    <div className="detail-label">Certification</div>
+                    <div className="detail-value">2 Years Valid</div>
+                  </div>
+                  <div className="detail-item">
+                    <div className="detail-label">Format</div>
+                    <div className="detail-value">Blended Learning</div>
+                  </div>
+                  <div className="detail-item">
+                    <div className="detail-label">Materials</div>
+                    <div className="detail-value">Included</div>
+                  </div>
+                </div>
+              </div>
+
               {/* Important Details Section */}
               <div className="course-section">
                 <div className="section-header">
@@ -240,7 +277,7 @@ function InstructorCourse() {
             {/* Pricing Sidebar */}
             <aside className="pricing-sidebar">
               <div className="pricing-card">
-                <h3 className="pricing-header">Course Investment</h3>
+                <h3 className="pricing-header">Course Pricing</h3>
                 
                 <div className="pricing-details">
                   <div className="price-item featured">
@@ -249,7 +286,7 @@ function InstructorCourse() {
                   </div>
                 </div>
 
-                <button className="register-btn">REGISTER NOW</button>
+                <button className="register-btn" onClick={openModal}>REGISTER NOW</button>
                 
                 <div className="payment-link">
                   <a href="https://app.autobooks.co/pay/elite-training-institute" target="_blank" rel="noopener noreferrer" className="pay-link">
@@ -292,6 +329,8 @@ function InstructorCourse() {
           </div>
         </div>
       </section>
+      
+      <RegistrationModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   )
 }

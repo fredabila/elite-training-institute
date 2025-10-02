@@ -13,7 +13,6 @@ function About() {
             <span>About Us</span>
           </nav>
           <h1 className="hero-title">Empowering Tomorrow's Healthcare Heroes</h1>
-          <p className="hero-subtitle">We're not just shaping careers, we're shaping the future of healthcare</p>
         </div>
       </section>
 
@@ -69,10 +68,87 @@ function About() {
       {/* Our Team Section */}
       <section className="our-team">
         <div className="container">
-          <h2 className="section-title">Our Team</h2>
-          <p className="team-placeholder">We will provide details later</p>
+          <h2 className="section-title">Meet Our Team</h2>
           <div className="team-grid">
-            {/* Placeholder for future team member cards */}
+            <div className="team-member">
+              <div className="member-photo">
+                <div className="photo-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="member-info">
+                <h3 className="member-name">Emmanuel Yeboah</h3>
+                <p className="member-title">MSN, FNP-C</p>
+                <p className="member-role">Executive Director</p>
+              </div>
+            </div>
+
+            <div className="team-member">
+              <div className="member-photo">
+                <div className="photo-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="member-info">
+                <h3 className="member-name">Abeiku Greene</h3>
+                <p className="member-title">EMPA, NYU</p>
+                <p className="member-role">Admissions & Enrollment Director</p>
+              </div>
+            </div>
+
+            <div className="team-member">
+              <div className="member-photo">
+                <div className="photo-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="member-info">
+                <h3 className="member-name">Nikki G. Yeboah</h3>
+                <p className="member-title">BSc. CIS</p>
+                <p className="member-role">Chief Operating Officer</p>
+              </div>
+            </div>
+
+            <div className="team-member">
+              <div className="member-photo">
+                <div className="photo-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="member-info">
+                <h3 className="member-name">Nana Kwame Apau-Duah</h3>
+                <p className="member-title">BSN. RN.</p>
+                <p className="member-role">Compliance & Accreditation Officer</p>
+              </div>
+            </div>
+
+            <div className="team-member">
+              <div className="member-photo">
+                <div className="photo-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="member-info">
+                <h3 className="member-name">Stephanie Gonzalez</h3>
+                <p className="member-title">MSN, FNP-BC</p>
+                <p className="member-role">Clinical Coordinator</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -160,9 +236,15 @@ function About() {
           <div className="accreditations-grid">
             <div className="accreditation-card">
               <div className="accreditation-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
+                <img src="https://via.placeholder.com/80x80/4A90E2/FFFFFF?text=NJ+DOE" alt="NJ Department of Education" className="accreditation-logo" />
+              </div>
+              <h3 className="accreditation-title">New Jersey Department of Education Approved</h3>
+              <p className="accreditation-description">Educational programs meet state education standards</p>
+            </div>
+
+            <div className="accreditation-card">
+              <div className="accreditation-icon">
+                <img src="https://via.placeholder.com/80x80/2ECC71/FFFFFF?text=NJ+DOH" alt="NJ Department of Health" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">New Jersey Department of Health Approved</h3>
               <p className="accreditation-description">All medical training programs meet state standards</p>
@@ -170,28 +252,23 @@ function About() {
 
             <div className="accreditation-card">
               <div className="accreditation-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
+                <img src="https://via.placeholder.com/80x80/E74C3C/FFFFFF?text=NJ+DOL" alt="NJ Department of Labor" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">New Jersey Department of Labor Approved</h3>
               <p className="accreditation-description">Career training programs certified for workforce development</p>
             </div>
 
-            <div className="accreditation-card aha-card">
+            <div className="accreditation-card">
               <div className="accreditation-icon">
-                <img src="/aha-authorized.jpg" alt="AHA Authorized" className="aha-logo" />
+                <img src="/aha-authorized.jpg" alt="AHA Authorized" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">American Heart Association Authorized Training Site</h3>
               <p className="accreditation-description">Official same-day AHA certifications</p>
-              <span className="verified-badge">VERIFIED</span>
             </div>
 
             <div className="accreditation-card">
               <div className="accreditation-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
+                <img src="https://via.placeholder.com/80x80/9B59B6/FFFFFF?text=NJ+BON" alt="NJ Board of Nursing" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">New Jersey Board of Nursing Approved</h3>
               <p className="accreditation-description">CHHA program meets all state requirements</p>
@@ -252,43 +329,28 @@ function About() {
           <div className="location-facilities-grid">
             <div className="location-info">
               <h3 className="location-title">Our Training Center</h3>
-              <div className="address-info">
-                <p className="address">2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
-               
-              </div>
-              <div className="hours-info">
-                <h4 className="hours-title">Hours of Operation</h4>
-                <div className="hours-list">
-                  <div className="hours-item">
-                    <svg className="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10"/>
-                      <polyline points="12,6 12,12 16,14"/>
-                    </svg>
-                    <span className="day">Tuesday:</span>
-                    <span className="time">9:00 AM - 5:00 PM</span>
-                  </div>
-                  <div className="hours-item">
-                    <svg className="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10"/>
-                      <polyline points="12,6 12,12 16,14"/>
-                    </svg>
-                    <span className="day">Thursday:</span>
-                    <span className="time">9:00 AM - 5:00 PM</span>
-                  </div>
-                  <div className="hours-item">
-                    <svg className="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10"/>
-                      <polyline points="12,6 12,12 16,14"/>
-                    </svg>
-                    <span className="day">Friday:</span>
-                    <span className="time">9:00 AM - 5:00 PM</span>
-                  </div>
-                  <div className="hours-item special">
-                    <svg className="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10"/>
-                      <polyline points="12,6 12,12 16,14"/>
-                    </svg>
-                    <span className="day">24/7 On-call support</span>
+              <div className="location-details">
+                <div className="address-info">
+                  <p className="address">2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
+                </div>
+                <div className="hours-info">
+                  <h4 className="hours-title">Hours of Operation</h4>
+                  <div className="hours-list">
+                    <div className="hours-item">
+                      <span className="day">Tuesday:</span>
+                      <span className="time">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="hours-item">
+                      <span className="day">Thursday:</span>
+                      <span className="time">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="hours-item">
+                      <span className="day">Friday:</span>
+                      <span className="time">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="hours-item special">
+                      <span className="day">24/7 On-call support</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -304,7 +366,7 @@ function About() {
           <h2 className="cta-title">Ready to Start Your Healthcare Journey?</h2>
           <p className="cta-subtitle">Get personalized guidance from our academic advisors</p>
           <div className="cta-buttons">
-            <a href="/contact" className="btn btn--primary cta-btn">REQUEST FREE CONSULTATION</a>
+            <a href="/contact" className="btn btn--primary cta-btn">REQUEST INFO</a>
             <a href="tel:8482801169" className="btn btn--secondary cta-btn">CALL 848.280.1169</a>
           </div>
           <p className="cta-hours">Available Tuesday, Thursday, Friday 9 AM - 5 PM, plus 24/7 on-call support</p>

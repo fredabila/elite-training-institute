@@ -79,7 +79,7 @@
 }
 
 .instructor-renewal-course-page .aha-hero-logo {
-  width: 150px;
+  width: 200px;
   height: auto;
   border-radius: 12px;
   box-shadow: 
@@ -459,22 +459,23 @@
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
+  color: #dc2626;
 }
 
 .detail-item:nth-child(1) .instructor-renewal-course-page .detail-value {
-  color: #f59e0b;
+  color: #dc2626;
 }
 
 .detail-item:nth-child(2) .instructor-renewal-course-page .detail-value {
-  color: #059669;
+  color: #dc2626;
 }
 
 .detail-item:nth-child(3) .instructor-renewal-course-page .detail-value {
-  color: #104aa4;
+  color: #dc2626;
 }
 
 .detail-item:nth-child(4) .instructor-renewal-course-page .detail-value {
-  color: #8b5cf6;
+  color: #dc2626;
 }
 
 /* Benefits Box */

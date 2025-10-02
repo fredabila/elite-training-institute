@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import './HeartSaverCourse.css'
+import RegistrationModal from '../RegistrationModal'
 
 function HeartSaverCourse() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
   return (
     <main className="heartsaver-course-page">
       {/* Hero Section */}
@@ -169,7 +175,7 @@ function HeartSaverCourse() {
                   </div>
                 </div>
 
-                <button className="register-btn">REGISTER NOW</button>
+                <button className="register-btn" onClick={openModal}>REGISTER NOW</button>
                 
                 <div className="payment-link">
                   <a href="https://app.autobooks.co/pay/elite-training-institute" target="_blank" rel="noopener noreferrer" className="pay-link">
@@ -212,6 +218,8 @@ function HeartSaverCourse() {
           </div>
         </div>
       </section>
+      
+      <RegistrationModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   )
 }

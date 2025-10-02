@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import './CHHAProgram.css'
+import EnrollmentModal from '../EnrollmentModal'
 
 function CHHAProgram() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
   return (
     <main className="chha-program-page">
       {/* Hero Section */}
@@ -11,9 +17,9 @@ function CHHAProgram() {
             {/* Breadcrumb Navigation */}
             <nav className="breadcrumb">
               <a href="/" className="breadcrumb-link">Home</a>
-              <span className="breadcrumb-separator">></span>
+              <span className="breadcrumb-separator">{'>'}</span>
               <a href="/courses" className="breadcrumb-link">Courses</a>
-              <span className="breadcrumb-separator">></span>
+              <span className="breadcrumb-separator">{'>'}</span>
               <span className="breadcrumb-current">CHHA Program</span>
             </nav>
             
@@ -292,7 +298,7 @@ function CHHAProgram() {
           <div className="pricing-content">
             <div className="pricing-card">
               <div className="pricing-header">
-                <h2>Program Investment</h2>
+                <h2>Program Pricing</h2>
                 <div className="pricing-badges">
                   <div className="original-price">Regular: $649.00</div>
                   <div className="current-price">NOW: $499.00</div>
@@ -327,7 +333,7 @@ function CHHAProgram() {
               </div>
               
               <div className="action-buttons">
-                <button className="enroll-btn">ENROLL NOW</button>
+                <button className="enroll-btn" onClick={openModal}>ENROLL NOW</button>
                 <a href="https://app.autobooks.co/pay/elite-training-institute" target="_blank" rel="noopener noreferrer" className="pay-btn">
                   <span>PAY HERE</span>
                   <svg className="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -341,6 +347,8 @@ function CHHAProgram() {
           </div>
         </div>
       </section>
+      
+      <EnrollmentModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   )
 }

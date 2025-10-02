@@ -17,19 +17,19 @@
   height: 72px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  gap: 16px;
+  justify-content: flex-start;
+  padding: 0 10px;
+  gap: 8px;
 }
 
 /* Ensure logo is at far left */
 .eti-header__inner > .eti-logo {
   order: -1;
   margin-right: auto;
-  margin-left: -50px;
+  margin-left: 0;
   padding-left: 0;
   position: relative;
-  left: -150px;
+  left: 0;
 }
 
 /* Logo */
@@ -58,27 +58,28 @@
 /* Contact card (glass) */
 .eti-contact {
   display: flex;
-  gap: 20px;
+  gap: 8px;
   align-items: center;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  padding: 10px 16px;
-  border-radius: 14px;
+  padding: 4px 8px;
+  border-radius: 12px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  flex-shrink: 0;
 }
 .eti-contact__item {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   text-decoration: none;
 }
 .eti-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.06);
   transition: transform 0.2s ease;
@@ -89,8 +90,9 @@
 .eti-contact__text {
   color: #ffffff;
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1;
+  white-space: nowrap;
 }
 .eti-contact__text--phone { font-weight: 500; }
 .eti-contact__text--email { font-weight: 400; }
@@ -99,7 +101,8 @@
 .eti-nav {
   display: flex;
   align-items: center;
-  margin-left: 16px;
+  margin-left: 12px;
+  flex-shrink: 0;
 }
 .eti-hamburger {
   display: none;
@@ -134,24 +137,26 @@
 .eti-nav__list {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 4px;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 .eti-nav__item { position: relative; }
 .eti-nav__link {
   position: relative;
   display: inline-block;
-  padding: 12px 22px;
-  border-radius: 999px;
+  padding: 4px 6px;
+  border-radius: 6px;
   color: #ffffff;
   text-decoration: none;
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 11px;
   line-height: 1;
   transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
 }
 .eti-nav__link::after {
   content: "";
@@ -175,22 +180,60 @@
   border-bottom: 3px solid #ff3131;
 }
 
+/* Contact Us Red Button */
+.eti-nav__link.contact-us-red {
+  background: #ff3131;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.eti-nav__link.contact-us-red:hover {
+  background: #e00000;
+  color: #ffffff;
+}
+
+.eti-nav__link.contact-us-red::after {
+  background: #ffffff;
+}
+
 /* Responsive */
+@media (max-width: 1200px) {
+  .eti-header__inner {
+    padding: 0 8px;
+  }
+  .eti-nav__list {
+    gap: 3px;
+  }
+  .eti-nav__link {
+    padding: 4px 5px;
+    font-size: 10px;
+  }
+  .eti-header__inner > .eti-logo {
+    left: 0;
+  }
+}
+
 @media (max-width: 1024px) {
   .eti-contact { display: none; }
   .eti-logo__image { height: 350px; }
+  .eti-header__inner {
+    padding: 0 8px;
+  }
   .eti-header__inner > .eti-logo {
-    margin-left: -50px;
-    left: -50px;
+    margin-left: 0;
+    left: 0;
   }
 }
 
 @media (max-width: 768px) {
   .eti-hamburger { display: inline-block; }
   .eti-logo__image { height: 300px; }
+  .eti-header__inner {
+    padding: 0 24px;
+  }
   .eti-header__inner > .eti-logo {
-    margin-left: -50px;
-    left: -50px;
+    margin-left: 0;
+    left: -15px;
   }
   .eti-nav__list {
     position: absolute;
@@ -218,8 +261,8 @@
     padding: 0 16px;
   }
   .eti-header__inner > .eti-logo {
-    margin-left: -30px;
-    left: -30px;
+    margin-left: 0;
+    left: -10px;
   }
 }
 

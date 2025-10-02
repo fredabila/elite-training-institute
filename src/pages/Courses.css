@@ -230,45 +230,32 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   border: 1px solid rgba(16, 74, 164, 0.1);
-  padding: 0 !important;
-  min-height: 500px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-end !important;
-  position: relative !important;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .courses-page .course-card .card-background {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  z-index: 1 !important;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  z-index: 1;
 }
 
 .courses-page .course-card .background-image {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.courses-page .course-card .card-content {
-  position: relative !important;
-  z-index: 2 !important;
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(15px) !important;
-  border-radius: 15px !important;
-  margin: 25px !important;
-  margin-top: auto !important;
-  padding: 20px !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  height: 320px !important;
-  overflow-y: auto !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
+.courses-page .course-card .card-info {
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(16, 74, 164, 0.1);
 }
 
 .course-card:hover {
@@ -292,8 +279,107 @@
 
 /* Removed - now using background images */
 
-.courses-page .card-content {
-  padding: 30px;
+/* New card info styling */
+.courses-page .card-info .price-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff3131;
+  background: rgba(255, 49, 49, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 49, 49, 0.3);
+}
+
+.courses-page .card-info .price-label {
+  color: #ff3131;
+  font-weight: 700;
+}
+
+.courses-page .card-info .price-separator {
+  color: #ff3131;
+  font-weight: 600;
+}
+
+.courses-page .card-info .certification-info {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff3131;
+  background: rgba(255, 49, 49, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 49, 49, 0.2);
+}
+
+.courses-page .card-info .duration-info {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #104aa4;
+  background: rgba(16, 74, 164, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(16, 74, 164, 0.2);
+}
+
+.courses-page .card-info .program-info {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #104aa4;
+  text-align: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(16, 74, 164, 0.1);
+  margin-bottom: 8px;
+}
+
+/* Button styling */
+.courses-page .card-info .register-btn {
+  background: #104aa4;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.courses-page .card-info .register-btn:hover {
+  background: #0d3a7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 74, 164, 0.3);
+}
+
+.courses-page .card-info .coming-soon-btn {
+  background: #ff3131;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.courses-page .card-info .coming-soon-btn:hover {
+  background: #e00000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 49, 49, 0.3);
 }
 
 .courses-page .course-title {
@@ -471,11 +557,9 @@
 }
 
 .courses-page .instructor-card .card-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
+  width: 100%;
+  height: 300px;
   z-index: 1;
 }
 
@@ -485,22 +569,13 @@
   object-fit: cover;
 }
 
-.courses-page .instructor-card .card-content {
-  position: relative !important;
-  z-index: 2 !important;
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(15px) !important;
-  border-radius: 15px !important;
-  margin: 25px !important;
-  margin-top: auto !important;
-  padding: 20px !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  height: 320px !important;
-  overflow-y: auto !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
+.courses-page .instructor-card .card-info {
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(16, 74, 164, 0.1);
 }
 
 .courses-page .instructor-card {
@@ -579,11 +654,9 @@
 }
 
 .courses-page .medical-card .card-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
+  width: 100%;
+  height: 300px;
   z-index: 1;
 }
 
@@ -593,22 +666,13 @@
   object-fit: cover;
 }
 
-.courses-page .medical-card .card-content {
-  position: relative !important;
-  z-index: 2 !important;
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(15px) !important;
-  border-radius: 15px !important;
-  margin: 25px !important;
-  margin-top: auto !important;
-  padding: 20px !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  height: 320px !important;
-  overflow-y: auto !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
+.courses-page .medical-card .card-info {
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(16, 74, 164, 0.1);
 }
 
 /* Custom scrollbar for content containers */
@@ -923,16 +987,20 @@
 }
 
 .cta-btn.courses-page .secondary {
-  background: rgba(255, 255, 255, 0.2);
+  background: #ff3131;
   color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  border: 2px solid #ff3131;
+  backdrop-filter: none;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 49, 49, 0.3);
 }
 
 .cta-btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: #e00000;
+  color: #ffffff;
+  border-color: #e00000;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 49, 49, 0.4);
 }
 
 .courses-page .cta-phone {

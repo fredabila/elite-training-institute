@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import './InstructorRenewalCourse.css'
+import RegistrationModal from '../RegistrationModal'
 
 function InstructorRenewalCourse() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
   return (
     <main className="instructor-renewal-course-page">
       {/* Hero Section */}
@@ -160,7 +166,7 @@ function InstructorRenewalCourse() {
                 <div className="details-grid">
                   <div className="detail-item">
                     <div className="detail-label">Duration</div>
-                    <div className="detail-value">1 Day</div>
+                    <div className="detail-value">4 Hours</div>
                   </div>
                   <div className="detail-item">
                     <div className="detail-label">Certification</div>
@@ -232,7 +238,7 @@ function InstructorRenewalCourse() {
                   </div>
                 </div>
 
-                <button className="register-btn">REGISTER NOW</button>
+                <button className="register-btn" onClick={openModal}>REGISTER NOW</button>
                 
                 <div className="payment-link">
                   <a href="https://app.autobooks.co/pay/elite-training-institute" target="_blank" rel="noopener noreferrer" className="pay-link">
@@ -275,6 +281,8 @@ function InstructorRenewalCourse() {
           </div>
         </div>
       </section>
+      
+      <RegistrationModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   )
 }

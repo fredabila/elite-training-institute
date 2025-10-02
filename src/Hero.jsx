@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import ContactModal from './ContactModal'
 import './Hero.css'
 
 const slides = [
@@ -7,7 +8,7 @@ const slides = [
     subtitle: 'State-approved healthcare training you can trust',
     titleSize: 48,
     bgClass: 'bg-medical-pattern',
-    image: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://www.teachhub.com/wp-content/uploads/2020/09/Sept-9-Benefits-of-Group-Work_web.jpg',
   },
   {
     title: 'We are Authorized Training Site - Get Same-Day American Heart Association (AHA) Certifications',
@@ -22,30 +23,34 @@ const slides = [
     subtitle: 'Learn at your own pace, on your schedule',
     titleSize: 44,
     bgClass: 'bg-calendar-clock',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://transitionsusa.org/wp-content/uploads/2024/12/shutterstock_2111420681-scaled.jpg',
   },
   {
     title: 'High-Quality, Hands-On Training to Prepare You for a Rewarding Healthcare Career',
     subtitle: 'Real skills, real experience, real results',
     titleSize: 46,
     bgClass: 'bg-healthcare-pros',
-    image: 'https://images.unsplash.com/photo-1584467735871-6b3f3a2a9f83?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://d2cbg94ubxgsnp.cloudfront.net/Pictures/2000xAny/6/8/9/536689_lab_practicals_webinar_image_credit_gettyimages1372800323_32_181878.jpg',
   },
   {
     title: 'Job Placement Assistance to Help Graduates Start Working Immediately After Completion',
     subtitle: 'Your career starts here',
     titleSize: 44,
     bgClass: 'bg-career',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://wolfcareers.com/wp-content/uploads/2021/12/job-placement-min.jpeg',
   },
 ]
 
 function Hero() {
   const [index, setIndex] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const timerRef = useRef(null)
 
   const next = () => setIndex((i) => (i + 1) % slides.length)
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length)
+  
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
 
   useEffect(() => {
     timerRef.current = setInterval(next, 5000)
@@ -128,9 +133,11 @@ function Hero() {
         ))}
       </div>
 
-      <a href="#request-info" className="cta" aria-label="Request information">
+      <button className="cta" onClick={openModal} aria-label="Request information">
         REQUEST INFO
-      </a>
+      </button>
+      
+      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   )
 }

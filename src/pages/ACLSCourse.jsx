@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import './ACLSCourse.css'
+import RegistrationModal from '../RegistrationModal'
 
 function ACLSCourse() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
   return (
     <main className="acls-course-page">
       {/* Hero Section */}
@@ -143,7 +149,7 @@ function ACLSCourse() {
                 <div className="details-grid">
                   <div className="detail-item">
                     <div className="detail-label">Duration</div>
-                    <div className="detail-value">2 Days</div>
+                    <div className="detail-value">4 Hours</div>
                   </div>
                   <div className="detail-item">
                     <div className="detail-label">Certification</div>
@@ -177,7 +183,7 @@ function ACLSCourse() {
                   </div>
                 </div>
 
-                <button className="register-btn">REGISTER NOW</button>
+                <button className="register-btn" onClick={openModal}>REGISTER NOW</button>
                 
                 <div className="payment-link">
                   <a href="https://app.autobooks.co/pay/elite-training-institute" target="_blank" rel="noopener noreferrer" className="pay-link">
@@ -220,6 +226,8 @@ function ACLSCourse() {
           </div>
         </div>
       </section>
+      
+      <RegistrationModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   )
 }

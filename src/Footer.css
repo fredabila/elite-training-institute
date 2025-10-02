@@ -53,13 +53,13 @@
 .footer-logo {
   margin-bottom: 16px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .footer-logo-link {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-decoration: none;
   transition: transform 0.3s ease;
   width: 100%;
@@ -154,6 +154,34 @@
   font-weight: 400;
   color: #cbd5e1;
   line-height: 1.4;
+}
+
+.address-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.address-link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.address-link span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #cbd5e1;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.address-link:hover span {
+  color: #3b82f6;
 }
 
 .contact-link {
@@ -295,6 +323,15 @@
 
 .social-link.tiktok svg {
   color: #ff0050;
+}
+
+.social-link.instagram:hover {
+  background: rgba(225, 48, 108, 0.1);
+  border-color: rgba(225, 48, 108, 0.3);
+}
+
+.social-link.instagram svg {
+  color: #e1306c;
 }
 
 /* Quick Links */

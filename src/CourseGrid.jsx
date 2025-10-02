@@ -200,7 +200,6 @@ function CourseGrid() {
               
               {/* Glass Container with Content */}
               <div className="glass-container">
-              <h3 className="title">{c.title}</h3>
                 {c.type === 'soon' ? (
               <button
                     className={`btn btn--disabled`}

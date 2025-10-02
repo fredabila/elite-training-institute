@@ -79,7 +79,7 @@
 }
 
 .instructor-course-page .aha-hero-logo {
-  width: 150px;
+  width: 200px;
   height: auto;
   border-radius: 12px;
   box-shadow: 
@@ -232,6 +232,46 @@
   color: #475569;
   line-height: 1.6;
   margin: 0;
+}
+
+/* Details Grid */
+.instructor-course-page .details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.instructor-course-page .detail-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.instructor-course-page .detail-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #104aa4;
+}
+
+.instructor-course-page .detail-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.instructor-course-page .detail-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #dc2626;
 }
 
 /* Prerequisites Box */
@@ -722,6 +762,11 @@
   
   .instructor-course-page .section-title {
     font-size: 24px;
+  }
+  
+  .instructor-course-page .details-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
   
   .instructor-course-page .detail-highlight {

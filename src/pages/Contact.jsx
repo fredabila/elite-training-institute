@@ -178,8 +178,8 @@ function Contact() {
                   <h3 className="card-title">Email</h3>
                 </div>
                 <p className="card-content">
-                  <a href="mailto:infoateliteti@gmail.com" className="contact-link">
-                    infoateliteti@gmail.com
+                  <a href="mailto:info@trainatelite.com" className="contact-link">
+                    info@trainatelite.com
                   </a>
                 </p>
               </div>

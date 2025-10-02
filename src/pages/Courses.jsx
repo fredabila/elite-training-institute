@@ -125,23 +125,13 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/0V1MYzK8/Whats-App-Image-2025-09-22-at-16-04-14-25058794.jpg" alt="BLS Course" className="background-image" />
               </div>
-              <div className="card-content">
-                <h3 className="course-title">Basic Life Support (BLS)</h3>
-                <p className="course-highlights">Same-day certification • 4-hour course • Healthcare professionals</p>
-                <p className="course-details">CPR, AED use, and emergency response training</p>
-                
-                <div className="pricing-section">
-                  <div className="pricing-box">
-                    <span className="price-label">Initial:</span>
-                    <span className="price-value">$95</span>
-                    <span className="price-separator">|</span>
-                    <span className="price-label">Renewal:</span>
-                    <span className="price-value">$85</span>
-                  </div>
+              <div className="card-info">
+                <div className="price-info">
+                  <span className="price-label">Initial: $95</span>
+                  <span className="price-separator">|</span>
+                  <span className="price-label">Renewal: $85</span>
                 </div>
-                
-                <div className="duration-badge">4 hours</div>
-                
+                <div className="certification-info">Same Day Certification</div>
                 <button className="register-btn" onClick={() => window.open('/bls-course', '_blank')}>REGISTER</button>
               </div>
             </div>
@@ -153,22 +143,13 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/1fPrG6Mb/Whats-App-Image-2025-09-22-at-16-04-59-10d96c26.jpg" alt="ACLS Course" className="background-image" />
               </div>
-              <div className="card-content">
-                <h3 className="course-title">Advanced Cardiovascular Life Support (ACLS)</h3>
-                <p className="course-highlights">Advanced emergency care • 2-day course • Healthcare professionals</p>
-                
-                <div className="pricing-section">
-                  <div className="pricing-box">
-                    <span className="price-label">Initial:</span>
-                    <span className="price-value">$240</span>
-                    <span className="price-separator">|</span>
-                    <span className="price-label">Renewal:</span>
-                    <span className="price-value">$200</span>
-                  </div>
+              <div className="card-info">
+                <div className="price-info">
+                  <span className="price-label">Initial: $240</span>
+                  <span className="price-separator">|</span>
+                  <span className="price-label">Renewal: $200</span>
                 </div>
-                
-                <div className="duration-badge">2 days</div>
-                
+                <div className="certification-info">Same Day Certification</div>
                 <button className="register-btn" onClick={() => window.open('/acls-course', '_blank')}>REGISTER</button>
               </div>
             </div>
@@ -180,22 +161,13 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/JRrpDyWw/Whats-App-Image-2025-09-22-at-16-04-14-94a2ff36.jpg" alt="PALS Course" className="background-image" />
               </div>
-              <div className="card-content">
-                <h3 className="course-title">Pediatric Advanced Life Support (PALS)</h3>
-                <p className="course-highlights">Pediatric emergency care • 2-day course • Child healthcare providers</p>
-                
-                <div className="pricing-section">
-                  <div className="pricing-box">
-                    <span className="price-label">Initial:</span>
-                    <span className="price-value">$240</span>
-                    <span className="price-separator">|</span>
-                    <span className="price-label">Renewal:</span>
-                    <span className="price-value">$200</span>
-                  </div>
+              <div className="card-info">
+                <div className="price-info">
+                  <span className="price-label">Initial: $240</span>
+                  <span className="price-separator">|</span>
+                  <span className="price-label">Renewal: $200</span>
                 </div>
-                
-                <div className="duration-badge">2 days</div>
-                
+                <div className="certification-info">Same Day Certification</div>
                 <button className="register-btn" onClick={() => window.open('/pals-course', '_blank')}>REGISTER</button>
               </div>
             </div>
@@ -207,22 +179,13 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/fY5g2xwK/Whats-App-Image-2025-09-22-at-16-04-14-f0697797.jpg" alt="HeartSaver Course" className="background-image" />
               </div>
-              <div className="card-content">
-                <h3 className="course-title">HeartSaver First Aid CPR AED</h3>
-                <p className="course-highlights">Community CPR • 1-day course • General public</p>
-                
-                <div className="pricing-section">
-                  <div className="pricing-box">
-                    <span className="price-label">Initial:</span>
-                    <span className="price-value">$140</span>
-                    <span className="price-separator">|</span>
-                    <span className="price-label">Renewal:</span>
-                    <span className="price-value">$120</span>
-                  </div>
+              <div className="card-info">
+                <div className="price-info">
+                  <span className="price-label">Initial: $140</span>
+                  <span className="price-separator">|</span>
+                  <span className="price-label">Renewal: $120</span>
                 </div>
-                
-                <div className="duration-badge">6 hours</div>
-                
+                <div className="certification-info">Same Day Certification</div>
                 <button className="register-btn" onClick={() => window.open('/heartsaver-course', '_blank')}>REGISTER</button>
               </div>
             </div>
@@ -246,22 +209,12 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/Kct2yz5j/Whats-App-Image-2025-09-22-at-16-04-14-7f14413f.jpg" alt="BLS/CPR Instructor Course" className="background-image" />
               </div>
-              <div className="premium-badge">INSTRUCTOR</div>
-              <div className="card-content">
-                <h3 className="course-title">BLS/CPR Instructor - Initial</h3>
-                <p className="course-highlights">Become an AHA instructor • Teach BLS & HeartSaver • Blended learning</p>
-                
-                <div className="pricing-section">
-                  <div className="pricing-box large">
-                    <span className="price-label">Course Fee:</span>
-                    <span className="price-value large">$549.00</span>
-                  </div>
+              <div className="card-info">
+                <div className="price-info">
+                  <span className="price-label">Course Fee: $549</span>
                 </div>
-                
-                <div className="duration-badge">2-3 weeks</div>
-                <div className="requirements-badge">Current BLS required</div>
-                
-                <button className="instructor-btn" onClick={() => window.open('/bls-instructor-initial', '_blank')}>REGISTER</button>
+                <div className="duration-info">Initial - 2 days</div>
+                <button className="register-btn" onClick={() => window.open('/bls-instructor-initial', '_blank')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -272,21 +225,12 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/Kct2yz5j/Whats-App-Image-2025-09-22-at-16-04-14-7f14413f.jpg" alt="BLS/CPR Instructor Course" className="background-image" />
               </div>
-              <div className="premium-badge">RENEWAL</div>
-              <div className="card-content">
-                <h3 className="course-title">BLS/CPR Instructor - Renewal</h3>
-                <p className="course-highlights">Maintain instructor status • Skills update • Administrative review</p>
-                
-                <div className="pricing-section">
-                  <div className="pricing-box large">
-                    <span className="price-label">Renewal Fee:</span>
-                    <span className="price-value large">$349.00</span>
-                  </div>
+              <div className="card-info">
+                <div className="price-info">
+                  <span className="price-label">Renewal Fee: $349</span>
                 </div>
-                
-                <div className="duration-badge">1 day</div>
-                
-                <button className="instructor-btn" onClick={() => window.open('/bls-instructor-renewal', '_blank')}>REGISTER</button>
+                <div className="duration-info">Renewal - 4 hours</div>
+                <button className="register-btn" onClick={() => window.open('/bls-instructor-renewal', '_blank')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -310,26 +254,12 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/d44Bjy5x/Program-Covers-images-0.jpg" alt="Certified Home Health Aide (CHHA) Program" className="background-image" />
               </div>
-              <div className="availability-badge available">AVAILABLE NOW</div>
-              <div className="card-content">
-                <h3 className="course-title">Certified Home Health Aide (CHHA)</h3>
-                <p className="course-highlights">2-week program • Hybrid learning • Job placement assistance</p>
-                
-                <div className="special-pricing">
-                  <div className="special-price-box">
-                    <span className="special-label">SPECIAL PRICE:</span>
-                    <span className="special-price">$499</span>
-                    <span className="original-price">(Was $649)</span>
-                  </div>
-                  <p className="urgency-text">Until October 31, 2025</p>
+              <div className="card-info">
+                <div className="program-info">CHHA: 2 Weeks | Hybrid Learning</div>
+                <div className="price-info">
+                  <span className="price-label">Special Price: $499</span>
                 </div>
-                
-                <div className="program-details">
-                  <div className="duration-info">2 weeks (60hrs classroom + 16hrs clinical)</div>
-                  <div className="prerequisites">18+ • High school diploma • Background check</div>
-                </div>
-                
-                <button className="enroll-btn pulse" onClick={() => window.open('/chha-program', '_blank')}>ENROLL NOW</button>
+                <button className="register-btn" onClick={() => window.open('/chha-program', '_blank')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -340,18 +270,9 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/ynW08jQ6/Program-Covers-images-1.jpg" alt="Medical Assistant (MA) Program" className="background-image" />
               </div>
-              <div className="availability-badge coming-soon">COMING SOON</div>
-              <div className="card-content">
-                <h3 className="course-title">Medical Assistant (MA)</h3>
-                <p className="course-highlights">5-month program • 4 months online + 1 month clinical</p>
-                <p className="certification-info">National certification prep (NHA CCMA)</p>
-                
-                <div className="program-details">
-                  <div className="duration-info">5 months</div>
-                  <div className="prerequisites">18+ • High school diploma • Entrance assessment</div>
-                </div>
-                
-                <button className="notify-btn" onClick={() => window.open('/ma-program', '_blank')}>COMING SOON</button>
+              <div className="card-info">
+                <div className="program-info">MA: 5 Months | Hybrid Learning</div>
+                <button className="coming-soon-btn" onClick={() => window.open('/ma-program', '_blank')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -362,17 +283,9 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/MxC7vpTy/Program-Covers-images-2.jpg" alt="Certified Medication Aide (CMA) Program" className="background-image" />
               </div>
-              <div className="availability-badge coming-soon">COMING SOON</div>
-              <div className="card-content">
-                <h3 className="course-title">Certified Medication Aide (CMA)</h3>
-                <p className="course-highlights">2-week program • Requires active CNA/CHHA/PCA</p>
-                <p className="certification-info">Med administration in licensed facilities</p>
-                
-                <div className="program-details">
-                  <div className="duration-info">2 weeks (48hrs online + 3 days hands-on)</div>
-                </div>
-                
-                <button className="notify-btn" onClick={() => window.open('/cma-program', '_blank')}>COMING SOON</button>
+              <div className="card-info">
+                <div className="program-info">CMA: 2 Weeks | Hybrid Learning</div>
+                <button className="coming-soon-btn" onClick={() => window.open('/cma-program', '_blank')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -383,17 +296,9 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/QvHBqbNQ/Program-Covers-images-3.jpg" alt="Certified Nursing Assistant (CNA) Program" className="background-image" />
               </div>
-              <div className="availability-badge coming-soon">COMING SOON</div>
-              <div className="card-content">
-                <h3 className="course-title">Certified Nurse Assistant (CNA)</h3>
-                <p className="course-highlights">4-week program • Long-term care and hospitals</p>
-                <p className="certification-info">State exam preparation included</p>
-                
-                <div className="program-details">
-                  <div className="duration-info">4 weeks (50hrs classroom + 40hrs clinical)</div>
-                </div>
-                
-                <button className="notify-btn" onClick={() => window.open('/cna-program', '_blank')}>COMING SOON</button>
+              <div className="card-info">
+                <div className="program-info">CNA: 4 Weeks | Hybrid Learning</div>
+                <button className="coming-soon-btn" onClick={() => window.open('/cna-program', '_blank')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -404,17 +309,9 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/GQw4ytVp/Program-Covers-images-4.jpg" alt="Patient Care Technician (PCT) Program" className="background-image" />
               </div>
-              <div className="availability-badge coming-soon">COMING SOON</div>
-              <div className="card-content">
-                <h3 className="course-title">Patient Care Technician (PCT)</h3>
-                <p className="course-highlights">5-month program • Advanced CNA skills + Phlebotomy + EKG</p>
-                <p className="certification-info">Multiple national certifications eligible</p>
-                
-                <div className="program-details">
-                  <div className="duration-info">5 months (300hrs classroom + 120hrs clinical)</div>
-                </div>
-                
-                <button className="notify-btn" onClick={() => window.open('/pct-program', '_blank')}>COMING SOON</button>
+              <div className="card-info">
+                <div className="program-info">PCT: 5 Months | Hybrid Learning</div>
+                <button className="coming-soon-btn" onClick={() => window.open('/pct-program', '_blank')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -425,17 +322,9 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/qMbnhY2j/Program-Covers-images-5.jpg" alt="Phlebotomy Technician Program" className="background-image" />
               </div>
-              <div className="availability-badge coming-soon">COMING SOON</div>
-              <div className="card-content">
-                <h3 className="course-title">Phlebotomy Technician</h3>
-                <p className="course-highlights">2-month program • Blood collection specialist</p>
-                <p className="certification-info">Hospital and lab employment</p>
-                
-                <div className="program-details">
-                  <div className="duration-info">2 months (50hrs classroom + 120hrs clinical)</div>
-                </div>
-                
-                <button className="notify-btn" onClick={() => window.open('/phlebotomy-program', '_blank')}>COMING SOON</button>
+              <div className="card-info">
+                <div className="program-info">Phlebotomy: 2 Months | Hybrid Learning</div>
+                <button className="coming-soon-btn" onClick={() => window.open('/phlebotomy-program', '_blank')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -446,17 +335,9 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/8DbSM0RD/Program-Covers-images-6.jpg" alt="EKG Technician Program" className="background-image" />
               </div>
-              <div className="availability-badge coming-soon">COMING SOON</div>
-              <div className="card-content">
-                <h3 className="course-title">EKG Technician</h3>
-                <p className="course-highlights">2-month program • Cardiac monitoring specialist</p>
-                <p className="certification-info">Hospital and clinic employment</p>
-                
-                <div className="program-details">
-                  <div className="duration-info">2 months (40hrs classroom + 100hrs clinical)</div>
-                </div>
-                
-                <button className="notify-btn" onClick={() => window.open('/ekg-program', '_blank')}>COMING SOON</button>
+              <div className="card-info">
+                <div className="program-info">EKG: 2 Months | Hybrid Learning</div>
+                <button className="coming-soon-btn" onClick={() => window.open('/ekg-program', '_blank')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -467,17 +348,9 @@ function Courses() {
               <div className="card-background">
                 <img src="https://i.ibb.co/4RpYHTb8/Program-Covers-images-7.jpg" alt="Pharmacy Technician Program" className="background-image" />
               </div>
-              <div className="availability-badge coming-soon">COMING SOON</div>
-              <div className="card-content">
-                <h3 className="course-title">Pharmacy Technician</h3>
-                <p className="course-highlights">4-month program • Retail and hospital pharmacy</p>
-                <p className="certification-info">National certification preparation</p>
-                
-                <div className="program-details">
-                  <div className="duration-info">4 months (3 months online + 1 month clinical)</div>
-                </div>
-                
-                <button className="notify-btn" onClick={() => window.open('/pharmacy-program', '_blank')}>COMING SOON</button>
+              <div className="card-info">
+                <div className="program-info">Pharmacy: 4 Months | Hybrid Learning</div>
+                <button className="coming-soon-btn" onClick={() => window.open('/pharmacy-program', '_blank')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -494,7 +367,7 @@ function Courses() {
             
             <div className="cta-buttons">
               <button className="cta-btn primary">REQUEST INFO</button>
-              <button className="cta-btn secondary">SCHEDULE CONSULTATION</button>
+              <a href="tel:8482801169" className="cta-btn secondary">CALL US</a>
             </div>
             
             <p className="cta-phone">Call us at <a href="tel:8482801169">848.280.1169</a> for immediate assistance</p>
