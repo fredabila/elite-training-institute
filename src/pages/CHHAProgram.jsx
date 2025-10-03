@@ -41,7 +41,7 @@ function CHHAProgram() {
           <div className="overview-content">
             <div className="intro-paragraph">
               <p>
-                At Elite Training Institute, our CHHA program is designed to prepare students to provide compassionate and competent care to patients in their homes. The program aligns with the New Jersey Department of Health standards, ensuring that our graduates are equipped with the necessary skills and knowledge to excel in the home health care field.
+                At Elite Training Institute, our CHHA program is designed to prepare students to provide compassionate and competent care to patients in their homes. The program aligns with the New Jersey Board of Nursing standards, ensuring that our graduates are equipped with the necessary skills and knowledge to excel in the home health care field.
               </p>
             </div>
 
@@ -72,7 +72,6 @@ function CHHAProgram() {
                           </svg>
                         </div>
                         <h4>Online Instruction</h4>
-                        <div className="hours-badge">Classroom: 60 hours</div>
                       </div>
                       <p>Students engage in comprehensive online coursework covering:</p>
                       <ul className="topics-list">
@@ -95,8 +94,7 @@ function CHHAProgram() {
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                           </svg>
                         </div>
-                        <h4>In-Person Clinical Training</h4>
-                        <div className="hours-badge">16 hours</div>
+                         <h4>In-Person Clinical Training</h4>
                       </div>
                       <p>Supervised hands-on experience in a home or clinical setting, practicing patient care tasks such as bathing, feeding, mobility assistance, and vital signs under the guidance of licensed professionals.</p>
                     </div>
@@ -124,7 +122,7 @@ function CHHAProgram() {
                       <div className="timeline-breakdown">
                         <div className="breakdown-item">
                           <span className="breakdown-label">Online Theory:</span>
-                          <span className="breakdown-value">60 hours</span>
+                          <span className="breakdown-value">Comprehensive</span>
                         </div>
                         <div className="breakdown-item">
                           <span className="breakdown-label">Clinical Practice:</span>
@@ -192,8 +190,8 @@ function CHHAProgram() {
                     </svg>
                   </div>
                   <div className="badge-content">
-                    <h3>NJ Department of Health Licensure</h3>
-                    <p>Graduates are eligible to apply for NJ Certified Homemaker-Home Health Aide licensure through the New Jersey Department of Health.</p>
+                    <h3>New Jersey Board of Nursing Licensure</h3>
+                    <p>Graduates are eligible to apply for NJ Certified Homemaker-Home Health Aide licensure through the New Jersey Board of Nursing.</p>
                   </div>
                 </div>
                 

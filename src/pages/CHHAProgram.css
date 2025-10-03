@@ -347,9 +347,9 @@
   font-family: 'Poppins', sans-serif;
   font-size: 48px;
   font-weight: 800;
-  color: #f59e0b;
+  color: #dc2626;
   margin-bottom: 10px;
-  text-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+  text-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
 }
 
 .chha-program-page .timeline-description {
@@ -380,14 +380,14 @@
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #475569;
+  color: #dc2626;
 }
 
 .chha-program-page .breakdown-value {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #f59e0b;
+  color: #dc2626;
 }
 
 /* Eligibility Section */
@@ -892,6 +892,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .chha-program-page .enroll-btn {
@@ -914,13 +921,6 @@
   background: linear-gradient(135deg, #16a34a, #15803d);
 }
 
-.chha-program-page .pay-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-decoration: none;
-}
 
 .chha-program-page .external-link-icon {
   width: 16px;

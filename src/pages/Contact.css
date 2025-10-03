@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #0b192c 0%, transparent 100%);
+  background: transparent;
   z-index: 1;
 }
 
@@ -625,6 +625,40 @@
   height: 1px;
   background: #000000;
   margin: 0 30px;
+}
+
+/* Address Link Styling */
+.contact-page .address-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.contact-page .address-link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.contact-page .address-link .card-content {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-page .address-link:hover .card-content {
+  color: #3b82f6;
+}
+
+.contact-page .address-link p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-page .address-link:hover p {
+  color: #3b82f6;
 }
 
 /* Responsive Design */

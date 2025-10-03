@@ -37,8 +37,8 @@ function Footer() {
                       rel="noopener noreferrer"
                       className="address-link"
                     >
-                      <span>2165 Morris Ave, Suite 15</span>
-                      <span>Union, NJ 07083</span>
+                    <span>2165 Morris Ave, Suite 15</span>
+                    <span>Union, NJ 07083</span>
                     </a>
                   </div>
                 </div>

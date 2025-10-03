@@ -1,4 +1,4 @@
-.course-grid { background: #0b192c; padding: 120px 16px; }
+.course-grid { background: #0f1419; padding: 120px 16px; }
 .course-grid__container { max-width: 1200px; margin: 0 auto; }
 
 .course-grid__header { text-align: center; margin-bottom: 80px; }
@@ -111,11 +111,11 @@
   backdrop-filter: blur(10px);
   font-weight: 500;
   text-shadow: none;
-  padding: 4px 8px;
-  font-size: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
   border-radius: 4px;
-  min-width: 60px;
-  height: 28px;
+  min-width: 70px;
+  height: 32px;
 }
 
 .glass-container .btn:hover {

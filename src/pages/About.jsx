@@ -331,7 +331,14 @@ function About() {
               <h3 className="location-title">Our Training Center</h3>
               <div className="location-details">
                 <div className="address-info">
-                  <p className="address">2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
+                  <a 
+                    href="https://www.google.com/maps/search/2165+Morris+Ave+Suite+15+Union+NJ+07083" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="address-link"
+                  >
+                    <p className="address">2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
+                  </a>
                 </div>
                 <div className="hours-info">
                   <h4 className="hours-title">Hours of Operation</h4>

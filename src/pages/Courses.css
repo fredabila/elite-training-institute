@@ -283,6 +283,7 @@
 .courses-page .card-info .price-info {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -292,6 +293,27 @@
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid rgba(255, 49, 49, 0.3);
+}
+
+.courses-page .card-info .price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.courses-page .card-info .price-note {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff3131;
+  opacity: 0.8;
+}
+
+/* CHHA specific pricing layout */
+.courses-page .card-info .price-info.chha-pricing {
+  flex-direction: column;
+  gap: 4px;
 }
 
 .courses-page .card-info .price-label {
@@ -362,7 +384,7 @@
 }
 
 .courses-page .card-info .coming-soon-btn {
-  background: #ff3131;
+  background: #9ca3af;
   color: #ffffff;
   border: none;
   padding: 12px 24px;
@@ -374,12 +396,14 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  opacity: 0.7;
 }
 
 .courses-page .card-info .coming-soon-btn:hover {
-  background: #e00000;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 49, 49, 0.3);
+  background: #6b7280;
+  opacity: 0.8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .courses-page .course-title {

@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #0b192c 0%, transparent 100%);
+  background: transparent;
   z-index: 1;
 }
 
@@ -900,6 +900,30 @@
   margin: 0;
 }
 
+
+/* Address Link Styling */
+.about-page .address-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.about-page .address-link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.about-page .address-link .address {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-page .address-link:hover .address {
+  color: #3b82f6;
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {

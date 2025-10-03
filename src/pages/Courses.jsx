@@ -128,7 +128,7 @@ function Courses() {
               <div className="card-info">
                 <div className="price-info">
                   <span className="price-label">Initial: $95</span>
-                  <span className="price-separator">|</span>
+                    <span className="price-separator">|</span>
                   <span className="price-label">Renewal: $85</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
@@ -146,7 +146,7 @@ function Courses() {
               <div className="card-info">
                 <div className="price-info">
                   <span className="price-label">Initial: $240</span>
-                  <span className="price-separator">|</span>
+                    <span className="price-separator">|</span>
                   <span className="price-label">Renewal: $200</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
@@ -164,7 +164,7 @@ function Courses() {
               <div className="card-info">
                 <div className="price-info">
                   <span className="price-label">Initial: $240</span>
-                  <span className="price-separator">|</span>
+                    <span className="price-separator">|</span>
                   <span className="price-label">Renewal: $200</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
@@ -182,7 +182,7 @@ function Courses() {
               <div className="card-info">
                 <div className="price-info">
                   <span className="price-label">Initial: $140</span>
-                  <span className="price-separator">|</span>
+                    <span className="price-separator">|</span>
                   <span className="price-label">Renewal: $120</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
@@ -256,10 +256,16 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">CHHA: 2 Weeks | Hybrid Learning</div>
-                <div className="price-info">
-                  <span className="price-label">Special Price: $499</span>
+                <div className="price-info chha-pricing">
+                  <div className="price-row">
+                    <span className="price-label">Regular: $649.00</span>
+                  </div>
+                  <div className="price-row">
+                    <span className="price-label">Now: $499.00</span>
+                    <span className="price-note">(Until October 31, 2025)</span>
+                  </div>
                 </div>
-                <button className="register-btn" onClick={() => window.open('/chha-program', '_blank')}>REGISTER</button>
+                <button className="register-btn" onClick={() => window.open('/chha-program', '_blank')}>ENROLL NOW</button>
               </div>
             </div>
             )}

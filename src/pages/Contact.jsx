@@ -144,10 +144,17 @@ function Contact() {
                   </div>
                   <h3 className="card-title">Address</h3>
                 </div>
-                <p className="card-content">
-                  2165 Morris Ave, Suite 15<br />
-                  Union, NJ 07083
-                </p>
+                <a 
+                  href="https://www.google.com/maps/search/2165+Morris+Ave+Suite+15+Union+NJ+07083" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="address-link"
+                >
+                  <p className="card-content">
+                    2165 Morris Ave, Suite 15<br />
+                    Union, NJ 07083
+                  </p>
+                </a>
               </div>
 
               {/* Phone Card */}
@@ -359,7 +366,14 @@ function Contact() {
             <div className="map-info">
               <div className="address-info">
                 <h3>Elite Training Institute</h3>
-                <p>2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
+                <a 
+                  href="https://www.google.com/maps/search/2165+Morris+Ave+Suite+15+Union+NJ+07083" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="address-link"
+                >
+                  <p>2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
+                </a>
                 <a href="https://maps.google.com/?q=2165+Morris+Ave+Suite+15+Union+NJ+07083" target="_blank" rel="noopener noreferrer" className="directions-btn">
                   Get Directions
                 </a>
