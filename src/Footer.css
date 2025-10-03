@@ -51,7 +51,7 @@
 
 /* Company Info */
 .footer-logo {
-  margin-bottom: 16px;
+  margin-bottom: 12px; /* reduced margin for better text alignment */
   display: flex;
   justify-content: flex-start;
 }
@@ -70,7 +70,7 @@
 }
 
 .footer-logo-image {
-  height: 300px;
+  height: 120px; /* much smaller logo for better alignment with text */
   width: auto;
   object-fit: contain;
   filter: brightness(1.1) contrast(1.1);
@@ -413,7 +413,7 @@
     gap: 32px;
   }
   .footer-logo-image {
-    height: 250px;
+    height: 100px; /* proportional reduction for tablet */
   }
 }
 
@@ -428,7 +428,7 @@
   }
   
   .footer-logo-image {
-    height: 200px;
+    height: 80px; /* proportional reduction for mobile */
   }
   
   .footer-bottom-content {
@@ -462,7 +462,7 @@
   }
   
   .footer-logo-image {
-    height: 180px;
+    height: 60px; /* proportional reduction for small mobile */
   }
   
   .logo-text {

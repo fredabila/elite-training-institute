@@ -188,14 +188,6 @@ function ContactModal({ isOpen, onClose }) {
 
             <div className="modal-actions">
               <button
-                type="button"
-                className="cancel-btn"
-                onClick={handleClose}
-                disabled={isSubmitting}
-              >
-                Cancel
-              </button>
-              <button
                 type="submit"
                 className={`submit-btn ${isSubmitting ? 'loading' : ''}`}
                 disabled={isSubmitting}

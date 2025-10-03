@@ -121,11 +121,11 @@
 
 /* Introduction Box */
 .instructor-renewal-course-page .intro-box {
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: #f8fbff;
   border-radius: 20px;
   padding: 30px;
-  border: 1px solid rgba(5, 150, 105, 0.15);
-  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(16, 74, 164, 0.1);
+  box-shadow: 0 4px 20px rgba(16, 74, 164, 0.05);
   position: relative;
 }
 
@@ -249,7 +249,7 @@
   align-items: flex-start;
   gap: 20px;
   padding: 20px;
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: #f8fbff;
   border-radius: 16px;
   border: 1px solid rgba(5, 150, 105, 0.1);
   box-shadow: 0 2px 12px rgba(5, 150, 105, 0.08);
@@ -404,7 +404,7 @@
 }
 
 .detail-item:nth-child(2) {
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: #f8fbff;
   border-color: rgba(5, 150, 105, 0.1);
 }
 
@@ -570,7 +570,7 @@
 }
 
 .price-item.instructor-renewal-course-page .featured {
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: #f8fbff;
   border-radius: 12px;
   padding: 25px 20px;
   border: 2px solid rgba(220, 38, 38, 0.2);

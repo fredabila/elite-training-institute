@@ -1,9 +1,14 @@
 import { useState, useMemo } from 'react'
+import ContactModal from '../ContactModal'
 import './Courses.css'
 
 function Courses() {
   const [activeFilter, setActiveFilter] = useState('All Courses')
   const [searchTerm, setSearchTerm] = useState('')
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
 
   const filters = ['All Courses', 'AHA Certifications', 'Medical Programs', 'Available Now', 'Coming Soon']
 
@@ -274,7 +279,7 @@ function Courses() {
             {shouldShowCourse('ma') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="https://i.ibb.co/ynW08jQ6/Program-Covers-images-1.jpg" alt="Medical Assistant (MA) Program" className="background-image" />
+                <img src="/MA.svg" alt="Medical Assistant (MA) Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">MA: 5 Months | Hybrid Learning</div>
@@ -287,7 +292,7 @@ function Courses() {
             {shouldShowCourse('cma') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="https://i.ibb.co/MxC7vpTy/Program-Covers-images-2.jpg" alt="Certified Medication Aide (CMA) Program" className="background-image" />
+                <img src="/CMA.svg" alt="Certified Medication Aide (CMA) Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">CMA: 2 Weeks | Hybrid Learning</div>
@@ -300,7 +305,7 @@ function Courses() {
             {shouldShowCourse('cna') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="https://i.ibb.co/QvHBqbNQ/Program-Covers-images-3.jpg" alt="Certified Nursing Assistant (CNA) Program" className="background-image" />
+                <img src="/CNA.svg" alt="Certified Nursing Assistant (CNA) Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">CNA: 4 Weeks | Hybrid Learning</div>
@@ -313,7 +318,7 @@ function Courses() {
             {shouldShowCourse('pct') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="https://i.ibb.co/GQw4ytVp/Program-Covers-images-4.jpg" alt="Patient Care Technician (PCT) Program" className="background-image" />
+                <img src="/PCT.svg" alt="Patient Care Technician (PCT) Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">PCT: 5 Months | Hybrid Learning</div>
@@ -326,7 +331,7 @@ function Courses() {
             {shouldShowCourse('phlebotomy') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="https://i.ibb.co/qMbnhY2j/Program-Covers-images-5.jpg" alt="Phlebotomy Technician Program" className="background-image" />
+                <img src="/Phlebotomy.svg" alt="Phlebotomy Technician Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">Phlebotomy: 2 Months | Hybrid Learning</div>
@@ -339,7 +344,7 @@ function Courses() {
             {shouldShowCourse('ekg') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="https://i.ibb.co/8DbSM0RD/Program-Covers-images-6.jpg" alt="EKG Technician Program" className="background-image" />
+                <img src="/EKG.svg" alt="EKG Technician Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">EKG: 2 Months | Hybrid Learning</div>
@@ -352,7 +357,7 @@ function Courses() {
             {shouldShowCourse('pharmacy') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="https://i.ibb.co/4RpYHTb8/Program-Covers-images-7.jpg" alt="Pharmacy Technician Program" className="background-image" />
+                <img src="/Pharmacy.svg" alt="Pharmacy Technician Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">Pharmacy: 4 Months | Hybrid Learning</div>
@@ -372,7 +377,7 @@ function Courses() {
             <p className="cta-subtitle">Get personalized guidance on choosing the right program</p>
             
             <div className="cta-buttons">
-              <button className="cta-btn primary">REQUEST INFO</button>
+              <button className="cta-btn primary" onClick={openModal}>REQUEST INFO</button>
               <a href="tel:8482801169" className="cta-btn secondary">CALL US</a>
             </div>
             
@@ -380,6 +385,8 @@ function Courses() {
           </div>
         </div>
       </section>
+      
+      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   )
 }

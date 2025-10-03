@@ -1,6 +1,12 @@
+import { useState } from 'react'
+import ContactModal from './ContactModal'
 import './AboutSection.css'
 
 function AboutSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
   return (
     <section className="about-section">
       {/* Hero Section */}
@@ -166,9 +172,11 @@ function AboutSection() {
       {/* Call to Action */}
       <div className="about-section-cta">
         <div className="container">
-          <button className="cta-button">REQUEST INFO</button>
+          <button className="cta-button" onClick={openModal}>REQUEST INFO</button>
         </div>
       </div>
+      
+      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   )
 }

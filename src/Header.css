@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 50;
-  height: 72px;
+  height: 90px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background: linear-gradient(90deg, #0b192c 0%, #142842 100%);
@@ -14,11 +14,11 @@
 .eti-header__inner {
   max-width: 1400px;
   margin: 0 auto;
-  height: 72px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 10px;
+  padding: 0 16px; /* add some left margin */
   gap: 8px;
 }
 
@@ -40,16 +40,19 @@
   text-decoration: none;
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  overflow: hidden; /* clip any excess if we shift image */
 }
 .eti-logo:hover {
   transform: scale(1.05);
 }
 .eti-logo__image {
-  height: 400px;
+  height: 95px; /* bigger logo for taller header */
   width: auto;
   object-fit: contain;
   filter: brightness(1.1) contrast(1.1);
   transition: filter 0.3s ease;
+  display: block;
+  margin-left: 0; /* remove negative margin */
 }
 .eti-logo:hover .eti-logo__image {
   filter: brightness(1.2) contrast(1.2);
@@ -67,6 +70,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   flex-shrink: 0;
+  margin-left: 20px; /* shift contact info more to the center/left */
 }
 .eti-contact__item {
   display: inline-flex;
@@ -101,7 +105,7 @@
 .eti-nav {
   display: flex;
   align-items: center;
-  margin-left: 12px;
+  margin-left: 20px; /* shift nav items more to the center/left */
   flex-shrink: 0;
 }
 .eti-hamburger {
@@ -137,7 +141,7 @@
 .eti-nav__list {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 10px; /* increased gap for better spacing */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -147,13 +151,13 @@
 .eti-nav__link {
   position: relative;
   display: inline-block;
-  padding: 4px 6px;
+  padding: 8px 12px; /* increased padding for larger clickable area */
   border-radius: 6px;
   color: #ffffff;
   text-decoration: none;
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  font-weight: 500;
-  font-size: 11px;
+  font-weight: 600; /* increased font weight for better visibility */
+  font-size: 14px; /* increased font size for better visibility */
   line-height: 1;
   transition: background-color 0.3s ease, color 0.3s ease;
   white-space: nowrap;
@@ -199,14 +203,14 @@
 /* Responsive */
 @media (max-width: 1200px) {
   .eti-header__inner {
-    padding: 0 8px;
+    padding: 0 0;
   }
   .eti-nav__list {
-    gap: 3px;
+    gap: 8px; /* maintain better spacing on medium screens */
   }
   .eti-nav__link {
-    padding: 4px 5px;
-    font-size: 10px;
+    padding: 6px 10px; /* maintain larger nav items on medium screens */
+    font-size: 13px; /* maintain larger font size on medium screens */
   }
   .eti-header__inner > .eti-logo {
     left: 0;
@@ -215,9 +219,9 @@
 
 @media (max-width: 1024px) {
   .eti-contact { display: none; }
-  .eti-logo__image { height: 350px; }
+  .eti-logo__image { height: 80px; margin-left: 0; } /* bigger logo on tablet */
   .eti-header__inner {
-    padding: 0 8px;
+    padding: 0 0;
   }
   .eti-header__inner > .eti-logo {
     margin-left: 0;
@@ -227,42 +231,47 @@
 
 @media (max-width: 768px) {
   .eti-hamburger { display: inline-block; }
-  .eti-logo__image { height: 300px; }
+  .eti-logo__image { height: 75px; margin-left: 0; } /* bigger logo on mobile */
   .eti-header__inner {
-    padding: 0 24px;
+    padding: 0 0;
   }
   .eti-header__inner > .eti-logo {
     margin-left: 0;
-    left: -15px;
+    left: 0;
   }
   .eti-nav__list {
     position: absolute;
-    top: 72px;
+    top: 90px;
     right: 12px;
     left: 12px;
     display: none;
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
+    gap: 12px; /* increased gap for mobile nav */
     background: rgba(20, 40, 66, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    padding: 14px;
+    padding: 16px; /* increased padding for mobile nav */
     border-radius: 16px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
   .eti-nav__list.is-open { display: flex; }
-  .eti-nav__link { display: block; text-align: center; }
+  .eti-nav__link { 
+    display: block; 
+    text-align: center; 
+    padding: 12px 16px; /* increased padding for mobile nav links */
+    font-size: 16px; /* larger font size for mobile nav */
+  }
 }
 
 @media (max-width: 480px) {
-  .eti-logo__image { height: 280px; }
+  .eti-logo__image { height: 70px; margin-left: 0; } /* bigger logo on small mobile */
   .eti-header__inner {
-    padding: 0 16px;
+    padding: 0 0;
   }
   .eti-header__inner > .eti-logo {
     margin-left: 0;
-    left: -10px;
+    left: 0;
   }
 }
 

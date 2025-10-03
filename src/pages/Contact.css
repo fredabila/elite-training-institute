@@ -9,7 +9,7 @@
 .contact-page .contact-hero {
   position: relative;
   height: 70vh;
-  background: linear-gradient(rgba(11, 25, 44, 0.8), rgba(11, 25, 44, 0.6)), 
+  background: linear-gradient(rgba(11, 25, 44, 0.3), rgba(11, 25, 44, 0.2)), 
               url('https://bairesdev.mo.cloudinary.net/blog/2022/07/smiling-male-callcenter-operator-with-headphones-sitting-at-modern-picture-id1322087869-1.jpg?tx=w_1920,q_auto');
   background-size: cover;
   background-position: center;
@@ -238,6 +238,9 @@
   box-shadow: 0 8px 30px rgba(220, 38, 38, 0.1);
   border: 1px solid rgba(220, 38, 38, 0.2);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .contact-page .inquiry-form::before {
@@ -274,6 +277,9 @@
 
 .contact-page .form-group {
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .contact-page .form-label {
@@ -351,6 +357,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .contact-page .submit-btn:hover {

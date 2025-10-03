@@ -154,17 +154,7 @@
   position: relative;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #6b7280, #104aa4);
-  border-radius: 2px;
-}
+.section-title::after { content: none; }
 
 .pct-program-page .section-subtitle {
   font-family: 'Poppins', sans-serif;

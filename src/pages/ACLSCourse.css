@@ -123,8 +123,8 @@
   background: #f8fbff;
   border-radius: 20px;
   padding: 30px;
-  border: 1px solid rgba(220, 38, 38, 0.1);
-  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.05);
+  border: 1px solid rgba(16, 74, 164, 0.1);
+  box-shadow: 0 4px 20px rgba(16, 74, 164, 0.05);
   position: relative;
 }
 
@@ -237,7 +237,7 @@
   color: #475569;
   line-height: 1.6;
   padding: 15px;
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: #f8fbff;
   border-radius: 12px;
   border: 1px solid rgba(220, 38, 38, 0.1);
 }
@@ -271,7 +271,7 @@
 }
 
 .acls-course-page .detail-item {
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: #f8fbff;
   border-radius: 12px;
   padding: 20px;
   text-align: center;

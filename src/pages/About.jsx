@@ -1,6 +1,12 @@
+import { useState } from 'react'
+import ContactModal from '../ContactModal'
 import './About.css'
 
 function About() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
   return (
     <main className="about-page">
       {/* Hero Section */}
@@ -236,7 +242,7 @@ function About() {
           <div className="accreditations-grid">
             <div className="accreditation-card">
               <div className="accreditation-icon">
-                <img src="https://via.placeholder.com/80x80/4A90E2/FFFFFF?text=NJ+DOE" alt="NJ Department of Education" className="accreditation-logo" />
+                <img src="/doe.jpg" alt="NJ Department of Education" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">New Jersey Department of Education Approved</h3>
               <p className="accreditation-description">Educational programs meet state education standards</p>
@@ -244,7 +250,7 @@ function About() {
 
             <div className="accreditation-card">
               <div className="accreditation-icon">
-                <img src="https://via.placeholder.com/80x80/2ECC71/FFFFFF?text=NJ+DOH" alt="NJ Department of Health" className="accreditation-logo" />
+                <img src="/doh.jpg" alt="NJ Department of Health" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">New Jersey Department of Health Approved</h3>
               <p className="accreditation-description">All medical training programs meet state standards</p>
@@ -252,7 +258,7 @@ function About() {
 
             <div className="accreditation-card">
               <div className="accreditation-icon">
-                <img src="https://via.placeholder.com/80x80/E74C3C/FFFFFF?text=NJ+DOL" alt="NJ Department of Labor" className="accreditation-logo" />
+                <img src="/dol.jpg" alt="NJ Department of Labor" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">New Jersey Department of Labor Approved</h3>
               <p className="accreditation-description">Career training programs certified for workforce development</p>
@@ -268,7 +274,7 @@ function About() {
 
             <div className="accreditation-card">
               <div className="accreditation-icon">
-                <img src="https://via.placeholder.com/80x80/9B59B6/FFFFFF?text=NJ+BON" alt="NJ Board of Nursing" className="accreditation-logo" />
+                <img src="/caf.jpg" alt="NJ Board of Nursing" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">New Jersey Board of Nursing Approved</h3>
               <p className="accreditation-description">CHHA program meets all state requirements</p>
@@ -373,7 +379,7 @@ function About() {
           <h2 className="cta-title">Ready to Start Your Healthcare Journey?</h2>
           <p className="cta-subtitle">Get personalized guidance from our academic advisors</p>
           <div className="cta-buttons">
-            <a href="/contact" className="btn btn--primary cta-btn">REQUEST INFO</a>
+            <button className="btn btn--primary cta-btn" onClick={openModal}>REQUEST INFO</button>
             <a href="tel:8482801169" className="btn btn--secondary cta-btn">CALL 848.280.1169</a>
           </div>
           <p className="cta-hours">Available Tuesday, Thursday, Friday 9 AM - 5 PM, plus 24/7 on-call support</p>
@@ -435,6 +441,8 @@ function About() {
           </div>
         </div>
       </section>
+      
+      <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   )
 }

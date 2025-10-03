@@ -32,17 +32,8 @@
   margin: 0 0 40px 0;
   text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 4px 18px rgba(16, 74, 164, 0.18);
 }
-.welcome__underline {
-  position: absolute;
-  left: 50%;
-  bottom: -8px;
-  height: 3px;
-  width: 0;
-  background: #104aa4;
-  transform: translateX(-50%);
-  transition: width 0.6s ease;
-}
-.welcome__heading.is-underline .welcome__underline { width: 160px; }
+.welcome__underline { display: none; }
+.welcome__heading.is-underline .welcome__underline { width: 0; }
 
 .welcome__text {
   margin: 0 auto;
@@ -77,8 +68,8 @@
 .wicon--cross::before { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23104aa4"><path d="M11 2h2v20h-2z"/><path d="M2 11h20v2H2z"/></svg>'); }
 
 /* Accent lines */
-.welcome__accents { margin-top: 28px; display: flex; justify-content: center; gap: 16px; }
-.welcome__accents span { display: block; width: 60px; height: 2px; background: #ff3131; opacity: 0.9; }
+.welcome__accents { display: none; }
+.welcome__accents span { display: none; }
 
 /* Responsive */
 @media (max-width: 900px) {
