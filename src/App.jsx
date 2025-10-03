@@ -1,5 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
+import BottomTabNav from './BottomTabNav'
 import ScrollToTop from './ScrollToTop'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
@@ -54,6 +55,7 @@ function App() {
           <Route path="/pharmacy-program" element={<PharmacyProgram />} />
         </Routes>
       </main>
+      <BottomTabNav />
       <Footer />
     </div>
   )

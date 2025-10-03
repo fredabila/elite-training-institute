@@ -73,6 +73,17 @@ function Header() {
           </ul>
         </nav>
       </div>
+      
+      {/* Mobile Phone Section - Attached to Header */}
+      <div className="mobile-phone-section">
+        <a href="tel:18482801169" className="mobile-phone-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.81 16.43 14.92C17.55 15.27 18.75 15.46 20 15.46C20.55 15.46 21 15.91 21 16.46V20C21 20.55 20.55 21 20 21C11.72 21 5 14.28 5 6C5 5.45 5.45 5 6 5H9.54C10.09 5 10.54 5.45 10.54 6C10.54 7.25 10.73 8.45 11.08 9.57C11.19 9.92 11.1 10.31 10.82 10.59L8.62 12.79L6.62 10.79Z" fill="#ff3131"/>
+          </svg>
+          <span className="mobile-phone-text">Call/Text</span>
+          <span className="mobile-phone-number">848.280.1169</span>
+        </a>
+      </div>
     </header>
   )
 }

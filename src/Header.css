@@ -264,6 +264,45 @@
   }
 }
 
+/* Mobile Phone Section - Attached to Header */
+.mobile-phone-section {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-phone-section {
+    display: block;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 8px 16px 12px;
+  }
+  
+  .mobile-phone-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .mobile-phone-link:hover {
+    color: #ff3131;
+  }
+  
+  .mobile-phone-text {
+    margin: 0 8px 0 6px;
+    font-size: 12px;
+  }
+  
+  .mobile-phone-number {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
 @media (max-width: 480px) {
   .eti-logo__image { height: 70px; margin-left: 0; } /* bigger logo on small mobile */
   .eti-header__inner {
@@ -272,6 +311,23 @@
   .eti-header__inner > .eti-logo {
     margin-left: 0;
     left: 0;
+  }
+  
+  .mobile-phone-section {
+    padding: 6px 12px 10px;
+  }
+  
+  .mobile-phone-link {
+    padding: 0;
+  }
+  
+  .mobile-phone-text {
+    font-size: 11px;
+    margin: 0 6px 0 4px;
+  }
+  
+  .mobile-phone-number {
+    font-size: 13px;
   }
 }
 
