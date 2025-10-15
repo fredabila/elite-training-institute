@@ -151,13 +151,14 @@ function Footer() {
               </div>
 
               <div className="quick-links">
-                <h5 className="quick-links-title">Quick Links</h5>
+                <h5 className="quick-links-title">Policies</h5>
                 <ul className="links-list">
-                  <li><a href="/" className="footer-link">Home</a></li>
-                  <li><a href="/courses" className="footer-link">Courses</a></li>
-                  <li><a href="/about" className="footer-link">About</a></li>
-                  <li><a href="/contact" className="footer-link">Contact</a></li>
-                  <li><a href="/student-portal" className="footer-link">Student Portal</a></li>
+                  <li><a href="/privacy-policy" className="footer-link">Privacy Policy</a></li>
+                  <li><a href="/terms-and-conditions" className="footer-link">Terms & Conditions</a></li>
+                  <li><a href="/refund-cancellation-policy" className="footer-link">Refund Policy</a></li>
+                  <li><a href="/non-discrimination-statement" className="footer-link">Non-Discrimination</a></li>
+                  <li><a href="/privacy-statement" className="footer-link">Privacy Statement</a></li>
+                  <li><a href="/student-rights-responsibilities" className="footer-link">Student Rights</a></li>
                 </ul>
               </div>
             </div>
@@ -173,9 +174,9 @@ function Footer() {
               <p>&copy; 2024 Elite Training Institute. All rights reserved.</p>
             </div>
             <div className="footer-bottom-links">
-              <a href="/privacy" className="footer-link">Privacy Policy</a>
+              <a href="/privacy-policy" className="footer-link">Privacy Policy</a>
               <span className="separator">•</span>
-              <a href="/terms" className="footer-link">Terms of Service</a>
+              <a href="/terms-and-conditions" className="footer-link">Terms & Conditions</a>
             </div>
           </div>
         </div>

@@ -23,6 +23,12 @@ import PCTProgram from './pages/PCTProgram'
 import PhlebotomyProgram from './pages/PhlebotomyProgram'
 import EKGProgram from './pages/EKGProgram'
 import PharmacyProgram from './pages/PharmacyProgram'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsAndConditions from './pages/TermsAndConditions'
+import RefundCancellationPolicy from './pages/RefundCancellationPolicy'
+import NonDiscriminationStatement from './pages/NonDiscriminationStatement'
+import PrivacyStatement from './pages/PrivacyStatement'
+import StudentRightsResponsibilities from './pages/StudentRightsResponsibilities'
 import './App.css'
 import './Global.css'
 
@@ -53,6 +59,12 @@ function App() {
           <Route path="/phlebotomy-program" element={<PhlebotomyProgram />} />
           <Route path="/ekg-program" element={<EKGProgram />} />
           <Route path="/pharmacy-program" element={<PharmacyProgram />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
+          <Route path="/non-discrimination-statement" element={<NonDiscriminationStatement />} />
+          <Route path="/privacy-statement" element={<PrivacyStatement />} />
+          <Route path="/student-rights-responsibilities" element={<StudentRightsResponsibilities />} />
         </Routes>
       </main>
       <BottomTabNav />

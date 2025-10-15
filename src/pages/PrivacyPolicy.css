@@ -1,0 +1,128 @@
+/* Privacy Policy Page Styles */
+.privacy-policy-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 120px 0 80px;
+}
+
+.privacy-policy-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.policy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(16, 74, 164, 0.1);
+}
+
+.policy-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #104aa4;
+  margin: 0 0 20px 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.effective-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(16, 74, 164, 0.1);
+}
+
+.policy-intro {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #104aa4;
+  margin: 40px 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #dc2626;
+}
+
+.policy-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.policy-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.policy-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.policy-list li strong {
+  color: #104aa4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-policy-page {
+    padding: 100px 0 60px;
+  }
+
+  .policy-content {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+
+  .policy-title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .policy-intro,
+  .policy-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .policy-content {
+    padding: 20px 15px;
+  }
+}
