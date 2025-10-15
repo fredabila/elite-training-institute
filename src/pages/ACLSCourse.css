@@ -133,10 +133,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #dc2626, #ef4444);
-  border-radius: 20px 20px 0 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #dc2626, #ef4444);
+  border-radius: 20px 0 0 20px;
 }
 
 .acls-course-page .course-description {

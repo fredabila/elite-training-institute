@@ -122,7 +122,7 @@ function CHHAProgram() {
                       <div className="timeline-breakdown">
                         <div className="breakdown-item">
                           <span className="breakdown-label">Online Theory:</span>
-                          <span className="breakdown-value">Comprehensive</span>
+                          <span className="breakdown-value">60 hours</span>
                         </div>
                         <div className="breakdown-item">
                           <span className="breakdown-label">Clinical Practice:</span>
@@ -166,7 +166,7 @@ function CHHAProgram() {
                       <polyline points="20,6 9,17 4,12"/>
                     </svg>
                   </div>
-                  <span>Complete a criminal background check, TB test, and required immunizations</span>
+                  <span>Complete a criminal background check and fingerprint</span>
                 </div>
                 <div className="checklist-item">
                   <div className="check-icon">
@@ -300,7 +300,7 @@ function CHHAProgram() {
                 <div className="pricing-badges">
                   <div className="original-price">Regular: $649.00</div>
                   <div className="current-price">NOW: $499.00</div>
-                  <div className="urgency-text">Until October 31, 2025</div>
+                  <div className="urgency-text">Until December 31, 2025</div>
                 </div>
               </div>
               

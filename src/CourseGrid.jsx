@@ -103,7 +103,7 @@ function CourseGrid() {
               {c.key === 'instructor' && (
                 <div className="card-background">
                   <img 
-                    src="https://i.ibb.co/Kct2yz5j/Whats-App-Image-2025-09-22-at-16-04-14-7f14413f.jpg" 
+                    src="/bls-instructor-initial.png" 
                     alt="BLS/CPR Instructor Course" 
                     className="background-image"
                   />
@@ -112,7 +112,7 @@ function CourseGrid() {
               {c.key === 'instructor-renewal' && (
                 <div className="card-background">
                   <img 
-                    src="https://i.ibb.co/Kct2yz5j/Whats-App-Image-2025-09-22-at-16-04-14-7f14413f.jpg" 
+                    src="/bls-instructor-renewal.png" 
                     alt="BLS/CPR Instructor Renewal Course" 
                     className="background-image"
                   />

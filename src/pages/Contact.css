@@ -448,12 +448,20 @@
   border-top: 1px solid rgba(220, 38, 38, 0.1);
 }
 
+.contact-page .address-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .contact-page .address-info h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #104aa4;
   margin: 0 0 15px 0;
+  text-align: center;
 }
 
 .contact-page .address-info p {
@@ -463,6 +471,7 @@
   color: #475569;
   margin: 0 0 20px 0;
   line-height: 1.6;
+  text-align: center;
 }
 
 .contact-page .directions-btn {

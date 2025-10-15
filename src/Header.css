@@ -231,6 +231,7 @@
 
 @media (max-width: 768px) {
   .eti-hamburger { display: inline-block; }
+  .eti-hamburger span { background: #dc2626; } /* red hamburger menu for mobile */
   .eti-logo__image { height: 75px; margin-left: 0; } /* bigger logo on mobile */
   .eti-header__inner {
     padding: 0 0;

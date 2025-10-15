@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { useNavigate } from 'react-router-dom'
 import ContactModal from '../ContactModal'
 import './Courses.css'
 
@@ -6,6 +7,7 @@ function Courses() {
   const [activeFilter, setActiveFilter] = useState('All Courses')
   const [searchTerm, setSearchTerm] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const navigate = useNavigate()
 
   const openModal = () => setIsModalOpen(true)
   const closeModal = () => setIsModalOpen(false)
@@ -137,7 +139,7 @@ function Courses() {
                   <span className="price-label">Renewal: $85</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
-                <button className="register-btn" onClick={() => window.open('/bls-course', '_blank')}>REGISTER</button>
+                <button className="register-btn" onClick={() => navigate('/bls-course')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -155,7 +157,7 @@ function Courses() {
                   <span className="price-label">Renewal: $200</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
-                <button className="register-btn" onClick={() => window.open('/acls-course', '_blank')}>REGISTER</button>
+                <button className="register-btn" onClick={() => navigate('/acls-course')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -173,7 +175,7 @@ function Courses() {
                   <span className="price-label">Renewal: $200</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
-                <button className="register-btn" onClick={() => window.open('/pals-course', '_blank')}>REGISTER</button>
+                <button className="register-btn" onClick={() => navigate('/pals-course')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -191,7 +193,7 @@ function Courses() {
                   <span className="price-label">Renewal: $120</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
-                <button className="register-btn" onClick={() => window.open('/heartsaver-course', '_blank')}>REGISTER</button>
+                <button className="register-btn" onClick={() => navigate('/heartsaver-course')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -212,14 +214,14 @@ function Courses() {
             {shouldShowCourse('bls-instructor-initial') && (
             <div className="instructor-card premium">
               <div className="card-background">
-                <img src="https://i.ibb.co/Kct2yz5j/Whats-App-Image-2025-09-22-at-16-04-14-7f14413f.jpg" alt="BLS/CPR Instructor Course" className="background-image" />
+                <img src="/bls-instructor-initial.png" alt="BLS/CPR Instructor Course" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="price-info">
                   <span className="price-label">Course Fee: $549</span>
                 </div>
                 <div className="duration-info">Initial - 2 days</div>
-                <button className="register-btn" onClick={() => window.open('/bls-instructor-initial', '_blank')}>REGISTER</button>
+                <button className="register-btn" onClick={() => navigate('/bls-instructor-initial')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -228,14 +230,14 @@ function Courses() {
             {shouldShowCourse('bls-instructor-renewal') && (
             <div className="instructor-card premium">
               <div className="card-background">
-                <img src="https://i.ibb.co/Kct2yz5j/Whats-App-Image-2025-09-22-at-16-04-14-7f14413f.jpg" alt="BLS/CPR Instructor Course" className="background-image" />
+                <img src="/bls-instructor-renewal.png" alt="BLS/CPR Instructor Course" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="price-info">
                   <span className="price-label">Renewal Fee: $349</span>
                 </div>
                 <div className="duration-info">Renewal - 4 hours</div>
-                <button className="register-btn" onClick={() => window.open('/bls-instructor-renewal', '_blank')}>REGISTER</button>
+                <button className="register-btn" onClick={() => navigate('/bls-instructor-renewal')}>REGISTER</button>
               </div>
             </div>
             )}
@@ -267,10 +269,10 @@ function Courses() {
                   </div>
                   <div className="price-row">
                     <span className="price-label">Now: $499.00</span>
-                    <span className="price-note">(Until October 31, 2025)</span>
+                    <span className="price-note">(Until December 31, 2025)</span>
                   </div>
                 </div>
-                <button className="register-btn" onClick={() => window.open('/chha-program', '_blank')}>ENROLL NOW</button>
+                <button className="register-btn" onClick={() => navigate('/chha-program')}>ENROLL NOW</button>
               </div>
             </div>
             )}
@@ -283,7 +285,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">MA: 5 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => window.open('/ma-program', '_blank')}>COMING SOON</button>
+                <button className="coming-soon-btn" onClick={() => navigate('/ma-program')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -296,7 +298,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">CMA: 2 Weeks | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => window.open('/cma-program', '_blank')}>COMING SOON</button>
+                <button className="coming-soon-btn" onClick={() => navigate('/cma-program')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -309,7 +311,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">CNA: 4 Weeks | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => window.open('/cna-program', '_blank')}>COMING SOON</button>
+                <button className="coming-soon-btn" onClick={() => navigate('/cna-program')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -322,7 +324,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">PCT: 5 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => window.open('/pct-program', '_blank')}>COMING SOON</button>
+                <button className="coming-soon-btn" onClick={() => navigate('/pct-program')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -335,7 +337,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">Phlebotomy: 2 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => window.open('/phlebotomy-program', '_blank')}>COMING SOON</button>
+                <button className="coming-soon-btn" onClick={() => navigate('/phlebotomy-program')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -348,7 +350,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">EKG: 2 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => window.open('/ekg-program', '_blank')}>COMING SOON</button>
+                <button className="coming-soon-btn" onClick={() => navigate('/ekg-program')}>COMING SOON</button>
               </div>
             </div>
             )}
@@ -361,7 +363,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">Pharmacy: 4 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => window.open('/pharmacy-program', '_blank')}>COMING SOON</button>
+                <button className="coming-soon-btn" onClick={() => navigate('/pharmacy-program')}>COMING SOON</button>
               </div>
             </div>
             )}

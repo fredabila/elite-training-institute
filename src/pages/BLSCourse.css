@@ -125,6 +125,18 @@
   padding: 30px;
   border: 1px solid rgba(16, 74, 164, 0.1);
   box-shadow: 0 4px 20px rgba(16, 74, 164, 0.05);
+  position: relative;
+}
+
+.bls-course-page .description-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #dc2626, #ef4444);
+  border-radius: 20px 0 0 20px;
 }
 
 .bls-course-page .course-description {
@@ -162,11 +174,12 @@
   flex-shrink: 0;
 }
 
-.section-icon.target-audience,
-.section-icon.curriculum,
-.section-icon.bls-course-page .details {
+.bls-course-page .section-icon.target-audience,
+.bls-course-page .section-icon.curriculum,
+.bls-course-page .section-icon.details {
   background: linear-gradient(135deg, #dc2626, #ef4444);
   color: #ffffff;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
 }
 
 .section-icon svg {
@@ -223,9 +236,10 @@
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
 }
 
-.curriculum-icon svg {
+.bls-course-page .curriculum-icon svg {
   width: 14px;
   height: 14px;
   color: #ffffff;

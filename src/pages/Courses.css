@@ -190,9 +190,9 @@
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #ffffff !important;
+  color: #666666 !important;
   margin: 10px 0 0 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.4) !important;
+  text-shadow: none !important;
 }
 
 .courses-page .aha-authorized {
