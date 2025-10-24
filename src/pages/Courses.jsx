@@ -379,8 +379,30 @@ function Courses() {
             <p className="cta-subtitle">Get personalized guidance on choosing the right program</p>
             
             <div className="cta-buttons">
-              <button className="cta-btn primary" onClick={openModal}>REQUEST INFO</button>
-              <a href="tel:8482801169" className="cta-btn secondary">CALL US</a>
+              <button 
+                className="cta-btn primary" 
+                onClick={openModal}
+                style={{
+                  backgroundColor: '#3b82f6',
+                  color: '#ffffff',
+                  border: 'none',
+                  boxShadow: '0 4px 15px rgba(59, 130, 246, 0.3)'
+                }}
+              >
+                REQUEST INFO
+              </button>
+              <a 
+                href="tel:8482801169" 
+                className="cta-btn secondary"
+                style={{
+                  backgroundColor: '#e00000',
+                  color: '#ffffff',
+                  border: '2px solid #e00000',
+                  boxShadow: '0 4px 15px rgba(224, 0, 0, 0.3)'
+                }}
+              >
+                CALL US
+              </a>
             </div>
             
             <p className="cta-phone">Call us at <a href="tel:8482801169">848.280.1169</a> for immediate assistance</p>

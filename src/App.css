@@ -1,7 +1,6 @@
 .app-root {
   min-height: 100vh;
   background: linear-gradient(180deg, #0b192c 0%, #142842 100%);
-  padding-top: 72px;
 }
 
 .hero-fill {

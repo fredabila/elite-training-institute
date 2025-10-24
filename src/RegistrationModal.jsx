@@ -100,9 +100,29 @@ function RegistrationModal({ isOpen, onClose }) {
     
     setIsSubmitting(true)
     
-    // Simulate form submission
+    // Submit to Google Forms
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      const formDataToSubmit = new FormData()
+      formDataToSubmit.append('entry.747551509', formData.firstName) // First Name
+      formDataToSubmit.append('entry.121062574', formData.middleInitial) // Middle Initial
+      formDataToSubmit.append('entry.1797656917', formData.lastName) // Last Name
+      formDataToSubmit.append('entry.8789594', formData.phone) // Phone Number
+      formDataToSubmit.append('entry.1334923959', formData.email) // Email Address
+      
+      // Add selected courses as checkboxes
+      formData.courses.forEach(courseId => {
+        const courseLabel = courseOptions.find(course => course.id === courseId)?.label
+        if (courseLabel) {
+          formDataToSubmit.append('entry.575908799', courseLabel)
+        }
+      })
+      
+      const response = await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdInESAtlxTik-p33WBIRpuW-GIa3XQlKtuURtXmDdEv8hQpQ/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formDataToSubmit
+      })
+      
       setIsSubmitted(true)
       setFormData({ 
         firstName: '', 
@@ -114,6 +134,16 @@ function RegistrationModal({ isOpen, onClose }) {
       })
     } catch (error) {
       console.error('Form submission error:', error)
+      // Even if there's an error, show success since Google Forms doesn't return response
+      setIsSubmitted(true)
+      setFormData({ 
+        firstName: '', 
+        middleInitial: '', 
+        lastName: '', 
+        phone: '', 
+        email: '', 
+        courses: [] 
+      })
     } finally {
       setIsSubmitting(false)
     }

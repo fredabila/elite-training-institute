@@ -1,90 +1,148 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import './Header.css'
+import React, { useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-function Header() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [active, setActive] = useState('HOME')
+const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const location = useLocation()
+  const currentPath = location.pathname
+  const navigate = useNavigate()
 
   const navItems = ['HOME', 'COURSES', 'ABOUT US', 'BLOG', 'STUDENT PORTAL', 'CONTACT US']
 
   return (
-    <header className="eti-header">
-      <div className="eti-header__inner">
-        {/* Left: Logo */}
-        <a href="/" className="eti-logo" aria-label="Elite Training Institute">
-          <img src="/elite-logo-white.png" alt="Elite Training Institute" className="eti-logo__image" />
-        </a>
-
-        {/* Center: Contact card */}
-        <div className="eti-contact">
-          <a className="eti-contact__item" href="tel:18482801169" aria-label="Call 848-280-1169">
-            <span className="eti-icon eti-icon--phone" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.81 16.43 14.92C17.55 15.27 18.75 15.46 20 15.46C20.55 15.46 21 15.91 21 16.46V20C21 20.55 20.55 21 20 21C11.72 21 5 14.28 5 6C5 5.45 5.45 5 6 5H9.54C10.09 5 10.54 5.45 10.54 6C10.54 7.25 10.73 8.45 11.08 9.57C11.19 9.92 11.1 10.31 10.82 10.59L8.62 12.79L6.62 10.79Z" fill="#ff3131"/>
+    <>
+      <header className="text-white w-full shadow-lg fixed top-0 left-0 right-0 z-50" style={{backgroundColor: '#0c1929'}}>
+        <div className="w-full p-0 m-0">
+          <div className="flex items-center justify-between h-24 w-full m-0 p-0 pr-6">
+            <Link to="/" className="flex items-center group ml-0">
+              <img 
+                src="/elite-logo-white.png" 
+                alt="Elite Training Institute Logo" 
+                className="h-20 w-auto max-w-[200px] transition-transform group-hover:scale-105 ml-0 object-contain"
+                style={{marginLeft: 0, paddingLeft: 0}}
+              />
+            </Link>
+            
+            {/* Desktop Contact Info */}
+            <div className="hidden md:flex items-center space-x-6">
+              <div className="flex items-center text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <span className="text-sm font-medium">848.280.1169</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-            </span>
-            <span className="eti-contact__text eti-contact__text--phone">848.280.1169</span>
-          </a>
-          <a className="eti-contact__item" href="mailto:info@trainatelite.com" aria-label="Email info@trainatelite.com">
-            <span className="eti-icon eti-icon--email" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#ff3131"/>
+                <span className="text-sm font-medium">info@trainatelite.com</span>
+              </div>
+            </div>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-6">
+               <Link to="/" className={`text-sm font-medium transition-colors ${currentPath === '/' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/' ? '#ef4444' : '#ffffff'}}>HOME</Link>
+               <Link to="/courses" className={`text-sm font-medium transition-colors ${currentPath === '/courses' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/courses' ? '#ef4444' : '#ffffff'}}>COURSES</Link>
+               <Link to="/about" className={`text-sm font-medium transition-colors ${currentPath === '/about' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/about' ? '#ef4444' : '#ffffff'}}>ABOUT US</Link>
+               <Link to="/blog" className={`text-sm font-medium transition-colors ${currentPath === '/blog' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/blog' ? '#ef4444' : '#ffffff'}}>BLOG</Link>
+              <a 
+                href="https://trainatelite.talentlms.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm font-medium transition-colors text-white hover:text-red-500"
+              >
+                STUDENT PORTAL
+              </a>
+              <Link 
+                to="/contact"
+                className={`bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors ml-2 ${currentPath === '/contact' ? 'ring-2 ring-red-500' : ''}`}
+                style={{
+                  backgroundColor: currentPath === '/contact' ? '#dc2626 !important' : '#dc2626 !important',
+                  boxShadow: currentPath === '/contact' ? '0 0 0 2px #ef4444 !important' : 'none !important'
+                }}
+              >
+                Contact Us
+              </Link>
+            </nav>
+            
+            {/* Mobile menu button */}
+            <button
+              className="lg:hidden flex items-center px-3 py-2 border-2 border-red-500 rounded bg-transparent focus:outline-none"
+              style={{
+                borderColor: '#ef4444 !important',
+                backgroundColor: 'transparent !important',
+                color: '#ffffff !important'
+              }}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{color: '#ffffff !important'}}>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            </span>
-            <span className="eti-contact__text eti-contact__text--email">info@trainatelite.com</span>
-          </a>
+            </button>
         </div>
 
-        {/* Right: Navigation */}
-        <nav className="eti-nav" aria-label="Primary">
-          <button
-            className={`eti-hamburger ${menuOpen ? 'is-open' : ''}`}
-            aria-label="Toggle menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((o) => !o)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-
-          <ul className={`eti-nav__list ${menuOpen ? 'is-open' : ''}`}>
-            {navItems.map((item) => (
-              <li key={item} className="eti-nav__item">
-                <NavLink
-                  to={
-                    item === 'HOME' ? '/' :
-                    item === 'COURSES' ? '/courses' :
-                    item === 'ABOUT US' ? '/about' :
-                    item === 'BLOG' ? '/blog' :
-                    item === 'STUDENT PORTAL' ? 'https://trainatelite.talentlms.com/' :
-                    item === 'CONTACT US' ? '/contact' :
-                    '/'
-                  }
-                  className={({ isActive }) => `eti-nav__link ${isActive ? 'is-active' : ''} ${item === 'CONTACT US' ? 'contact-us-red' : ''}`}
-                  onClick={() => setMenuOpen(false)}
-                  {...(item === 'STUDENT PORTAL' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          {/* Mobile menu slide down */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden absolute top-24 left-0 w-full z-50 bg-gray-800 shadow-xl">
+              <div className="flex flex-col items-center py-8 space-y-6">
+                 <Link to="/" className={`text-lg font-bold transition-colors ${currentPath === '/' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/' ? '#ef4444' : '#ffffff'}} onClick={() => setMobileMenuOpen(false)}>HOME</Link>
+                 <Link to="/courses" className={`text-lg font-bold transition-colors ${currentPath === '/courses' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/courses' ? '#ef4444' : '#ffffff'}} onClick={() => setMobileMenuOpen(false)}>COURSES</Link>
+                 <Link to="/about" className={`text-lg font-bold transition-colors ${currentPath === '/about' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/about' ? '#ef4444' : '#ffffff'}} onClick={() => setMobileMenuOpen(false)}>ABOUT US</Link>
+                 <Link to="/blog" className={`text-lg font-bold transition-colors ${currentPath === '/blog' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/blog' ? '#ef4444' : '#ffffff'}} onClick={() => setMobileMenuOpen(false)}>BLOG</Link>
+                <a 
+                  href="https://trainatelite.talentlms.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-lg font-bold transition-colors text-white hover:text-red-500"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+                  STUDENT PORTAL
+                </a>
+                <Link to="/contact" className={`bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md text-sm font-medium transition-colors w-40 text-center ${currentPath === '/contact' ? 'ring-2 ring-red-500' : ''}`} style={{
+                  backgroundColor: currentPath === '/contact' ? '#dc2626 !important' : '#dc2626 !important',
+                  boxShadow: currentPath === '/contact' ? '0 0 0 2px #ef4444 !important' : 'none !important'
+                }} onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+                
+                {/* Mobile Contact Info */}
+                <div className="flex flex-col items-center mt-6 space-y-2">
+                  <div className="flex items-center text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    <span className="text-base font-medium ">848.280.1169</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    <span className="text-base font-medium">info@trainatelite.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
       </div>
+      </header>
       
-      {/* Mobile Phone Section - Attached to Header */}
-      <div className="mobile-phone-section">
-        <a href="tel:18482801169" className="mobile-phone-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.81 16.43 14.92C17.55 15.27 18.75 15.46 20 15.46C20.55 15.46 21 15.91 21 16.46V20C21 20.55 20.55 21 20 21C11.72 21 5 14.28 5 6C5 5.45 5.45 5 6 5H9.54C10.09 5 10.54 5.45 10.54 6C10.54 7.25 10.73 8.45 11.08 9.57C11.19 9.92 11.1 10.31 10.82 10.59L8.62 12.79L6.62 10.79Z" fill="#ff3131"/>
+       {/* Mobile Contact Bar */}
+       <div className="md:hidden bg-white border-b border-gray-200 fixed top-24 left-0 right-0 z-40">
+         <div className="flex items-center justify-center py-2 px-4">
+           <a 
+             href="tel:18482801169" 
+             className="flex items-center text-black hover:text-red-600 transition-colors"
+           >
+             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
           </svg>
-          <span className="mobile-phone-text">Call/Text</span>
-          <span className="mobile-phone-number">848.280.1169</span>
+             <span className="text-sm font-medium text-black">Call/Text: (848) 280-1169</span>
         </a>
       </div>
-    </header>
+       </div>
+      
+    </>
   )
 }
 

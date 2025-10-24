@@ -30,6 +30,15 @@ function CHHAProgram() {
               </div>
               <h1 className="hero-title">Certified Home Health Aide (CHHA) Program</h1>
               <p className="hero-subtitle">Compassionate care training for New Jersey's home healthcare professionals</p>
+              
+              {/* Top Enroll Button */}
+              <div className="hero-cta">
+                <button className="hero-enroll-btn" onClick={openModal}>ENROLL NOW</button>
+                <div className="hero-pricing">
+                  <span className="hero-price-original">Regular: $649</span>
+                  <span className="hero-price-current">Now: $499</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
