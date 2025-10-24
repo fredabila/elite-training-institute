@@ -354,11 +354,11 @@ function About() {
                       <span className="time">9:00 AM - 5:00 PM</span>
                     </div>
                     <div className="hours-item">
-                      <span className="day">Thursday:</span>
+                      <span className="day">Friday:</span>
                       <span className="time">9:00 AM - 5:00 PM</span>
                     </div>
                     <div className="hours-item">
-                      <span className="day">Friday:</span>
+                      <span className="day">Saturday:</span>
                       <span className="time">9:00 AM - 5:00 PM</span>
                     </div>
                     <div className="hours-item special">
