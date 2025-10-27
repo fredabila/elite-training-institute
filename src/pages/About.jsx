@@ -382,7 +382,7 @@ function About() {
             <button className="btn btn--primary cta-btn" onClick={openModal}>REQUEST INFO</button>
             <a href="tel:8482801169" className="btn btn--secondary cta-btn">CALL 848.280.1169</a>
           </div>
-          <p className="cta-hours">Available Tuesday, Thursday, Friday 9 AM - 5 PM, plus 24/7 on-call support</p>
+          <p className="cta-hours">Available Tuesday, Friday, Saturday 9 AM - 5 PM, plus 24/7 on-call support</p>
         </div>
       </section>
 

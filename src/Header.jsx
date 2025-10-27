@@ -179,7 +179,7 @@ const Header = () => {
                   boxShadow: currentPath === '/contact' ? '0 0 0 2px #ef4444 !important' : 'none !important'
                 }}
               >
-                Contact Us
+                CONTACT US
               </Link>
             </nav>
             
