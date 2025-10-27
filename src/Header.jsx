@@ -1,6 +1,24 @@
 import React, { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
+// Custom styles for the header
+const headerStyles = `
+  .border-b-3 {
+    border-bottom-width: 3px !important;
+  }
+  .nav-link-hover {
+    position: relative;
+  }
+  .nav-link-hover:hover > span {
+    transform: scaleX(1) !important;
+    opacity: 0.9 !important;
+  }
+  .nav-link-hover > span {
+    transition: transform 0.3s ease !important;
+    transition: opacity 0.3s ease !important;
+  }
+`
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
@@ -11,6 +29,7 @@ const Header = () => {
 
   return (
     <>
+      <style>{headerStyles}</style>
       <header className="text-white w-full shadow-lg fixed top-0 left-0 right-0 z-50" style={{backgroundColor: '#0c1929'}}>
         <div className="w-full p-0 m-0">
           <div className="flex items-center justify-between h-24 w-full m-0 p-0 pr-6">
@@ -24,28 +43,126 @@ const Header = () => {
             </Link>
             
             {/* Desktop Contact Info */}
-            <div className="hidden md:flex items-center space-x-6">
-              <div className="flex items-center text-gray-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-red-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                <span className="text-sm font-medium">848.280.1169</span>
+            <div className="hidden md:flex items-center gap-2 ml-5" style={{
+              background: 'rgba(255, 255, 255, 0.08)',
+              border: '1px solid rgba(255, 255, 255, 0.16)',
+              padding: '4px 8px',
+              borderRadius: '12px',
+              backdropFilter: 'blur(10px)'
+            }}>
+              <div className="flex items-center gap-2 text-white" style={{fontSize: '12px', fontFamily: 'Poppins, sans-serif', fontWeight: 500}}>
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '24px',
+                  height: '24px',
+                  borderRadius: '50px',
+                  background: 'rgba(255, 255, 255, 0.06)'
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                </div>
+                <span style={{whiteSpace: 'nowrap'}}>848.280.1169</span>
               </div>
-              <div className="flex items-center text-gray-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-red-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-                <span className="text-sm font-medium">info@trainatelite.com</span>
+              <div className="flex items-center gap-2 text-white" style={{fontSize: '12px', fontFamily: 'Poppins, sans-serif', fontWeight: 400}}>
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '24px',
+                  height: '24px',
+                  borderRadius: '50px',
+                  background: 'rgba(255, 255, 255, 0.06)'
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                </div>
+                <span style={{whiteSpace: 'nowrap'}}>info@trainatelite.com</span>
               </div>
             </div>
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
-               <Link to="/" className={`text-sm font-medium transition-colors ${currentPath === '/' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/' ? '#ef4444' : '#ffffff'}}>HOME</Link>
-               <Link to="/courses" className={`text-sm font-medium transition-colors ${currentPath === '/courses' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/courses' ? '#ef4444' : '#ffffff'}}>COURSES</Link>
-               <Link to="/about" className={`text-sm font-medium transition-colors ${currentPath === '/about' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/about' ? '#ef4444' : '#ffffff'}}>ABOUT US</Link>
-               <Link to="/blog" className={`text-sm font-medium transition-colors ${currentPath === '/blog' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/blog' ? '#ef4444' : '#ffffff'}}>BLOG</Link>
+               <Link 
+                 to="/" 
+                 className={`nav-link-hover relative text-sm font-medium transition-all duration-300 px-3 py-2 rounded-md ${
+                   currentPath === '/' 
+                     ? 'text-white border-b-3 border-red-500' 
+                     : 'text-white'
+                 }`}
+               >
+                 HOME
+                 {currentPath !== '/' && (
+                   <span 
+                     className="absolute left-3 right-3 bottom-1 h-0.5 bg-white origin-left"
+                     style={{
+                       transform: 'scaleX(0)',
+                       transition: 'transform 0.3s ease'
+                     }}
+                   ></span>
+                 )}
+               </Link>
+               <Link 
+                 to="/courses" 
+                 className={`nav-link-hover relative text-sm font-medium transition-all duration-300 px-3 py-2 rounded-md ${
+                   currentPath === '/courses' 
+                     ? 'text-white border-b-3 border-red-500' 
+                     : 'text-white'
+                 }`}
+               >
+                 COURSES
+                 {currentPath !== '/courses' && (
+                   <span 
+                     className="absolute left-3 right-3 bottom-1 h-0.5 bg-white origin-left"
+                     style={{
+                       transform: 'scaleX(0)',
+                       transition: 'transform 0.3s ease'
+                     }}
+                   ></span>
+                 )}
+               </Link>
+               <Link 
+                 to="/about" 
+                 className={`nav-link-hover relative text-sm font-medium transition-all duration-300 px-3 py-2 rounded-md ${
+                   currentPath === '/about' 
+                     ? 'text-white border-b-3 border-red-500' 
+                     : 'text-white'
+                 }`}
+               >
+                 ABOUT US
+                 {currentPath !== '/about' && (
+                   <span 
+                     className="absolute left-3 right-3 bottom-1 h-0.5 bg-white origin-left"
+                     style={{
+                       transform: 'scaleX(0)',
+                       transition: 'transform 0.3s ease'
+                     }}
+                   ></span>
+                 )}
+               </Link>
+               <Link 
+                 to="/blog" 
+                 className={`nav-link-hover relative text-sm font-medium transition-all duration-300 px-3 py-2 rounded-md ${
+                   currentPath === '/blog' 
+                     ? 'text-white border-b-3 border-red-500' 
+                     : 'text-white'
+                 }`}
+               >
+                 BLOG
+                 {currentPath !== '/blog' && (
+                   <span 
+                     className="absolute left-3 right-3 bottom-1 h-0.5 bg-white origin-left"
+                     style={{
+                       transform: 'scaleX(0)',
+                       transition: 'transform 0.3s ease'
+                     }}
+                   ></span>
+                 )}
+               </Link>
               <a 
                 href="https://trainatelite.talentlms.com/" 
                 target="_blank" 
@@ -87,10 +204,62 @@ const Header = () => {
           {mobileMenuOpen && (
             <div className="lg:hidden absolute top-24 left-0 w-full z-50 bg-gray-800 shadow-xl">
               <div className="flex flex-col items-center py-8 space-y-6">
-                 <Link to="/" className={`text-lg font-bold transition-colors ${currentPath === '/' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/' ? '#ef4444' : '#ffffff'}} onClick={() => setMobileMenuOpen(false)}>HOME</Link>
-                 <Link to="/courses" className={`text-lg font-bold transition-colors ${currentPath === '/courses' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/courses' ? '#ef4444' : '#ffffff'}} onClick={() => setMobileMenuOpen(false)}>COURSES</Link>
-                 <Link to="/about" className={`text-lg font-bold transition-colors ${currentPath === '/about' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/about' ? '#ef4444' : '#ffffff'}} onClick={() => setMobileMenuOpen(false)}>ABOUT US</Link>
-                 <Link to="/blog" className={`text-lg font-bold transition-colors ${currentPath === '/blog' ? 'text-red-500' : 'text-white hover:text-red-500'}`} style={{color: currentPath === '/blog' ? '#ef4444' : '#ffffff'}} onClick={() => setMobileMenuOpen(false)}>BLOG</Link>
+                 <Link 
+                   to="/" 
+                   className={`relative text-lg font-bold transition-all duration-300 px-4 py-2 rounded-md ${
+                     currentPath === '/' 
+                       ? 'text-white border-b-3 border-red-500' 
+                       : 'text-white hover:text-white hover:bg-blue-600'
+                   }`}
+                   onClick={() => setMobileMenuOpen(false)}
+                 >
+                   HOME
+                   {currentPath !== '/' && (
+                     <span className="absolute left-4 right-4 bottom-1 h-0.5 bg-white transform scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                   )}
+                 </Link>
+                 <Link 
+                   to="/courses" 
+                   className={`relative text-lg font-bold transition-all duration-300 px-4 py-2 rounded-md ${
+                     currentPath === '/courses' 
+                       ? 'text-white border-b-3 border-red-500' 
+                       : 'text-white hover:text-white hover:bg-blue-600'
+                   }`}
+                   onClick={() => setMobileMenuOpen(false)}
+                 >
+                   COURSES
+                   {currentPath !== '/courses' && (
+                     <span className="absolute left-4 right-4 bottom-1 h-0.5 bg-white transform scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                   )}
+                 </Link>
+                 <Link 
+                   to="/about" 
+                   className={`relative text-lg font-bold transition-all duration-300 px-4 py-2 rounded-md ${
+                     currentPath === '/about' 
+                       ? 'text-white border-b-3 border-red-500' 
+                       : 'text-white hover:text-white hover:bg-blue-600'
+                   }`}
+                   onClick={() => setMobileMenuOpen(false)}
+                 >
+                   ABOUT US
+                   {currentPath !== '/about' && (
+                     <span className="absolute left-4 right-4 bottom-1 h-0.5 bg-white transform scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                   )}
+                 </Link>
+                 <Link 
+                   to="/blog" 
+                   className={`relative text-lg font-bold transition-all duration-300 px-4 py-2 rounded-md ${
+                     currentPath === '/blog' 
+                       ? 'text-white border-b-3 border-red-500' 
+                       : 'text-white hover:text-white hover:bg-blue-600'
+                   }`}
+                   onClick={() => setMobileMenuOpen(false)}
+                 >
+                   BLOG
+                   {currentPath !== '/blog' && (
+                     <span className="absolute left-4 right-4 bottom-1 h-0.5 bg-white transform scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                   )}
+                 </Link>
                 <a 
                   href="https://trainatelite.talentlms.com/" 
                   target="_blank" 
