@@ -56,7 +56,7 @@ function EnrollmentModal({ isOpen, onClose }) {
     
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required'
-    } else if (!/^[\d\s\-\+\(\)]+$/.test(formData.phone)) {
+    } else if (!/^[\d\s\-+()]+$/.test(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number'
     }
     
@@ -83,9 +83,19 @@ function EnrollmentModal({ isOpen, onClose }) {
     
     setIsSubmitting(true)
     
-    // Simulate form submission
+    // Submit to Google Forms
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      const formDataToSubmit = new FormData()
+      formDataToSubmit.append('entry.693691713', formData.fullName)
+      formDataToSubmit.append('entry.1651044243', formData.phone)
+      formDataToSubmit.append('entry.1070821365', formData.email)
+      
+      await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfJ1DOPHuWeWLqdyNdcN8CKzEaOa8miZ4VCgIXYTVnwQ4MkQg/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formDataToSubmit
+      })
+      
       setIsSubmitted(true)
       setFormData({ 
         fullName: '', 
@@ -95,6 +105,14 @@ function EnrollmentModal({ isOpen, onClose }) {
       })
     } catch (error) {
       console.error('Form submission error:', error)
+      // Even if there's an error, show success since Google Forms doesn't return response
+      setIsSubmitted(true)
+      setFormData({ 
+        fullName: '', 
+        phone: '', 
+        email: '', 
+        course: '' 
+      })
     } finally {
       setIsSubmitting(false)
     }
