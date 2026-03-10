@@ -242,30 +242,6 @@ function About() {
           <div className="accreditations-grid">
             <div className="accreditation-card">
               <div className="accreditation-icon">
-                <img src="/doe.jpg" alt="NJ Department of Education" className="accreditation-logo" />
-              </div>
-              <h3 className="accreditation-title">New Jersey Department of Education Approved</h3>
-              <p className="accreditation-description">Educational programs meet state education standards</p>
-            </div>
-
-            <div className="accreditation-card">
-              <div className="accreditation-icon">
-                <img src="/doh.jpg" alt="NJ Department of Health" className="accreditation-logo" />
-              </div>
-              <h3 className="accreditation-title">New Jersey Department of Health Approved</h3>
-              <p className="accreditation-description">All medical training programs meet state standards</p>
-            </div>
-
-            <div className="accreditation-card">
-              <div className="accreditation-icon">
-                <img src="/dol.jpg" alt="NJ Department of Labor" className="accreditation-logo" />
-              </div>
-              <h3 className="accreditation-title">New Jersey Department of Labor Approved</h3>
-              <p className="accreditation-description">Career training programs certified for workforce development</p>
-            </div>
-
-            <div className="accreditation-card">
-              <div className="accreditation-icon">
                 <img src="/aha-authorized.jpg" alt="AHA Authorized" className="accreditation-logo" />
               </div>
               <h3 className="accreditation-title">American Heart Association Authorized Training Site</h3>

@@ -171,7 +171,7 @@ function Footer() {
         <div className="container">
           <div className="footer-bottom-content">
             <div className="copyright">
-              <p>&copy; 2024 Elite Training Institute. All rights reserved.</p>
+              <p>&copy; 2026 Elite Training Institute. All rights reserved.</p>
             </div>
             <div className="footer-bottom-links">
               <a href="/privacy-policy" className="footer-link">Privacy Policy</a>

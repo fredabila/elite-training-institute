@@ -59,165 +59,179 @@ function CourseGrid() {
         </header>
 
         <div className="grid">
-          {courses.map((c) => (
-            <article key={c.key} className={`card ${c.type}`}>
-              {c.badge && <span className="badge">{c.badge}</span>}
-              
-              {/* Course Background Image */}
-              {c.key === 'bls' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/0V1MYzK8/Whats-App-Image-2025-09-22-at-16-04-14-25058794.jpg" 
-                    alt="BLS Course" 
-                    className="background-image"
-                  />
+          {courses.map((c) => {
+            const isSoon = c.type === 'soon';
+            const CardContent = (
+              <>
+                {c.badge && <span className="badge">{c.badge}</span>}
+                
+                {/* Course Background Image */}
+                {c.key === 'bls' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/0V1MYzK8/Whats-App-Image-2025-09-22-at-16-04-14-25058794.jpg" 
+                      alt="BLS Course" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'acls' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/1fPrG6Mb/Whats-App-Image-2025-09-22-at-16-04-59-10d96c26.jpg" 
+                      alt="ACLS Course" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'pals' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/JRrpDyWw/Whats-App-Image-2025-09-22-at-16-04-14-94a2ff36.jpg" 
+                      alt="PALS Course" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'heartsaver' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/fY5g2xwK/Whats-App-Image-2025-09-22-at-16-04-14-f0697797.jpg" 
+                      alt="HeartSaver Course" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'instructor' && (
+                  <div className="card-background">
+                    <img 
+                      src="/bls-instructor-initial.png" 
+                      alt="BLS/CPR Instructor Course" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'instructor-renewal' && (
+                  <div className="card-background">
+                    <img 
+                      src="/bls-instructor-renewal.png" 
+                      alt="BLS/CPR Instructor Renewal Course" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'chha' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/dd48ckY/HHA-program-cover.png" 
+                      alt="Certified Home Health Aide (CHHA) Program" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'ma' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/ynW08jQ6/Program-Covers-images-1.jpg" 
+                      alt="Medical Assistant (MA) Program" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'cma' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/MxC7vpTy/Program-Covers-images-2.jpg" 
+                      alt="Certified Medication Aide (CMA) Program" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'cna' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/QvHBqbNQ/Program-Covers-images-3.jpg" 
+                      alt="Certified Nursing Assistant (CNA) Program" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'pct' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/GQw4ytVp/Program-Covers-images-4.jpg" 
+                      alt="Patient Care Technician (PCT) Program" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'phlebotomy' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/qMbnhY2j/Program-Covers-images-5.jpg" 
+                      alt="Phlebotomy Technician Program" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'ekg' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/8DbSM0RD/Program-Covers-images-6.jpg" 
+                      alt="EKG Technician Program" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                {c.key === 'pharmacy' && (
+                  <div className="card-background">
+                    <img 
+                      src="https://i.ibb.co/4RpYHTb8/Program-Covers-images-7.jpg" 
+                      alt="Pharmacy Technician Program" 
+                      className="background-image"
+                    />
+                  </div>
+                )}
+                
+                {/* Default background for other courses */}
+                {!['bls', 'acls', 'pals', 'heartsaver', 'instructor', 'instructor-renewal', 'chha', 'ma', 'cma', 'cna', 'pct', 'phlebotomy', 'ekg', 'pharmacy'].includes(c.key) && (
+                  <div className="card-background default">
+                    <Icon type={c.type} courseKey={c.key} />
+                  </div>
+                )}
+                
+                {/* Glass Container with Content */}
+                <div className="glass-container">
+                  {isSoon ? (
+                    <button
+                      className={`btn btn--disabled`}
+                      disabled={true}
+                    >
+                      {c.cta}
+                    </button>
+                  ) : (
+                    <span className={`btn btn--primary ${c.pulse ? 'btn--pulse' : ''}`}>
+                      {c.cta}
+                    </span>
+                  )}
                 </div>
-              )}
-              {c.key === 'acls' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/1fPrG6Mb/Whats-App-Image-2025-09-22-at-16-04-59-10d96c26.jpg" 
-                    alt="ACLS Course" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'pals' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/JRrpDyWw/Whats-App-Image-2025-09-22-at-16-04-14-94a2ff36.jpg" 
-                    alt="PALS Course" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'heartsaver' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/fY5g2xwK/Whats-App-Image-2025-09-22-at-16-04-14-f0697797.jpg" 
-                    alt="HeartSaver Course" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'instructor' && (
-                <div className="card-background">
-                  <img 
-                    src="/bls-instructor-initial.png" 
-                    alt="BLS/CPR Instructor Course" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'instructor-renewal' && (
-                <div className="card-background">
-                  <img 
-                    src="/bls-instructor-renewal.png" 
-                    alt="BLS/CPR Instructor Renewal Course" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'chha' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/d44Bjy5x/Program-Covers-images-0.jpg" 
-                    alt="Certified Home Health Aide (CHHA) Program" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'ma' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/ynW08jQ6/Program-Covers-images-1.jpg" 
-                    alt="Medical Assistant (MA) Program" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'cma' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/MxC7vpTy/Program-Covers-images-2.jpg" 
-                    alt="Certified Medication Aide (CMA) Program" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'cna' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/QvHBqbNQ/Program-Covers-images-3.jpg" 
-                    alt="Certified Nursing Assistant (CNA) Program" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'pct' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/GQw4ytVp/Program-Covers-images-4.jpg" 
-                    alt="Patient Care Technician (PCT) Program" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'phlebotomy' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/qMbnhY2j/Program-Covers-images-5.jpg" 
-                    alt="Phlebotomy Technician Program" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'ekg' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/8DbSM0RD/Program-Covers-images-6.jpg" 
-                    alt="EKG Technician Program" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              {c.key === 'pharmacy' && (
-                <div className="card-background">
-                  <img 
-                    src="https://i.ibb.co/4RpYHTb8/Program-Covers-images-7.jpg" 
-                    alt="Pharmacy Technician Program" 
-                    className="background-image"
-                  />
-                </div>
-              )}
-              
-              {/* Default background for other courses */}
-              {!['bls', 'acls', 'pals', 'heartsaver', 'instructor', 'instructor-renewal', 'chha', 'ma', 'cma', 'cna', 'pct', 'phlebotomy', 'ekg', 'pharmacy'].includes(c.key) && (
-                <div className="card-background default">
-                  <Icon type={c.type} courseKey={c.key} />
-                </div>
-              )}
-              
-              {/* Glass Container with Content */}
-              <div className="glass-container">
-                {c.type === 'soon' ? (
-              <button
-                    className={`btn btn--disabled`}
-                    disabled={true}
-              >
-                {c.cta}
-              </button>
+              </>
+            );
+
+            return (
+              <article key={c.key} className={`card ${c.type}`}>
+                {isSoon ? (
+                  <div className="card-link-wrapper disabled">
+                    {CardContent}
+                  </div>
                 ) : (
-                  <Link
-                    to={c.route}
-                    className={`btn btn--primary ${c.pulse ? 'btn--pulse' : ''}`}
-                  >
-                    {c.cta}
+                  <Link to={c.route} className="card-link-wrapper">
+                    {CardContent}
                   </Link>
                 )}
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>

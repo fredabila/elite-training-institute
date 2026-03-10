@@ -58,31 +58,31 @@ function CHHAProgram() {
             <div className="program-format">
               <h2 className="section-title">Program Format</h2>
               <div className="format-grid">
-                {/* Left Column - Hybrid Learning */}
+                {/* Left Column - In-Person Training */}
                 <div className="format-column">
                   <div className="format-card">
                     <div className="format-header">
                       <div className="format-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                          <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                          <circle cx="9" cy="7" r="4"/>
                         </svg>
                       </div>
-                      <h3>Hybrid Learning Model</h3>
+                      <h3>In-Person Training Program</h3>
                     </div>
                     
                     <div className="learning-component">
                       <div className="component-header">
                         <div className="component-icon">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21"/>
-                            <line x1="12" y1="17" x2="12" y2="21"/>
+                            <path d="M2 3h20v14H2z"/>
+                            <path d="M8 21h8"/>
+                            <path d="M12 17v4"/>
                           </svg>
                         </div>
-                        <h4>Online Instruction</h4>
+                        <h4>Classroom Instruction</h4>
                       </div>
-                      <p>Students engage in comprehensive online coursework covering:</p>
+                      <p>Students engage in comprehensive classroom sessions covering:</p>
                       <ul className="topics-list">
                         <li>Personal care</li>
                         <li>Patient rights</li>
@@ -105,7 +105,7 @@ function CHHAProgram() {
                         </div>
                          <h4>In-Person Clinical Training</h4>
                       </div>
-                      <p>Supervised hands-on experience in a home or clinical setting, practicing patient care tasks such as bathing, feeding, mobility assistance, and vital signs under the guidance of licensed professionals.</p>
+                      <p>Supervised hands-on experience in a clinical setting, practicing patient care tasks such as bathing, feeding, mobility assistance, and vital signs under the guidance of licensed professionals.</p>
                     </div>
                   </div>
                 </div>
@@ -126,11 +126,11 @@ function CHHAProgram() {
                     <div className="timeline">
                       <div className="timeline-item">
                         <div className="timeline-duration">2 weeks</div>
-                        <div className="timeline-description">Complete program combining online theory and in-person practical training</div>
+                        <div className="timeline-description">Complete program combining in-person theory and practical training</div>
                       </div>
                       <div className="timeline-breakdown">
                         <div className="breakdown-item">
-                          <span className="breakdown-label">Online Theory:</span>
+                          <span className="breakdown-label">Classroom Theory:</span>
                           <span className="breakdown-value">60 hours</span>
                         </div>
                         <div className="breakdown-item">
@@ -244,8 +244,8 @@ function CHHAProgram() {
                       <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
                     </svg>
                   </div>
-                  <h3>Flexible Schedule</h3>
-                  <p>Hybrid schedule for online theory and in-person skills training</p>
+                  <h3>Comprehensive Training</h3>
+                  <p>Structured classroom theory and in-person clinical skills training</p>
                 </div>
                 <div className="benefit-item">
                   <div className="benefit-icon">

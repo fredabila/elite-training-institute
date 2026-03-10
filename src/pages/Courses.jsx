@@ -128,7 +128,7 @@ function Courses() {
           <div className="courses-grid">
             {/* BLS Course Card */}
             {shouldShowCourse('bls') && (
-            <div className="course-card">
+            <div className="course-card clickable" onClick={() => navigate('/bls-course')}>
               <div className="card-background">
                 <img src="https://i.ibb.co/0V1MYzK8/Whats-App-Image-2025-09-22-at-16-04-14-25058794.jpg" alt="BLS Course" className="background-image" />
               </div>
@@ -139,14 +139,14 @@ function Courses() {
                   <span className="price-label">Renewal: $85</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
-                <button className="register-btn" onClick={() => navigate('/bls-course')}>REGISTER</button>
+                <button className="register-btn">REGISTER</button>
               </div>
             </div>
             )}
 
             {/* ACLS Course Card */}
             {shouldShowCourse('acls') && (
-            <div className="course-card">
+            <div className="course-card clickable" onClick={() => navigate('/acls-course')}>
               <div className="card-background">
                 <img src="https://i.ibb.co/1fPrG6Mb/Whats-App-Image-2025-09-22-at-16-04-59-10d96c26.jpg" alt="ACLS Course" className="background-image" />
               </div>
@@ -157,14 +157,14 @@ function Courses() {
                   <span className="price-label">Renewal: $200</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
-                <button className="register-btn" onClick={() => navigate('/acls-course')}>REGISTER</button>
+                <button className="register-btn">REGISTER</button>
               </div>
             </div>
             )}
 
             {/* PALS Course Card */}
             {shouldShowCourse('pals') && (
-            <div className="course-card">
+            <div className="course-card clickable" onClick={() => navigate('/pals-course')}>
               <div className="card-background">
                 <img src="https://i.ibb.co/JRrpDyWw/Whats-App-Image-2025-09-22-at-16-04-14-94a2ff36.jpg" alt="PALS Course" className="background-image" />
               </div>
@@ -175,14 +175,14 @@ function Courses() {
                   <span className="price-label">Renewal: $200</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
-                <button className="register-btn" onClick={() => navigate('/pals-course')}>REGISTER</button>
+                <button className="register-btn">REGISTER</button>
               </div>
             </div>
             )}
 
             {/* HeartSaver Course Card */}
             {shouldShowCourse('heartsaver') && (
-            <div className="course-card">
+            <div className="course-card clickable" onClick={() => navigate('/heartsaver-course')}>
               <div className="card-background">
                 <img src="https://i.ibb.co/fY5g2xwK/Whats-App-Image-2025-09-22-at-16-04-14-f0697797.jpg" alt="HeartSaver Course" className="background-image" />
               </div>
@@ -193,7 +193,7 @@ function Courses() {
                   <span className="price-label">Renewal: $120</span>
                 </div>
                 <div className="certification-info">Same Day Certification</div>
-                <button className="register-btn" onClick={() => navigate('/heartsaver-course')}>REGISTER</button>
+                <button className="register-btn">REGISTER</button>
               </div>
             </div>
             )}
@@ -212,7 +212,7 @@ function Courses() {
           <div className="instructor-grid">
             {/* Instructor Initial Card */}
             {shouldShowCourse('bls-instructor-initial') && (
-            <div className="instructor-card premium">
+            <div className="instructor-card premium clickable" onClick={() => navigate('/bls-instructor-initial')}>
               <div className="card-background">
                 <img src="/bls-instructor-initial.png" alt="BLS/CPR Instructor Course" className="background-image" />
               </div>
@@ -221,14 +221,14 @@ function Courses() {
                   <span className="price-label">Course Fee: $549</span>
                 </div>
                 <div className="duration-info">Initial - 2 days</div>
-                <button className="register-btn" onClick={() => navigate('/bls-instructor-initial')}>REGISTER</button>
+                <button className="register-btn">REGISTER</button>
               </div>
             </div>
             )}
 
             {/* Instructor Renewal Card */}
             {shouldShowCourse('bls-instructor-renewal') && (
-            <div className="instructor-card premium">
+            <div className="instructor-card premium clickable" onClick={() => navigate('/bls-instructor-renewal')}>
               <div className="card-background">
                 <img src="/bls-instructor-renewal.png" alt="BLS/CPR Instructor Course" className="background-image" />
               </div>
@@ -237,7 +237,7 @@ function Courses() {
                   <span className="price-label">Renewal Fee: $349</span>
                 </div>
                 <div className="duration-info">Renewal - 4 hours</div>
-                <button className="register-btn" onClick={() => navigate('/bls-instructor-renewal')}>REGISTER</button>
+                <button className="register-btn">REGISTER</button>
               </div>
             </div>
             )}
@@ -257,12 +257,12 @@ function Courses() {
           <div className="medical-grid">
             {/* CHHA Program - Available */}
             {shouldShowCourse('chha') && (
-            <div className="medical-card available">
+            <div className="medical-card available clickable" onClick={() => navigate('/chha-program')}>
               <div className="card-background">
-                <img src="https://i.ibb.co/d44Bjy5x/Program-Covers-images-0.jpg" alt="Certified Home Health Aide (CHHA) Program" className="background-image" />
+                <img src="https://i.ibb.co/dd48ckY/HHA-program-cover.png" alt="Certified Home Health Aide (CHHA) Program" className="background-image" />
               </div>
               <div className="card-info">
-                <div className="program-info">CHHA: 2 Weeks | Hybrid Learning</div>
+                <div className="program-info">CHHA: 2 Weeks | In-Person Training</div>
                 <div className="price-info chha-pricing">
                   <div className="price-row">
                     <span className="price-label">Regular: $649.00</span>
@@ -272,7 +272,7 @@ function Courses() {
                     <span className="price-note">(Until December 31, 2025)</span>
                   </div>
                 </div>
-                <button className="register-btn" onClick={() => navigate('/chha-program')}>ENROLL NOW</button>
+                <button className="register-btn">ENROLL NOW</button>
               </div>
             </div>
             )}
@@ -285,7 +285,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">MA: 5 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => navigate('/ma-program')}>COMING SOON</button>
+                <button className="coming-soon-btn" disabled>COMING SOON</button>
               </div>
             </div>
             )}
@@ -298,7 +298,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">CMA: 2 Weeks | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => navigate('/cma-program')}>COMING SOON</button>
+                <button className="coming-soon-btn" disabled>COMING SOON</button>
               </div>
             </div>
             )}
@@ -311,7 +311,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">CNA: 4 Weeks | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => navigate('/cna-program')}>COMING SOON</button>
+                <button className="coming-soon-btn" disabled>COMING SOON</button>
               </div>
             </div>
             )}
@@ -324,7 +324,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">PCT: 5 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => navigate('/pct-program')}>COMING SOON</button>
+                <button className="coming-soon-btn" disabled>COMING SOON</button>
               </div>
             </div>
             )}
@@ -337,7 +337,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">Phlebotomy: 2 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => navigate('/phlebotomy-program')}>COMING SOON</button>
+                <button className="coming-soon-btn" disabled>COMING SOON</button>
               </div>
             </div>
             )}
@@ -350,7 +350,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">EKG: 2 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => navigate('/ekg-program')}>COMING SOON</button>
+                <button className="coming-soon-btn" disabled>COMING SOON</button>
               </div>
             </div>
             )}
@@ -363,7 +363,7 @@ function Courses() {
               </div>
               <div className="card-info">
                 <div className="program-info">Pharmacy: 4 Months | Hybrid Learning</div>
-                <button className="coming-soon-btn" onClick={() => navigate('/pharmacy-program')}>COMING SOON</button>
+                <button className="coming-soon-btn" disabled>COMING SOON</button>
               </div>
             </div>
             )}
