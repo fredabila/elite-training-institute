@@ -85,7 +85,7 @@ function AboutSection() {
                 </svg>
               </div>
               <p className="benefit-text">
-                All programs are approved by the NJ Department of Education and Board of Nursing
+                All programs are approved by the Board of Nursing
               </p>
               <div className="official-seal">
                 <svg viewBox="0 0 24 24" fill="currentColor">
