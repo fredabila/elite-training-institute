@@ -140,21 +140,7 @@ function About() {
               </div>
             </div>
 
-            <div className="team-member">
-              <div className="member-photo">
-                <div className="photo-placeholder">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="member-info">
-                <h3 className="member-name">Stephanie Gonzalez</h3>
-                <p className="member-title">MSN, FNP-BC</p>
-                <p className="member-role">Clinical Coordinator</p>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -171,8 +157,8 @@ function About() {
                   <circle cx="12" cy="12" r="10"/>
                 </svg>
               </div>
-              <h3 className="benefit-title">NJ State-Approved CHHA & American Heart Association (AHA) - Certified Programs</h3>
-              <p className="benefit-description">All medical training programs meet state standards and provide official same-day AHA certifications.</p>
+              <h3 className="benefit-title">NJ State-Approved CHHA & American Heart Association (AHA) - Certified Program</h3>
+              <p className="benefit-description">The CHHA program meets state standards and provides official same-day AHA certifications.</p>
             </div>
 
             <div className="benefit-card">

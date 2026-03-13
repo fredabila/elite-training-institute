@@ -4,7 +4,7 @@ import './Hero.css'
 
 const slides = [
   {
-    title: 'All Programs are Approved by the NJ Board of Nursing',
+    title: 'CHHA Program is Approved by the NJ Board of Nursing',
     subtitle: 'State-approved healthcare training you can trust',
     titleSize: 48,
     bgClass: 'bg-medical-pattern',
