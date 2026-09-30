@@ -11,7 +11,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.95);
-  background-color: #0b192c;
+  background-color: #0c2e1b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,13 +32,13 @@ body {
   margin: 0; 
   min-width: 320px; 
   min-height: 100vh; 
-  padding-top: 6rem; /* 24 * 0.25rem = 6rem for h-24 header */
+  padding-top: 122px; /* utility bar (38px) + main header bar (84px) */
 }
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body {
-    padding-top: 7rem; /* Space for header (6rem) + mobile contact bar (1rem) */
+    padding-top: 110px; /* main header bar (72px) + mobile call bar (38px) */
   }
 }
 
@@ -66,4 +66,4 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) { :root { color: rgba(10, 20, 30, 0.95); background-color: #f3f6fb; } }
+@media (prefers-color-scheme: light) { :root { color: rgba(10, 20, 30, 0.95); background-color: #f4f7f3; } }

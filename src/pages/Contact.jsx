@@ -40,7 +40,7 @@ function Contact() {
     },
     {
       question: "Are your certifications AHA or NJ Board approved?",
-      answer: "Absolutely. All CPR certifications are American Heart Association (AHA) approved. The CHHA course is New Jersey Board of Nursing approved under our affiliate Homecare Agency, \"Manicare Home Health\". Verify <a href='https://newjersey.mylicense.com/verification/Search.aspx?facility=Y' target='_blank' rel='noopener noreferrer' style='color: #104aa4; text-decoration: underline; font-weight: 600;'>HERE</a>"
+      answer: "Absolutely. All CPR certifications are American Heart Association (AHA) approved. The CHHA course is New Jersey Board of Nursing approved under our affiliate Homecare Agency, \"Manicare Home Health\". Verify <a href='https://newjersey.mylicense.com/verification/Search.aspx?facility=Y' target='_blank' rel='noopener noreferrer' style='color: #134a2a; text-decoration: underline; font-weight: 600;'>HERE</a>"
     },
     {
       question: "Are payment plans available for courses?",
@@ -243,12 +243,12 @@ function Contact() {
 
               {isSubmitted ? (
                 <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                  <div className="card-icon" style={{ margin: '0 auto 20px', background: 'linear-gradient(135deg, #22c55e, #16a34a)' }}>
+                  <div className="card-icon" style={{ margin: '0 auto 20px', background: 'linear-gradient(135deg, #2b7a4b, #1f6b3f)' }}>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 style={{ color: '#22c55e', marginBottom: '10px' }}>Message Sent!</h3>
+                  <h3 style={{ color: '#2b7a4b', marginBottom: '10px' }}>Message Sent!</h3>
                   <p style={{ color: '#666' }}>Thank you for contacting us. We'll get back to you soon.</p>
                 </div>
               ) : (
@@ -354,7 +354,7 @@ function Contact() {
           </div>
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.1234567890123!2d-74.2634!3d40.6975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b8c8c8c8c8c8%3A0x1234567890abcdef!2s2165%20Morris%20Ave%20Suite%2015%2C%20Union%2C%20NJ%2007083!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              src="https://maps.google.com/maps?q=2165+Morris+Ave+Suite+15,+Union,+NJ+07083&z=16&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}

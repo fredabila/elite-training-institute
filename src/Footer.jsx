@@ -10,7 +10,7 @@ function Footer() {
             <div className="footer-section">
               <div className="footer-logo">
                 <a href="/" className="footer-logo-link">
-                  <img src="/elite-logo-white.png" alt="Elite Training Institute" className="footer-logo-image" />
+                  <img src="/elite-crest.png" alt="Elite School of Health Professions" className="footer-logo-image" />
                 </a>
               </div>
               <p className="company-description">

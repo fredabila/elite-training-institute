@@ -5,7 +5,7 @@ function NonDiscriminationStatement() {
     <main className="non-discrimination-page">
       <div className="container">
         <div className="policy-content">
-          <h1 className="policy-title">Non-Discrimination Statement</h1>
+          <h1 className="policy-title">Non&#8209;Discrimination Statement</h1>
           <p className="effective-date">Effective Date: 09/01/2025</p>
 
           <p className="policy-text">

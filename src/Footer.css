@@ -1,6 +1,6 @@
 /* Footer Styles */
 .footer {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #020617 100%);
+  background: linear-gradient(135deg, #144129 0%, #0c2e1b 50%, #07200f 100%);
   position: relative;
   overflow: hidden;
 }
@@ -14,8 +14,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 20% 20%, rgba(16, 74, 164, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 20% 20%, rgba(19, 74, 42, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(163, 122, 48, 0.08) 0%, transparent 50%),
     linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
     linear-gradient(-45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%);
   background-size: 200px 200px, 150px 150px, 40px 40px, 40px 40px;
@@ -46,7 +46,7 @@
 
 /* Footer Sections */
 .footer-section {
-  color: #e2e8f0;
+  color: #e3eae5;
 }
 
 /* Company Info */
@@ -73,21 +73,20 @@
   height: 120px; /* much smaller logo for better alignment with text */
   width: auto;
   object-fit: contain;
-  filter: brightness(1.1) contrast(1.1);
   transition: filter 0.3s ease;
   max-width: 100%;
 }
 
 .footer-logo-link:hover .footer-logo-image {
-  filter: brightness(1.2) contrast(1.2);
+  filter: brightness(1.08);
 }
 
 
-.company-description {
+.footer .company-description{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #cbd5e1;
+  color: #cdd9d1;
   line-height: 1.6;
   margin: 0;
 }
@@ -109,54 +108,54 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #dc2626, #ef4444);
+  background: linear-gradient(90deg, #a37a30, #c9a14a);
   border-radius: 1px;
 }
 
 /* Contact Info */
-.contact-info {
+.footer .contact-info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.contact-item {
+.footer .contact-item {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
 }
 
-.contact-icon {
+.footer .contact-icon {
   width: 20px;
   height: 20px;
-  color: #ff3131;
+  color: #bb9041;
   flex-shrink: 0;
 }
 
-.contact-icon svg {
+.footer .contact-icon svg {
   width: 100%;
   height: 100%;
-  color: #ff3131 !important;
-  stroke: #ff3131 !important;
+  color: #bb9041 !important;
+  stroke: #bb9041 !important;
 }
 
-.contact-details {
+.footer .contact-details {
   display: flex;
   flex-direction: column;
   gap: 2px;
   flex: 1;
 }
 
-.contact-details span {
+.footer .contact-details span {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #cbd5e1;
+  color: #cdd9d1;
   line-height: 1.4;
 }
 
-.address-link {
+.footer .address-link{
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
@@ -166,45 +165,45 @@
   gap: 2px;
 }
 
-.address-link:hover {
-  color: #3b82f6;
+.footer .address-link:hover{
+  color: #2b7a4b;
   text-decoration: underline;
 }
 
-.address-link span {
+.footer .address-link span{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #cbd5e1;
+  color: #cdd9d1;
   line-height: 1.4;
   transition: color 0.3s ease;
 }
 
-.address-link:hover span {
-  color: #3b82f6;
+.footer .address-link:hover span{
+  color: #2b7a4b;
 }
 
-.contact-link {
+.footer .contact-link {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #cbd5e1;
+  color: #cdd9d1;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-link:hover {
-  color: #3b82f6;
+.footer .contact-link:hover {
+  color: #2b7a4b;
 }
 
 /* Office Hours */
-.hours-list {
+.footer .hours-list{
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.hours-item {
+.footer .hours-item{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -212,43 +211,43 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.hours-item.special {
+.footer .hours-item.special{
   border-bottom: none;
-  background: rgba(220, 38, 38, 0.1);
+  background: rgba(163, 122, 48, 0.1);
   padding: 12px 16px;
   border-radius: 8px;
   margin-top: 8px;
 }
 
-.day {
+.footer .day{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #e2e8f0;
+  color: #e3eae5;
 }
 
-.time {
+.footer .time{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #94a3b8;
+  color: #8a9990;
 }
 
-.hours-item.special .day,
-.hours-item.special .time {
+.footer .hours-item.special .day,
+.footer .hours-item.special .time{
   color: #ffffff;
   font-weight: 600;
 }
 
 /* Social Links */
-.social-links {
+.footer .social-links{
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-bottom: 32px;
 }
 
-.social-link {
+.footer .social-link{
   display: flex;
   align-items: center;
   gap: 12px;
@@ -263,7 +262,7 @@
   overflow: hidden;
 }
 
-.social-link::before {
+.footer .social-link::before{
   content: '';
   position: absolute;
   top: 0;
@@ -274,72 +273,72 @@
   transition: left 0.5s ease;
 }
 
-.social-link:hover::before {
+.footer .social-link:hover::before{
   left: 100%;
 }
 
-.social-link:hover {
+.footer .social-link:hover{
   transform: translateX(4px);
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.social-link svg {
+.footer .social-link svg{
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
 
-.social-link span {
+.footer .social-link span{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #e2e8f0;
+  color: #e3eae5;
 }
 
 /* Social Link Colors */
-.social-link.facebook:hover {
+.footer .social-link.facebook:hover{
   background: rgba(24, 119, 242, 0.1);
   border-color: rgba(24, 119, 242, 0.3);
 }
 
-.social-link.facebook svg {
+.footer .social-link.facebook svg{
   color: #1877f2;
 }
 
-.social-link.linkedin:hover {
+.footer .social-link.linkedin:hover{
   background: rgba(0, 119, 181, 0.1);
   border-color: rgba(0, 119, 181, 0.3);
 }
 
-.social-link.linkedin svg {
+.footer .social-link.linkedin svg{
   color: #0077b5;
 }
 
-.social-link.tiktok:hover {
+.footer .social-link.tiktok:hover{
   background: rgba(255, 0, 80, 0.1);
   border-color: rgba(255, 0, 80, 0.3);
 }
 
-.social-link.tiktok svg {
+.footer .social-link.tiktok svg{
   color: #ff0050;
 }
 
-.social-link.instagram:hover {
+.footer .social-link.instagram:hover{
   background: rgba(225, 48, 108, 0.1);
   border-color: rgba(225, 48, 108, 0.3);
 }
 
-.social-link.instagram svg {
+.footer .social-link.instagram svg{
   color: #e1306c;
 }
 
 /* Quick Links */
-.quick-links {
+.footer .quick-links{
   margin-top: 24px;
 }
 
-.quick-links-title {
+.footer .quick-links-title{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -347,7 +346,7 @@
   margin: 0 0 16px 0;
 }
 
-.links-list {
+.footer .links-list{
   list-style: none;
   padding: 0;
   margin: 0;
@@ -360,14 +359,14 @@
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #cbd5e1;
+  color: #cdd9d1;
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 4px 0;
 }
 
 .footer-link:hover {
-  color: #3b82f6;
+  color: #2b7a4b;
   padding-left: 8px;
 }
 
@@ -387,11 +386,11 @@
   align-items: center;
 }
 
-.copyright p {
+.footer .copyright p{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #94a3b8;
+  color: #8a9990;
   margin: 0;
 }
 
@@ -401,8 +400,8 @@
   gap: 16px;
 }
 
-.separator {
-  color: #64748b;
+.footer .separator{
+  color: #5b6b62;
   font-size: 14px;
 }
 
@@ -465,7 +464,7 @@
     height: 60px; /* proportional reduction for small mobile */
   }
   
-  .logo-text {
+  .footer .logo-text{
     font-size: 20px;
   }
   
@@ -474,25 +473,25 @@
     margin-bottom: 16px;
   }
   
-  .social-links {
+  .footer .social-links{
     gap: 12px;
     margin-bottom: 24px;
   }
   
-  .social-link {
+  .footer .social-link{
     padding: 10px 14px;
   }
   
-  .contact-item {
+  .footer .contact-item {
     gap: 10px;
     margin-bottom: 10px;
   }
   
-  .hours-item {
+  .footer .hours-item{
     padding: 6px 0;
   }
   
-  .hours-item.special {
+  .footer .hours-item.special{
     padding: 10px 12px;
   }
 }

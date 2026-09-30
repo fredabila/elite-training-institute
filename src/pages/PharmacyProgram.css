@@ -9,7 +9,7 @@
 
 /* Hero Section */
 .pharmacy-program-page .program-hero {
-  background: linear-gradient(135deg, #0b192c, #104aa4);
+  background: linear-gradient(135deg, #0c2e1b, #134a2a);
   position: relative;
   padding: 120px 0 80px;
   overflow: hidden;
@@ -53,7 +53,7 @@
   transition: color 0.3s ease;
 }
 
-.breadcrumb-link:hover {
+.pharmacy-program-page .breadcrumb-link:hover{
   color: #ffffff;
 }
 
@@ -78,7 +78,7 @@
 
 .pharmacy-program-page .coming-soon-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #6b7280, #9ca3af);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 30px;
@@ -86,7 +86,7 @@
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 30px;
-  box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+  box-shadow: 0 8px 25px rgba(19, 74, 42, 0.4);
   animation: pulse 2s infinite;
 }
 
@@ -126,15 +126,15 @@
 }
 
 .pharmacy-program-page .intro-paragraph {
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  background: linear-gradient(135deg, #f8faf8, #e3eae5);
   border-radius: 20px;
   padding: 40px;
   margin-bottom: 60px;
-  border-left: 5px solid #6b7280;
-  box-shadow: 0 8px 32px rgba(107, 114, 128, 0.1);
+  border-left: 5px solid #a37a30;
+  box-shadow: 0 8px 32px rgba(19, 74, 42, 0.1);
 }
 
-.intro-paragraph p {
+.pharmacy-program-page .intro-paragraph p{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -148,19 +148,19 @@
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 30px 0;
   text-align: center;
   position: relative;
 }
 
-.section-title::after { content: none; }
+.pharmacy-program-page .section-title::after{ content: none; }
 
 .pharmacy-program-page .section-subtitle {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: #475569;
+  color: #4a5a51;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -186,8 +186,8 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 12px 40px rgba(107, 114, 128, 0.1);
-  border: 1px solid rgba(107, 114, 128, 0.1);
+  box-shadow: 0 12px 40px rgba(19, 74, 42, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
   height: 100%;
 }
 
@@ -197,36 +197,36 @@
   gap: 15px;
   margin-bottom: 25px;
   padding-bottom: 15px;
-  border-bottom: 2px solid rgba(107, 114, 128, 0.1);
+  border-bottom: 2px solid rgba(19, 74, 42, 0.1);
 }
 
 .pharmacy-program-page .format-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #6b7280, #4b5563);
+  background: linear-gradient(135deg, #1f6b3f, #134a2a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(19, 74, 42, 0.3);
 }
 
-.format-icon.pharmacy-program-page .clock {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+.pharmacy-program-page .format-icon.clock{
+  background: linear-gradient(135deg, #bb9041, #a37a30);
+  box-shadow: 0 4px 15px rgba(187, 144, 65, 0.3);
 }
 
-.format-icon svg {
+.pharmacy-program-page .format-icon svg{
   width: 24px;
   height: 24px;
 }
 
-.format-header h3 {
+.pharmacy-program-page .format-header h3{
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0;
 }
 
@@ -235,7 +235,7 @@
   padding: 20px;
   background: linear-gradient(135deg, #f9fafb, #f3f4f6);
   border-radius: 12px;
-  border: 1px solid rgba(107, 114, 128, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
 }
 
 .pharmacy-program-page .component-header {
@@ -248,30 +248,30 @@
 .pharmacy-program-page .component-icon {
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, #104aa4, #1e40af);
+  background: linear-gradient(135deg, #134a2a, #0f3d23);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(16, 74, 164, 0.3);
+  box-shadow: 0 2px 8px rgba(19, 74, 42, 0.3);
 }
 
-.component-icon svg {
+.pharmacy-program-page .component-icon svg{
   width: 18px;
   height: 18px;
 }
 
-.component-header h4 {
+.pharmacy-program-page .component-header h4{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0;
 }
 
 .pharmacy-program-page .hours-badge {
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   color: #ffffff;
   padding: 6px 12px;
   border-radius: 20px;
@@ -281,11 +281,11 @@
   margin-left: auto;
 }
 
-.learning-component p {
+.pharmacy-program-page .learning-component p{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0;
 }
@@ -303,16 +303,16 @@
   font-family: 'Poppins', sans-serif;
   font-size: 48px;
   font-weight: 800;
-  color: #f59e0b;
+  color: #a37a30;
   margin-bottom: 10px;
-  text-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+  text-shadow: 0 2px 4px rgba(187, 144, 65, 0.3);
 }
 
 .pharmacy-program-page .timeline-description {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.5;
 }
 
@@ -322,7 +322,7 @@
   background: linear-gradient(135deg, #f9fafb, #f3f4f6);
   border-radius: 20px;
   padding: 40px;
-  border: 1px solid rgba(107, 114, 128, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
 }
 
 .pharmacy-program-page .checklist {
@@ -339,43 +339,43 @@
   padding: 20px;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.1);
-  border: 1px solid rgba(107, 114, 128, 0.1);
+  box-shadow: 0 4px 15px rgba(19, 74, 42, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
 }
 
 .pharmacy-program-page .check-icon {
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, #6b7280, #4b5563);
+  background: linear-gradient(135deg, #1f6b3f, #134a2a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 2px 8px rgba(19, 74, 42, 0.3);
 }
 
-.check-icon svg {
+.pharmacy-program-page .check-icon svg{
   width: 18px;
   height: 18px;
   color: #ffffff;
   stroke-width: 3;
 }
 
-.checklist-item span {
+.pharmacy-program-page .checklist-item span{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #104aa4;
+  color: #134a2a;
 }
 
 /* Certification Section */
 .pharmacy-program-page .certification-section {
   margin-bottom: 60px;
-  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  background: linear-gradient(135deg, #f2f7f3, #dcebe1);
   border-radius: 20px;
   padding: 40px;
-  border: 1px solid rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(43, 122, 75, 0.1);
 }
 
 .pharmacy-program-page .certification-content {
@@ -389,42 +389,42 @@
   padding: 30px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 8px 25px rgba(43, 122, 75, 0.1);
   margin-bottom: 30px;
-  border: 2px solid rgba(34, 197, 94, 0.2);
+  border: 2px solid rgba(43, 122, 75, 0.2);
 }
 
 .pharmacy-program-page .badge-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: linear-gradient(135deg, #bb9041, #a37a30);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 15px rgba(187, 144, 65, 0.3);
   flex-shrink: 0;
 }
 
-.badge-icon svg {
+.pharmacy-program-page .badge-icon svg{
   width: 30px;
   height: 30px;
 }
 
-.badge-content h3 {
+.pharmacy-program-page .badge-content h3{
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 10px 0;
 }
 
-.badge-content p {
+.pharmacy-program-page .badge-content p{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0;
 }
@@ -446,81 +446,81 @@
   padding: 30px 20px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(107, 114, 128, 0.1);
-  border: 1px solid rgba(107, 114, 128, 0.1);
+  box-shadow: 0 8px 25px rgba(19, 74, 42, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.benefit-item::before {
+.pharmacy-program-page .benefit-item::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #6b7280, #104aa4);
+  background: linear-gradient(90deg, #bb9041, #134a2a);
 }
 
-.benefit-item:hover {
+.pharmacy-program-page .benefit-item:hover{
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(107, 114, 128, 0.2);
+  box-shadow: 0 15px 35px rgba(19, 74, 42, 0.2);
 }
 
 .pharmacy-program-page .benefit-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #6b7280, #4b5563);
+  background: linear-gradient(135deg, #1f6b3f, #134a2a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(19, 74, 42, 0.3);
   margin: 0 auto 20px;
 }
 
-.benefit-icon svg {
+.pharmacy-program-page .benefit-icon svg{
   width: 28px;
   height: 28px;
 }
 
-.benefit-item h3 {
+.pharmacy-program-page .benefit-item h3{
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 15px 0;
 }
 
-.benefit-item p {
+.pharmacy-program-page .benefit-item p{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0;
 }
 
 /* Coming Soon Notice */
 .pharmacy-program-page .coming-soon-notice {
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
-  border: 2px solid #f59e0b;
+  background: linear-gradient(135deg, #f6eedb, #e6d3a3);
+  border: 2px solid #bb9041;
   border-radius: 16px;
   padding: 30px;
   margin-bottom: 60px;
   position: relative;
 }
 
-.coming-soon-notice::before {
+.pharmacy-program-page .coming-soon-notice::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #f59e0b, #d97706);
+  background: linear-gradient(90deg, #bb9041, #a37a30);
   border-radius: 16px 16px 0 0;
 }
 
@@ -534,33 +534,33 @@
 .pharmacy-program-page .notice-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: linear-gradient(135deg, #bb9041, #a37a30);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 15px rgba(187, 144, 65, 0.3);
 }
 
-.notice-icon svg {
+.pharmacy-program-page .notice-icon svg{
   width: 20px;
   height: 20px;
 }
 
-.notice-header h3 {
+.pharmacy-program-page .notice-header h3{
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #f59e0b;
+  color: #bb9041;
   margin: 0;
 }
 
-.coming-soon-notice p {
+.pharmacy-program-page .coming-soon-notice p{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0;
   font-style: italic;
@@ -568,7 +568,7 @@
 
 /* Coming Soon CTA Section */
 .pharmacy-program-page .coming-soon-cta {
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  background: linear-gradient(135deg, #f8faf8, #e3eae5);
   padding: 80px 0;
 }
 
@@ -578,19 +578,19 @@
   text-align: center;
 }
 
-.cta-content h2 {
+.pharmacy-program-page .cta-content h2{
   font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 20px 0;
 }
 
-.cta-content p {
+.pharmacy-program-page .cta-content p{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   margin: 0 0 30px 0;
   line-height: 1.6;
 }
@@ -600,7 +600,7 @@
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(135deg, #6b7280, #4b5563);
+  background: linear-gradient(135deg, #1f6b3f, #134a2a);
   border: none;
   border-radius: 25px;
   padding: 16px 32px;
@@ -609,19 +609,19 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(19, 74, 42, 0.3);
   margin-bottom: 30px;
 }
 
-.notify-btn:hover {
+.pharmacy-program-page .notify-btn:hover{
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
-  background: linear-gradient(135deg, #4b5563, #374151);
+  box-shadow: 0 8px 25px rgba(19, 74, 42, 0.4);
+  background: linear-gradient(135deg, #134a2a, #0f3a21);
 }
 
 .pharmacy-program-page .contact-info {
   padding-top: 20px;
-  border-top: 2px solid rgba(107, 114, 128, 0.1);
+  border-top: 2px solid rgba(19, 74, 42, 0.1);
 }
 
 .pharmacy-program-page .contact-item {
@@ -634,16 +634,16 @@
 .pharmacy-program-page .contact-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #6b7280, #4b5563);
+  background: linear-gradient(135deg, #1f6b3f, #134a2a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(19, 74, 42, 0.3);
 }
 
-.contact-icon svg {
+.pharmacy-program-page .contact-icon svg{
   width: 20px;
   height: 20px;
 }
@@ -658,19 +658,19 @@
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #64748b;
+  color: #5b6b62;
 }
 
 .pharmacy-program-page .contact-link {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-link:hover {
+.pharmacy-program-page .contact-link:hover{
   color: #6b7280;
 }
 
@@ -779,18 +779,18 @@
 
 /* Animation for sections */
 @media (prefers-reduced-motion: no-preference) {
-  .format-card, .benefit-item, .pharmacy-program-page .checklist-item {
+  .pharmacy-program-page .format-card, .pharmacy-program-page .benefit-item, .pharmacy-program-page .checklist-item {
     opacity: 0;
     transform: translateY(30px);
     animation: slideInUp 0.6s ease forwards;
   }
   
-  .format-card:nth-child(1) { animation-delay: 0.1s; }
-  .format-card:nth-child(2) { animation-delay: 0.2s; }
-  .benefit-item:nth-child(1) { animation-delay: 0.3s; }
-  .benefit-item:nth-child(2) { animation-delay: 0.4s; }
-  .benefit-item:nth-child(3) { animation-delay: 0.5s; }
-  .benefit-item:nth-child(4) { animation-delay: 0.6s; }
+  .pharmacy-program-page .format-card:nth-child(1){ animation-delay: 0.1s; }
+  .pharmacy-program-page .format-card:nth-child(2){ animation-delay: 0.2s; }
+  .pharmacy-program-page .benefit-item:nth-child(1){ animation-delay: 0.3s; }
+  .pharmacy-program-page .benefit-item:nth-child(2){ animation-delay: 0.4s; }
+  .pharmacy-program-page .benefit-item:nth-child(3){ animation-delay: 0.5s; }
+  .pharmacy-program-page .benefit-item:nth-child(4){ animation-delay: 0.6s; }
 }
 
 @keyframes slideInUp {
@@ -798,4 +798,28 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Layout polish */
+@media (min-width: 769px) {
+  .pharmacy-program-page .hours-badge {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+.pharmacy-program-page .requirements-grid > .requirement-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  .pharmacy-program-page .certification-badge {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+}
+
+.pharmacy-program-page .format-grid {
+  align-items: start;
 }

@@ -102,7 +102,7 @@ function ContactModal({ isOpen, onClose }) {
   if (!isOpen) return null
 
   return (
-    <div className="modal-overlay" onClick={handleClose}>
+    <div className="modal-overlay contact-modal" onClick={handleClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={handleClose} aria-label="Close modal">
           <span className="close-icon">×</span>

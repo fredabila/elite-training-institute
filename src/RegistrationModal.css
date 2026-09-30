@@ -1,5 +1,5 @@
 /* Registration Modal Styles */
-.modal-overlay {
+.registration-modal.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   padding: 20px;
 }
 
-.modal-content {
+.registration-modal .modal-content{
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -26,29 +26,29 @@
   -ms-overflow-style: none;
 }
 
-.modal-content::-webkit-scrollbar {
+.registration-modal .modal-content::-webkit-scrollbar{
   display: none;
 }
 
-.modal-header {
+.registration-modal .modal-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 30px 20px 30px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e3eae5;
 }
 
-.modal-title {
+.registration-modal .modal-title{
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0;
 }
 
-.close-button {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+.registration-modal .close-button{
+  background: #f8faf8;
+  border: 1px solid #e3eae5;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -59,30 +59,30 @@
   transition: all 0.3s ease;
 }
 
-.close-button:hover {
-  background: #e2e8f0;
+.registration-modal .close-button:hover{
+  background: #e3eae5;
   transform: scale(1.05);
 }
 
-.close-icon {
+.registration-modal .close-icon{
   font-size: 20px;
   font-weight: 600;
-  color: #475569;
+  color: #4a5a51;
   font-family: 'Poppins', sans-serif;
 }
 
-.modal-form {
+.registration-modal .modal-form{
   padding: 30px 40px;
   margin: 0 auto;
 }
 
-.modal-success {
+.registration-modal .modal-success{
   padding: 40px 30px;
   text-align: center;
   margin: 0 auto;
 }
 
-.success-actions {
+.registration-modal .success-actions{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,7 +91,7 @@
 }
 
 /* Match CHHA modal/pay button look */
-.modal-success .pay-btn {
+.registration-modal .modal-success .pay-btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -109,23 +109,23 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.modal-success .pay-btn:hover {
+.registration-modal .modal-success .pay-btn:hover{
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
-  background: linear-gradient(135deg, #ef4444, #f87171);
+  box-shadow: 0 8px 25px rgba(43, 122, 75, 0.4);
+  background: linear-gradient(135deg, #c9a14a, #d4b36e);
 }
 
-.modal-success .external-link-icon {
+.registration-modal .modal-success .external-link-icon{
   width: 16px;
   height: 16px;
 }
 
 /* Ensure Close button matches PAY HERE size */
-.modal-success .success-button {
+.registration-modal .modal-success .success-button{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -134,10 +134,10 @@
   border-radius: 25px;
 }
 
-.success-icon {
+.registration-modal .success-icon{
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: linear-gradient(135deg, #2b7a4b, #1f6b3f);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -145,30 +145,30 @@
   margin: 0 auto 20px;
 }
 
-.success-icon svg {
+.registration-modal .success-icon svg{
   width: 40px;
   height: 40px;
   color: #ffffff;
 }
 
-.success-title {
+.registration-modal .success-title{
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #22c55e;
+  color: #2b7a4b;
   margin: 0 0 15px 0;
 }
 
-.success-message {
+.registration-modal .success-message{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0 0 30px 0;
 }
 
-.success-button {
-  background: linear-gradient(135deg, #104aa4, #1e40af);
+.registration-modal .success-button{
+  background: linear-gradient(135deg, #134a2a, #0f3d23);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -180,19 +180,19 @@
   transition: all 0.3s ease;
 }
 
-.success-button:hover {
-  background: linear-gradient(135deg, #1e40af, #1d4ed8);
+.registration-modal .success-button:hover{
+  background: linear-gradient(135deg, #0f3d23, #1a5c35);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(16, 74, 164, 0.3);
+  box-shadow: 0 8px 25px rgba(19, 74, 42, 0.3);
 }
 
-.form-group {
+.registration-modal .form-group{
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
 }
 
-.form-label {
+.registration-modal .form-label{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -203,16 +203,16 @@
   gap: 4px;
 }
 
-.required {
-  color: #dc2626;
+.registration-modal .required{
+  color: #a37a30;
   font-weight: 700;
 }
 
-.form-input {
+.registration-modal .form-input{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   padding: 12px 16px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #e3eae5;
   border-radius: 8px;
   background: #ffffff;
   color: #374151;
@@ -220,54 +220,54 @@
   outline: none;
 }
 
-.form-input:focus {
-  border-color: #104aa4;
-  box-shadow: 0 0 0 3px rgba(16, 74, 164, 0.1);
+.registration-modal .form-input:focus{
+  border-color: #134a2a;
+  box-shadow: 0 0 0 3px rgba(19, 74, 42, 0.1);
 }
 
-.form-input.error {
-  border-color: #dc2626;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+.registration-modal .form-input.error{
+  border-color: #a37a30;
+  box-shadow: 0 0 0 3px rgba(163, 122, 48, 0.1);
 }
 
-.courses-grid {
+.registration-modal .courses-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 15px;
   margin-top: 15px;
 }
 
-.course-checkbox {
+.registration-modal .course-checkbox{
   display: flex;
   align-items: center;
   gap: 15px;
   padding: 15px 20px;
-  background: #f8fafc;
-  border: 2px solid #e2e8f0;
+  background: #f8faf8;
+  border: 2px solid #e3eae5;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   min-height: 50px;
 }
 
-.course-checkbox:hover {
-  background: #f1f5f9;
-  border-color: #cbd5e1;
+.registration-modal .course-checkbox:hover{
+  background: #f1f5f2;
+  border-color: #cdd9d1;
 }
 
-.course-checkbox:has(.checkbox-input:checked) {
-  background: #eff6ff;
-  border-color: #104aa4;
+.registration-modal .course-checkbox:has(.checkbox-input:checked){
+  background: #eef6f1;
+  border-color: #134a2a;
 }
 
-.checkbox-input {
+.registration-modal .checkbox-input{
   width: 18px;
   height: 18px;
-  accent-color: #104aa4;
+  accent-color: #134a2a;
   cursor: pointer;
 }
 
-.checkbox-label {
+.registration-modal .checkbox-label{
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -276,25 +276,25 @@
   line-height: 1.4;
 }
 
-.error-message {
+.registration-modal .error-message{
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  color: #dc2626;
+  color: #a37a30;
   margin-top: 6px;
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.3s ease;
 }
 
-.error-message.show {
+.registration-modal .error-message.show{
   opacity: 1;
   transform: translateY(0);
 }
 
-.submit-btn {
+.registration-modal .submit-btn{
   width: 100%;
   max-width: 400px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -311,22 +311,22 @@
   margin: 30px auto 0 auto;
 }
 
-.submit-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #ef4444, #f87171);
+.registration-modal .submit-btn:hover:not(:disabled){
+  background: linear-gradient(135deg, #c9a14a, #d4b36e);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 8px 25px rgba(163, 122, 48, 0.3);
 }
 
-.submit-btn:disabled {
+.registration-modal .submit-btn:disabled{
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.submit-btn.loading {
-  background: linear-gradient(135deg, #9ca3af, #6b7280);
+.registration-modal .submit-btn.loading{
+  background: linear-gradient(135deg, #4a5a51, #3d4b43);
 }
 
-.loading-spinner {
+.registration-modal .loading-spinner{
   width: 20px;
   height: 20px;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -342,68 +342,68 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .modal-content {
+  .registration-modal .modal-content{
     margin: 10px;
     max-height: 95vh;
   }
   
-  .modal-header {
+  .registration-modal .modal-header{
     padding: 20px 20px 15px 20px;
   }
   
-  .modal-title {
+  .registration-modal .modal-title{
     font-size: 20px;
   }
   
-  .modal-form {
+  .registration-modal .modal-form{
     padding: 20px;
   }
   
-  .modal-success {
+  .registration-modal .modal-success{
     padding: 30px 20px;
   }
   
-  .form-group {
+  .registration-modal .form-group{
     margin-bottom: 20px;
   }
   
-  .courses-grid {
+  .registration-modal .courses-grid{
     grid-template-columns: 1fr;
     gap: 10px;
     max-width: 100%;
   }
   
-  .submit-btn {
+  .registration-modal .submit-btn{
     max-width: 100%;
   }
   
-  .course-checkbox {
+  .registration-modal .course-checkbox{
     padding: 10px 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .modal-overlay {
+  .registration-modal .modal-overlay{
     padding: 10px;
   }
   
-  .modal-header {
+  .registration-modal .modal-header{
     padding: 15px 15px 10px 15px;
   }
   
-  .modal-form {
+  .registration-modal .modal-form{
     padding: 15px;
   }
   
-  .modal-success {
+  .registration-modal .modal-success{
     padding: 20px 15px;
   }
   
-  .success-title {
+  .registration-modal .success-title{
     font-size: 20px;
   }
   
-  .success-message {
+  .registration-modal .success-message{
     font-size: 14px;
   }
 }

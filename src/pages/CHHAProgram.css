@@ -9,7 +9,7 @@
 
 /* Hero Section */
 .chha-program-page .program-hero {
-  background: #0b192c;
+  background: #0c2e1b;
   position: relative;
   padding: 120px 0 80px;
   overflow: hidden;
@@ -23,7 +23,7 @@
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(11, 25, 44, 0.7), rgba(11, 25, 44, 0.5)),
+    linear-gradient(rgba(12, 46, 27, 0.86), rgba(12, 46, 27, 0.78)),
     url('https://i.ibb.co/dd48ckY/HHA-program-cover.png');
   background-size: cover;
   background-position: center;
@@ -51,7 +51,7 @@
   transition: color 0.3s ease;
 }
 
-.breadcrumb-link:hover {
+.chha-program-page .breadcrumb-link:hover{
   color: #ffffff;
 }
 
@@ -76,7 +76,7 @@
 
 .chha-program-page .special-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 30px;
@@ -84,7 +84,7 @@
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 30px;
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 8px 25px rgba(163, 122, 48, 0.4);
   animation: pulse 2s infinite;
 }
 
@@ -132,22 +132,22 @@
   font-size: 18px;
   font-weight: 700;
   padding: 16px 40px;
-  background: linear-gradient(135deg, #ff3131, #e00000);
+  background: linear-gradient(135deg, #bb9041, #9c7530);
   color: #ffffff;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 8px 25px rgba(255, 49, 49, 0.4);
+  box-shadow: 0 8px 25px rgba(187, 144, 65, 0.4);
   transition: all 0.3s ease;
   min-width: 200px;
 }
 
 .chha-program-page .hero-enroll-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(255, 49, 49, 0.5);
-  background: linear-gradient(135deg, #e00000, #b91c1c);
+  box-shadow: 0 12px 35px rgba(187, 144, 65, 0.5);
+  background: linear-gradient(135deg, #9c7530, #86632a);
 }
 
 .chha-program-page .hero-pricing {
@@ -169,7 +169,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #ff3131;
+  color: #bb9041;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -185,15 +185,15 @@
 }
 
 .chha-program-page .intro-paragraph {
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  background: linear-gradient(135deg, #f8faf8, #e3eae5);
   border-radius: 20px;
   padding: 40px;
   margin-bottom: 60px;
-  border-left: 5px solid #dc2626;
-  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.1);
+  border-left: 5px solid #a37a30;
+  box-shadow: 0 8px 32px rgba(163, 122, 48, 0.1);
 }
 
-.intro-paragraph p {
+.chha-program-page .intro-paragraph p{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -207,13 +207,13 @@
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 30px 0;
   text-align: center;
   position: relative;
 }
 
-.section-title::after {
+.chha-program-page .section-title::after{
   content: none;
 }
 
@@ -221,7 +221,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: #475569;
+  color: #4a5a51;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -247,8 +247,8 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 12px 40px rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.1);
+  box-shadow: 0 12px 40px rgba(43, 122, 75, 0.1);
+  border: 1px solid rgba(43, 122, 75, 0.1);
   height: 100%;
 }
 
@@ -258,45 +258,45 @@
   gap: 15px;
   margin-bottom: 25px;
   padding-bottom: 15px;
-  border-bottom: 2px solid rgba(34, 197, 94, 0.1);
+  border-bottom: 2px solid rgba(43, 122, 75, 0.1);
 }
 
 .chha-program-page .format-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 15px rgba(43, 122, 75, 0.3);
 }
 
-.format-icon.chha-program-page .clock {
-  background: linear-gradient(135deg, #dc2626, #ef4444);
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+.chha-program-page .format-icon.clock{
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
+  box-shadow: 0 4px 15px rgba(187, 144, 65, 0.3);
 }
 
-.format-icon svg {
+.chha-program-page .format-icon svg{
   width: 24px;
   height: 24px;
 }
 
-.format-header h3 {
+.chha-program-page .format-header h3{
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0;
 }
 
 .chha-program-page .learning-component {
   margin-bottom: 25px;
   padding: 20px;
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: linear-gradient(135deg, #fbf7ee, #f6eedb);
   border-radius: 12px;
-  border: 1px solid rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(43, 122, 75, 0.1);
 }
 
 .chha-program-page .component-header {
@@ -309,30 +309,30 @@
 .chha-program-page .component-icon {
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, #104aa4, #1e40af);
+  background: linear-gradient(135deg, #134a2a, #0f3d23);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(16, 74, 164, 0.3);
+  box-shadow: 0 2px 8px rgba(19, 74, 42, 0.3);
 }
 
-.component-icon svg {
+.chha-program-page .component-icon svg{
   width: 18px;
   height: 18px;
 }
 
-.component-header h4 {
+.chha-program-page .component-header h4{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0;
 }
 
 .chha-program-page .hours-badge {
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   color: #ffffff;
   padding: 6px 12px;
   border-radius: 20px;
@@ -342,11 +342,11 @@
   margin-left: auto;
 }
 
-.learning-component p {
+.chha-program-page .learning-component p{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0 0 15px 0;
 }
@@ -360,23 +360,23 @@
   gap: 8px;
 }
 
-.topics-list li {
+.chha-program-page .topics-list li{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #104aa4;
+  color: #134a2a;
   padding: 8px 12px;
-  background: rgba(16, 74, 164, 0.1);
+  background: rgba(19, 74, 42, 0.1);
   border-radius: 8px;
   position: relative;
   padding-left: 30px;
 }
 
-.topics-list li::before {
+.chha-program-page .topics-list li::before{
   content: '•';
   position: absolute;
   left: 12px;
-  color: #22c55e;
+  color: #2b7a4b;
   font-weight: 700;
   font-size: 16px;
 }
@@ -394,16 +394,16 @@
   font-family: 'Poppins', sans-serif;
   font-size: 48px;
   font-weight: 800;
-  color: #dc2626;
+  color: #a37a30;
   margin-bottom: 10px;
-  text-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+  text-shadow: 0 2px 4px rgba(163, 122, 48, 0.3);
 }
 
 .chha-program-page .timeline-description {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.5;
 }
 
@@ -418,32 +418,32 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  background: linear-gradient(135deg, #fbf7ee, #f6eedb);
   border-radius: 10px;
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(187, 144, 65, 0.2);
 }
 
 .chha-program-page .breakdown-label {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #dc2626;
+  color: #a37a30;
 }
 
 .chha-program-page .breakdown-value {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #dc2626;
+  color: #a37a30;
 }
 
 /* Eligibility Section */
 .chha-program-page .eligibility-section {
   margin-bottom: 60px;
-  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  background: linear-gradient(135deg, #eef6f1, #dcebe1);
   border-radius: 20px;
   padding: 40px;
-  border: 1px solid rgba(16, 74, 164, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
 }
 
 .chha-program-page .checklist {
@@ -460,43 +460,43 @@
   padding: 20px;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(16, 74, 164, 0.1);
-  border: 1px solid rgba(16, 74, 164, 0.1);
+  box-shadow: 0 4px 15px rgba(19, 74, 42, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
 }
 
 .chha-program-page .check-icon {
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 2px 8px rgba(43, 122, 75, 0.3);
 }
 
-.check-icon svg {
+.chha-program-page .check-icon svg{
   width: 18px;
   height: 18px;
   color: #ffffff;
   stroke-width: 3;
 }
 
-.checklist-item span {
+.chha-program-page .checklist-item span{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #104aa4;
+  color: #134a2a;
 }
 
 /* Certification Section */
 .chha-program-page .certification-section {
   margin-bottom: 60px;
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: linear-gradient(135deg, #fbf7ee, #f6eedb);
   border-radius: 20px;
   padding: 40px;
-  border: 1px solid rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(43, 122, 75, 0.1);
 }
 
 .chha-program-page .certification-content {
@@ -510,42 +510,42 @@
   padding: 30px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 8px 25px rgba(43, 122, 75, 0.1);
   margin-bottom: 30px;
-  border: 2px solid rgba(34, 197, 94, 0.2);
+  border: 2px solid rgba(43, 122, 75, 0.2);
 }
 
 .chha-program-page .badge-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 15px rgba(187, 144, 65, 0.3);
   flex-shrink: 0;
 }
 
-.badge-icon svg {
+.chha-program-page .badge-icon svg{
   width: 30px;
   height: 30px;
 }
 
-.badge-content h3 {
+.chha-program-page .badge-content h3{
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 10px 0;
 }
 
-.badge-content p {
+.chha-program-page .badge-content p{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0;
 }
@@ -563,42 +563,42 @@
   padding: 20px;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.1);
+  box-shadow: 0 4px 15px rgba(43, 122, 75, 0.1);
+  border: 1px solid rgba(43, 122, 75, 0.1);
 }
 
 .chha-program-page .req-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 2px 8px rgba(43, 122, 75, 0.3);
   flex-shrink: 0;
   margin-top: 5px;
 }
 
-.req-icon svg {
+.chha-program-page .req-icon svg{
   width: 20px;
   height: 20px;
 }
 
-.requirement-item h4 {
+.chha-program-page .requirement-item h4{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 8px 0;
 }
 
-.requirement-item p {
+.chha-program-page .requirement-item p{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.5;
   margin: 0;
 }
@@ -620,81 +620,81 @@
   padding: 30px 20px;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.1);
+  box-shadow: 0 8px 25px rgba(43, 122, 75, 0.1);
+  border: 1px solid rgba(43, 122, 75, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.benefit-item::before {
+.chha-program-page .benefit-item::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #dc2626, #ef4444);
+  background: linear-gradient(90deg, #a37a30, #c9a14a);
 }
 
-.benefit-item:hover {
+.chha-program-page .benefit-item:hover{
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 15px 35px rgba(43, 122, 75, 0.2);
 }
 
 .chha-program-page .benefit-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 15px rgba(43, 122, 75, 0.3);
   margin: 0 auto 20px;
 }
 
-.benefit-icon svg {
+.chha-program-page .benefit-icon svg{
   width: 28px;
   height: 28px;
 }
 
-.benefit-item h3 {
+.chha-program-page .benefit-item h3{
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 15px 0;
 }
 
-.benefit-item p {
+.chha-program-page .benefit-item p{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0;
 }
 
 /* Special Notice */
 .chha-program-page .special-notice {
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
-  border: 2px solid #dc2626;
+  background: linear-gradient(135deg, #fbf7ee, #f6eedb);
+  border: 2px solid #a37a30;
   border-radius: 16px;
   padding: 30px;
   margin-bottom: 60px;
   position: relative;
 }
 
-.special-notice::before {
+.chha-program-page .special-notice::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #dc2626, #ef4444);
+  background: linear-gradient(90deg, #a37a30, #c9a14a);
   border-radius: 16px 16px 0 0;
 }
 
@@ -708,33 +708,33 @@
 .chha-program-page .notice-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 15px rgba(163, 122, 48, 0.3);
 }
 
-.notice-icon svg {
+.chha-program-page .notice-icon svg{
   width: 20px;
   height: 20px;
 }
 
-.notice-header h3 {
+.chha-program-page .notice-header h3{
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #dc2626;
+  color: #a37a30;
   margin: 0;
 }
 
-.special-notice p {
+.chha-program-page .special-notice p{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0;
   font-style: italic;
@@ -742,7 +742,7 @@
 
 /* Pricing Section */
 .chha-program-page .pricing-section {
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  background: linear-gradient(135deg, #f8faf8, #e3eae5);
   padding: 80px 0;
 }
 
@@ -755,20 +755,20 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 20px 60px rgba(34, 197, 94, 0.15);
-  border: 3px solid #22c55e;
+  box-shadow: 0 20px 60px rgba(43, 122, 75, 0.15);
+  border: 3px solid #2b7a4b;
   position: relative;
   overflow: hidden;
 }
 
-.pricing-card::before {
+.chha-program-page .pricing-card::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #dc2626, #ef4444);
+  background: linear-gradient(90deg, #a37a30, #c9a14a);
 }
 
 .chha-program-page .pricing-header {
@@ -776,11 +776,11 @@
   margin-bottom: 30px;
 }
 
-.pricing-header h2 {
+.chha-program-page .pricing-header h2{
   font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 20px 0;
 }
 
@@ -795,7 +795,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: #64748b;
+  color: #5b6b62;
   text-decoration: line-through;
 }
 
@@ -803,19 +803,19 @@
   font-family: 'Poppins', sans-serif;
   font-size: 48px;
   font-weight: 800;
-  color: #dc2626;
-  text-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+  color: #a37a30;
+  text-shadow: 0 2px 4px rgba(163, 122, 48, 0.3);
 }
 
 .chha-program-page .urgency-text {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #dc2626;
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  color: #a37a30;
+  background: linear-gradient(135deg, #fbf7ee, #f6eedb);
   padding: 8px 16px;
   border-radius: 20px;
-  border: 1px solid rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(163, 122, 48, 0.2);
 }
 
 .chha-program-page .pricing-details {
@@ -826,15 +826,15 @@
   margin-bottom: 25px;
 }
 
-.includes-section h3 {
+.chha-program-page .includes-section h3{
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 600;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 15px 0;
 }
 
-.includes-section ul {
+.chha-program-page .includes-section ul{
   list-style: none;
   padding: 0;
   margin: 0;
@@ -843,29 +843,29 @@
   gap: 10px;
 }
 
-.includes-section li {
+.chha-program-page .includes-section li{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #475569;
+  color: #4a5a51;
   padding: 8px 12px;
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  background: linear-gradient(135deg, #fbf7ee, #f6eedb);
   border-radius: 8px;
   position: relative;
   padding-left: 25px;
 }
 
-.includes-section li::before {
+.chha-program-page .includes-section li::before{
   content: '✓';
   position: absolute;
   left: 8px;
-  color: #22c55e;
+  color: #2b7a4b;
   font-weight: 700;
 }
 
 .chha-program-page .contact-info {
   padding-top: 20px;
-  border-top: 2px solid rgba(34, 197, 94, 0.1);
+  border-top: 2px solid rgba(43, 122, 75, 0.1);
 }
 
 .chha-program-page .contact-item {
@@ -878,16 +878,16 @@
 .chha-program-page .contact-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 15px rgba(43, 122, 75, 0.3);
 }
 
-.contact-icon svg {
+.chha-program-page .contact-icon svg{
   width: 20px;
   height: 20px;
 }
@@ -902,20 +902,20 @@
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #64748b;
+  color: #5b6b62;
 }
 
 .chha-program-page .contact-link {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-link:hover {
-  color: #22c55e;
+.chha-program-page .contact-link:hover{
+  color: #2b7a4b;
 }
 
 .chha-program-page .action-buttons {
@@ -924,7 +924,7 @@
   margin-top: 30px;
 }
 
-.enroll-btn, .chha-program-page .pay-btn {
+.chha-program-page .enroll-btn, .chha-program-page .pay-btn {
   flex: 1;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
@@ -949,23 +949,23 @@
 }
 
 .chha-program-page .enroll-btn {
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
 }
 
-.enroll-btn:hover {
+.chha-program-page .enroll-btn:hover{
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
-  background: linear-gradient(135deg, #b91c1c, #dc2626);
+  box-shadow: 0 8px 25px rgba(163, 122, 48, 0.4);
+  background: linear-gradient(135deg, #86632a, #a37a30);
 }
 
 .chha-program-page .pay-btn {
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
 }
 
-.pay-btn:hover {
+.chha-program-page .pay-btn:hover{
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
-  background: linear-gradient(135deg, #16a34a, #15803d);
+  box-shadow: 0 8px 25px rgba(43, 122, 75, 0.4);
+  background: linear-gradient(135deg, #1f6b3f, #134a2a);
 }
 
 
@@ -1126,30 +1126,50 @@
     grid-template-columns: 1fr;
   }
   
-  .includes-section ul {
+  .chha-program-page .includes-section ul{
     grid-template-columns: 1fr;
   }
 }
 
 /* Animation for sections */
 @media (prefers-reduced-motion: no-preference) {
-  .format-card, .benefit-item, .checklist-item, .chha-program-page .requirement-item {
+  .chha-program-page .format-card, .chha-program-page .benefit-item, .chha-program-page .checklist-item, .chha-program-page .requirement-item {
     opacity: 0;
     transform: translateY(30px);
     animation: slideInUp 0.6s ease forwards;
   }
   
-  .format-card:nth-child(1) { animation-delay: 0.1s; }
-  .format-card:nth-child(2) { animation-delay: 0.2s; }
-  .benefit-item:nth-child(1) { animation-delay: 0.3s; }
-  .benefit-item:nth-child(2) { animation-delay: 0.4s; }
-  .benefit-item:nth-child(3) { animation-delay: 0.5s; }
-  .benefit-item:nth-child(4) { animation-delay: 0.6s; }
+  .chha-program-page .format-card:nth-child(1){ animation-delay: 0.1s; }
+  .chha-program-page .format-card:nth-child(2){ animation-delay: 0.2s; }
+  .chha-program-page .benefit-item:nth-child(1){ animation-delay: 0.3s; }
+  .chha-program-page .benefit-item:nth-child(2){ animation-delay: 0.4s; }
+  .chha-program-page .benefit-item:nth-child(3){ animation-delay: 0.5s; }
+  .chha-program-page .benefit-item:nth-child(4){ animation-delay: 0.6s; }
 }
 
 @keyframes slideInUp {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Layout polish */
+@media (min-width: 769px) {
+  .chha-program-page .hours-badge {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+.chha-program-page .requirements-grid > .requirement-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  .chha-program-page .certification-badge {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
   }
 }

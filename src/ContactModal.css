@@ -1,5 +1,5 @@
 /* Modal Overlay */
-.modal-overlay {
+.contact-modal.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@
 }
 
 /* Modal Content */
-.modal-content {
+.contact-modal .modal-content{
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
@@ -38,7 +38,7 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
-.modal-content::-webkit-scrollbar {
+.contact-modal .modal-content::-webkit-scrollbar{
   display: none; /* WebKit */
 }
 
@@ -54,7 +54,7 @@
 }
 
 /* Close Button */
-.modal-close {
+.contact-modal .modal-close{
   position: absolute;
   top: 20px;
   right: 20px;
@@ -72,18 +72,18 @@
   z-index: 10;
 }
 
-.modal-close:hover {
+.contact-modal .modal-close:hover{
   background: rgba(0, 0, 0, 0.1);
   border-color: rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.modal-close:active {
+.contact-modal .modal-close:active{
   transform: scale(0.95);
 }
 
-.close-icon {
+.contact-modal .close-icon{
   font-size: 24px;
   font-weight: 300;
   color: #6b7280;
@@ -92,12 +92,12 @@
   font-family: Arial, sans-serif;
 }
 
-.modal-close:hover .close-icon {
+.contact-modal .modal-close:hover .close-icon{
   color: #374151;
 }
 
 /* Modal Header */
-.modal-header {
+.contact-modal .modal-header{
   padding: 40px 40px 24px 40px;
   text-align: center;
   border-bottom: 1px solid #e5e7eb;
@@ -106,15 +106,15 @@
   align-items: center;
 }
 
-.modal-title {
+.contact-modal .modal-title{
   font-size: 28px;
   font-weight: 700;
-  color: #0b192c;
+  color: #0c2e1b;
   margin: 0 0 8px 0;
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-.modal-subtitle {
+.contact-modal .modal-subtitle{
   font-size: 16px;
   color: #6b7280;
   margin: 0;
@@ -122,20 +122,20 @@
 }
 
 /* Modal Form */
-.modal-form {
+.contact-modal .modal-form{
   padding: 24px 40px 40px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.form-group {
+.contact-modal .form-group{
   margin-bottom: 20px;
   width: 100%;
   max-width: 400px;
 }
 
-.form-label {
+.contact-modal .form-label{
   display: block;
   font-size: 14px;
   font-weight: 600;
@@ -144,12 +144,12 @@
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-.required {
-  color: #ef4444;
+.contact-modal .required{
+  color: #c9a14a;
 }
 
-.form-input,
-.form-textarea {
+.contact-modal .form-input,
+.contact-modal .form-textarea{
   width: 100%;
   padding: 12px 16px;
   border: 2px solid #e5e7eb;
@@ -161,26 +161,26 @@
   color: #333333;
 }
 
-.form-input:focus,
-.form-textarea:focus {
+.contact-modal .form-input:focus,
+.contact-modal .form-textarea:focus{
   outline: none;
-  border-color: #ff3131;
-  box-shadow: 0 0 0 3px rgba(255, 49, 49, 0.1);
+  border-color: #bb9041;
+  box-shadow: 0 0 0 3px rgba(187, 144, 65, 0.1);
 }
 
-.form-input.error,
-.form-textarea.error {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+.contact-modal .form-input.error,
+.contact-modal .form-textarea.error{
+  border-color: #c9a14a;
+  box-shadow: 0 0 0 3px rgba(201, 161, 74, 0.1);
 }
 
-.form-textarea {
+.contact-modal .form-textarea{
   resize: vertical;
   min-height: 100px;
 }
 
-.error-message {
-  color: #ef4444;
+.contact-modal .error-message{
+  color: #c9a14a;
   font-size: 12px;
   margin-top: 4px;
   opacity: 0;
@@ -188,19 +188,19 @@
   transition: all 0.2s ease;
 }
 
-.error-message.show {
+.contact-modal .error-message.show{
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Modal Actions */
-.modal-actions {
+.contact-modal .modal-actions{
   display: flex;
   justify-content: center;
   margin-top: 32px;
 }
 
-.cancel-btn {
+.contact-modal .cancel-btn{
   flex: 1;
   padding: 12px 24px;
   border: 2px solid #e5e7eb;
@@ -214,22 +214,22 @@
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-.cancel-btn:hover:not(:disabled) {
+.contact-modal .cancel-btn:hover:not(:disabled){
   border-color: #d1d5db;
   color: #374151;
   background: #f9fafb;
 }
 
-.cancel-btn:disabled {
+.contact-modal .cancel-btn:disabled{
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.submit-btn {
+.contact-modal .submit-btn{
   padding: 12px 32px;
   border: none;
   border-radius: 8px;
-  background: #ff3131;
+  background: #bb9041;
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
@@ -243,24 +243,24 @@
   min-width: 160px;
 }
 
-.submit-btn:hover:not(:disabled) {
-  background: #e00000;
+.contact-modal .submit-btn:hover:not(:disabled){
+  background: #9c7530;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 49, 49, 0.3);
+  box-shadow: 0 4px 12px rgba(187, 144, 65, 0.3);
 }
 
-.submit-btn:disabled {
+.contact-modal .submit-btn:disabled{
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
 }
 
-.submit-btn.loading {
-  background: #e00000;
+.contact-modal .submit-btn.loading{
+  background: #9c7530;
 }
 
 /* Loading Spinner */
-.loading-spinner {
+.contact-modal .loading-spinner{
   width: 16px;
   height: 16px;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -275,7 +275,7 @@
 }
 
 /* Success State */
-.modal-success {
+.contact-modal .modal-success{
   padding: 40px 40px;
   text-align: center;
   display: flex;
@@ -283,10 +283,10 @@
   align-items: center;
 }
 
-.success-icon {
+.contact-modal .success-icon{
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: linear-gradient(135deg, #2b7a4b, #1f6b3f);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -294,32 +294,32 @@
   margin: 0 auto 20px;
 }
 
-.success-icon svg {
+.contact-modal .success-icon svg{
   width: 32px;
   height: 32px;
   color: #ffffff;
 }
 
-.success-title {
+.contact-modal .success-title{
   font-size: 24px;
   font-weight: 700;
-  color: #22c55e;
+  color: #2b7a4b;
   margin: 0 0 12px 0;
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-.success-message {
+.contact-modal .success-message{
   font-size: 16px;
   color: #6b7280;
   margin: 0 0 24px 0;
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-.success-close-btn {
+.contact-modal .success-close-btn{
   padding: 12px 32px;
   border: none;
   border-radius: 8px;
-  background: #ff3131;
+  background: #bb9041;
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
@@ -328,97 +328,97 @@
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-.success-close-btn:hover {
-  background: #e00000;
+.contact-modal .success-close-btn:hover{
+  background: #9c7530;
   transform: translateY(-1px);
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
-  .modal-overlay {
+  .contact-modal .modal-overlay{
     padding: 16px;
   }
   
-  .modal-content {
+  .contact-modal .modal-content{
     max-height: 95vh;
     max-width: 100%;
   }
   
-  .modal-header {
+  .contact-modal .modal-header{
     padding: 24px 20px 16px 20px;
   }
   
-  .modal-title {
+  .contact-modal .modal-title{
     font-size: 24px;
   }
   
-  .modal-subtitle {
+  .contact-modal .modal-subtitle{
     font-size: 14px;
   }
   
-  .modal-form {
+  .contact-modal .modal-form{
     padding: 20px;
   }
   
-  .modal-actions {
+  .contact-modal .modal-actions{
     justify-content: center;
   }
   
-  .submit-btn {
+  .contact-modal .submit-btn{
     width: 100%;
     max-width: 200px;
   }
   
-  .modal-close {
+  .contact-modal .modal-close{
     top: 16px;
     right: 16px;
     width: 36px;
     height: 36px;
   }
   
-  .close-icon {
+  .contact-modal .close-icon{
     font-size: 20px;
   }
   
-  .modal-success {
+  .contact-modal .modal-success{
     padding: 30px 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .modal-overlay {
+  .contact-modal .modal-overlay{
     padding: 12px;
   }
   
-  .modal-header {
+  .contact-modal .modal-header{
     padding: 20px 16px 12px 16px;
   }
   
-  .modal-form {
+  .contact-modal .modal-form{
     padding: 16px;
   }
   
-  .modal-title {
+  .contact-modal .modal-title{
     font-size: 22px;
   }
   
-  .form-input,
-  .form-textarea {
+  .contact-modal .form-input,
+  .contact-modal .form-textarea{
     font-size: 16px; /* Prevent zoom on iOS */
   }
   
-  .modal-close {
+  .contact-modal .modal-close{
     top: 12px;
     right: 12px;
     width: 32px;
     height: 32px;
   }
   
-  .close-icon {
+  .contact-modal .close-icon{
     font-size: 18px;
   }
   
-  .modal-success {
+  .contact-modal .modal-success{
     padding: 25px 16px;
   }
 }

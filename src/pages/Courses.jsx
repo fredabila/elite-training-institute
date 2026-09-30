@@ -383,10 +383,10 @@ function Courses() {
                 className="cta-btn primary" 
                 onClick={openModal}
                 style={{
-                  backgroundColor: '#3b82f6',
+                  backgroundColor: '#2b7a4b',
                   color: '#ffffff',
                   border: 'none',
-                  boxShadow: '0 4px 15px rgba(59, 130, 246, 0.3)'
+                  boxShadow: '0 4px 15px rgba(43, 122, 75, 0.3)'
                 }}
               >
                 REQUEST INFO
@@ -395,10 +395,10 @@ function Courses() {
                 href="tel:8482801169" 
                 className="cta-btn secondary"
                 style={{
-                  backgroundColor: '#e00000',
+                  backgroundColor: '#9c7530',
                   color: '#ffffff',
-                  border: '2px solid #e00000',
-                  boxShadow: '0 4px 15px rgba(224, 0, 0, 0.3)'
+                  border: '2px solid #9c7530',
+                  boxShadow: '0 4px 15px rgba(156, 117, 48, 0.3)'
                 }}
               >
                 CALL US

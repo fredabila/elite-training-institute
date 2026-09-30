@@ -9,7 +9,7 @@
 
 /* Hero Section */
 .bls-course-page .course-hero {
-  background: #0b192c;
+  background: #0c2e1b;
   position: relative;
   padding: 120px 0 80px;
   overflow: hidden;
@@ -23,7 +23,7 @@
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(11, 25, 44, 0.7), rgba(11, 25, 44, 0.5)),
+    linear-gradient(rgba(12, 46, 27, 0.86), rgba(12, 46, 27, 0.78)),
     url('https://i.ibb.co/0V1MYzK8/Whats-App-Image-2025-09-22-at-16-04-14-25058794.jpg');
   background-size: cover;
   background-position: center;
@@ -51,7 +51,7 @@
   transition: color 0.3s ease;
 }
 
-.breadcrumb-link:hover {
+.bls-course-page .breadcrumb-link:hover{
   color: #ffffff;
 }
 
@@ -120,11 +120,11 @@
 
 /* Description Box */
 .bls-course-page .description-box {
-  background: #f8fbff;
+  background: #f8faf6;
   border-radius: 20px;
   padding: 30px;
-  border: 1px solid rgba(16, 74, 164, 0.1);
-  box-shadow: 0 4px 20px rgba(16, 74, 164, 0.05);
+  border: 1px solid rgba(19, 74, 42, 0.1);
+  box-shadow: 0 4px 20px rgba(19, 74, 42, 0.05);
   position: relative;
 }
 
@@ -135,7 +135,7 @@
   left: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, #dc2626, #ef4444);
+  background: linear-gradient(180deg, #a37a30, #c9a14a);
   border-radius: 20px 0 0 20px;
 }
 
@@ -154,7 +154,7 @@
   border-radius: 16px;
   padding: 40px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(16, 74, 164, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
 }
 
 .bls-course-page .section-header {
@@ -177,12 +177,12 @@
 .bls-course-page .section-icon.target-audience,
 .bls-course-page .section-icon.curriculum,
 .bls-course-page .section-icon.details {
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 15px rgba(163, 122, 48, 0.3);
 }
 
-.section-icon svg {
+.bls-course-page .section-icon svg{
   width: 28px;
   height: 28px;
 }
@@ -191,7 +191,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 28px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0;
   line-height: 1.2;
 }
@@ -200,7 +200,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
   margin: 0;
 }
@@ -222,21 +222,21 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   line-height: 1.6;
 }
 
 .bls-course-page .curriculum-icon {
   width: 24px;
   height: 24px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 2px 8px rgba(163, 122, 48, 0.3);
 }
 
 .bls-course-page .curriculum-icon svg {
@@ -249,24 +249,24 @@
 /* Details Grid */
 .bls-course-page .details-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 20px;
 }
 
 .bls-course-page .detail-item {
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  background: linear-gradient(135deg, #f8faf8, #e3eae5);
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  border: 1px solid rgba(16, 74, 164, 0.1);
+  border: 1px solid rgba(19, 74, 42, 0.1);
 }
 
 .bls-course-page .detail-label {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #64748b;
+  color: #5b6b62;
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -276,43 +276,43 @@
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #dc2626;
+  color: #86632a;
 }
 
 /* Pricing Sidebar */
 .bls-course-page .pricing-sidebar {
   position: sticky;
-  top: 100px;
+  top: 146px;
   height: fit-content;
 }
 
 .bls-course-page .pricing-card {
   background: #ffffff;
-  border: 3px solid #dc2626;
+  border: 3px solid #a37a30;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 
-    0 12px 40px rgba(220, 38, 38, 0.15),
+    0 12px 40px rgba(163, 122, 48, 0.15),
     0 4px 16px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
 
-.pricing-card::before {
+.bls-course-page .pricing-card::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #dc2626, #ef4444);
+  background: linear-gradient(90deg, #a37a30, #c9a14a);
 }
 
 .bls-course-page .pricing-header {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 25px 0;
   text-align: center;
 }
@@ -326,10 +326,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
-  border-bottom: 1px solid rgba(16, 74, 164, 0.1);
+  border-bottom: 1px solid rgba(19, 74, 42, 0.1);
 }
 
-.price-item:last-child {
+.bls-course-page .price-item:last-child{
   border-bottom: none;
 }
 
@@ -337,14 +337,14 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #475569;
+  color: #4a5a51;
 }
 
 .bls-course-page .price-value {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #104aa4;
+  color: #134a2a;
 }
 
 .bls-course-page .register-btn {
@@ -353,7 +353,7 @@
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border: none;
   border-radius: 25px;
   padding: 16px;
@@ -362,14 +362,14 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 15px rgba(163, 122, 48, 0.3);
   margin-bottom: 20px;
 }
 
-.register-btn:hover {
+.bls-course-page .register-btn:hover{
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
-  background: linear-gradient(135deg, #b91c1c, #dc2626);
+  box-shadow: 0 8px 25px rgba(163, 122, 48, 0.4);
+  background: linear-gradient(135deg, #86632a, #a37a30);
 }
 
 .bls-course-page .payment-link {
@@ -384,16 +384,16 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #104aa4;
+  color: #134a2a;
   text-decoration: none;
   padding: 12px 20px;
-  border: 2px solid #104aa4;
+  border: 2px solid #134a2a;
   border-radius: 25px;
   transition: all 0.3s ease;
 }
 
-.pay-link:hover {
-  background: #104aa4;
+.bls-course-page .pay-link:hover{
+  background: #134a2a;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -407,14 +407,14 @@
 .bls-course-page .course-highlights {
   margin-bottom: 30px;
   padding-top: 25px;
-  border-top: 2px solid rgba(16, 74, 164, 0.1);
+  border-top: 2px solid rgba(19, 74, 42, 0.1);
 }
 
 .bls-course-page .highlights-title {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #104aa4;
+  color: #134a2a;
   margin: 0 0 15px 0;
 }
 
@@ -427,27 +427,27 @@
   gap: 8px;
 }
 
-.highlights-list li {
+.bls-course-page .highlights-list li{
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #475569;
+  color: #4a5a51;
   position: relative;
   padding-left: 20px;
 }
 
-.highlights-list li::before {
+.bls-course-page .highlights-list li::before{
   content: '✓';
   position: absolute;
   left: 0;
-  color: #dc2626;
+  color: #a37a30;
   font-weight: 600;
 }
 
 /* Contact Info */
 .bls-course-page .contact-info {
   padding-top: 25px;
-  border-top: 2px solid rgba(16, 74, 164, 0.1);
+  border-top: 2px solid rgba(19, 74, 42, 0.1);
 }
 
 .bls-course-page .contact-item {
@@ -459,7 +459,7 @@
 .bls-course-page .contact-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #dc2626, #ef4444);
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -467,7 +467,7 @@
   flex-shrink: 0;
 }
 
-.contact-icon svg {
+.bls-course-page .contact-icon svg{
   width: 20px;
   height: 20px;
   color: #ffffff;
@@ -483,20 +483,20 @@
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #64748b;
+  color: #5b6b62;
 }
 
 .bls-course-page .contact-link {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #104aa4;
+  color: #134a2a;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-link:hover {
-  color: #dc2626;
+.bls-course-page .contact-link:hover{
+  color: #a37a30;
 }
 
 /* Responsive Design */
@@ -615,10 +615,10 @@
     animation: slideInUp 0.6s ease forwards;
   }
   
-  .course-section:nth-child(1) { animation-delay: 0.1s; }
-  .course-section:nth-child(2) { animation-delay: 0.2s; }
-  .course-section:nth-child(3) { animation-delay: 0.3s; }
-  .course-section:nth-child(4) { animation-delay: 0.4s; }
+  .bls-course-page .course-section:nth-child(1){ animation-delay: 0.1s; }
+  .bls-course-page .course-section:nth-child(2){ animation-delay: 0.2s; }
+  .bls-course-page .course-section:nth-child(3){ animation-delay: 0.3s; }
+  .bls-course-page .course-section:nth-child(4){ animation-delay: 0.4s; }
 }
 
 @keyframes slideInUp {

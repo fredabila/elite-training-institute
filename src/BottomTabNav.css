@@ -16,14 +16,14 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
   
-  .bottom-tab-container {
+  .bottom-tab-nav .bottom-tab-container{
     display: flex;
     justify-content: space-around;
     padding: 8px 16px 12px;
     background: #ffffff;
   }
   
-  .bottom-tab-item {
+  .bottom-tab-nav .bottom-tab-item{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,23 +34,23 @@
     padding: 4px 8px;
   }
   
-  .bottom-tab-item:hover,
-  .bottom-tab-item:focus {
-    color: #ff3131;
+  .bottom-tab-nav .bottom-tab-item:hover,
+  .bottom-tab-nav .bottom-tab-item:focus{
+    color: #bb9041;
   }
   
-  .bottom-tab-item svg {
+  .bottom-tab-nav .bottom-tab-item svg{
     margin-bottom: 4px;
   }
   
-  .bottom-tab-item span {
+  .bottom-tab-nav .bottom-tab-item span{
     font-size: 11px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
   }
   
-  .bottom-tab-item button,
-  button.bottom-tab-item {
+  .bottom-tab-nav .bottom-tab-item button,
+  .bottom-tab-nav button.bottom-tab-item{
     background: none;
     border: none;
     cursor: pointer;
@@ -64,23 +64,23 @@
     padding: 4px 8px;
   }
   
-  button.bottom-tab-item:hover,
-  button.bottom-tab-item:focus {
-    color: #ff3131;
+  .bottom-tab-nav button.bottom-tab-item:hover,
+  .bottom-tab-nav button.bottom-tab-item:focus{
+    color: #bb9041;
   }
 }
 
 @media (max-width: 480px) {
-  .bottom-tab-container {
+  .bottom-tab-nav .bottom-tab-container{
     padding: 6px 12px 10px;
   }
   
-  .bottom-tab-item {
+  .bottom-tab-nav .bottom-tab-item{
     min-width: 50px;
     padding: 2px 4px;
   }
   
-  .bottom-tab-item span {
+  .bottom-tab-nav .bottom-tab-item span{
     font-size: 10px;
   }
 }

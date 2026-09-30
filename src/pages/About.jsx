@@ -307,6 +307,14 @@ function About() {
                   >
                     <p className="address">2165 Morris Ave, Suite 15<br />Union, NJ 07083</p>
                   </a>
+                  <a
+                    href="https://maps.google.com/?q=2165+Morris+Ave+Suite+15+Union+NJ+07083"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="directions-link"
+                  >
+                    Get Directions
+                  </a>
                 </div>
                 <div className="hours-info">
                   <h4 className="hours-title">Hours of Operation</h4>
