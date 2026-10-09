@@ -20,6 +20,7 @@ import {
 } from 'lucide-react'
 import SiteSearch from './SiteSearch'
 import { APPLY_URL, MYELITE_URL } from './siteLinks'
+import { hasUpcomingEvents } from './calendarFeed'
 import './Header.css'
 
 const PHONE_DISPLAY = '(848) 280-1169'
@@ -154,7 +155,19 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileSection, setMobileSection] = useState(null)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [showCalendar, setShowCalendar] = useState(false)
   const navRef = useRef(null)
+
+  // Only advertise the calendar once MyElite has published upcoming public events
+  useEffect(() => {
+    let cancelled = false
+    hasUpcomingEvents()
+      .then((has) => !cancelled && setShowCalendar(has))
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   const openSearch = () => {
     setOpenMenu(null)
@@ -226,6 +239,7 @@ const Header = () => {
           </div>
           <div className="utility-links">
             <Link to="/courses">Course Catalog</Link>
+            {showCalendar && <Link to="/calendar">Calendar</Link>}
             <Link to="/blog">News</Link>
             <a href={MYELITE_URL} target="_blank" rel="noopener noreferrer" className="utility-myelite" aria-label="MyElite">
               <img src="/myelite-logo.png" alt="MyElite" />
@@ -379,6 +393,9 @@ const Header = () => {
           <Link to="/blog" className={`mobile-link${pathname === '/blog' ? ' is-active' : ''}`}>Blog</Link>
           <Link to="/contact" className={`mobile-link${pathname === '/contact' ? ' is-active' : ''}`}>Contact</Link>
           <Link to="/giving" className={`mobile-link${pathname === '/giving' ? ' is-active' : ''}`}>Donations &amp; Giving</Link>
+          {showCalendar && (
+            <Link to="/calendar" className={`mobile-link${pathname === '/calendar' ? ' is-active' : ''}`}>Calendar</Link>
+          )}
           <a href={MYELITE_URL} target="_blank" rel="noopener noreferrer" className="mobile-link mobile-link--myelite" aria-label="MyElite">
             <img src="/myelite-logo.png" alt="MyElite" />
           </a>
