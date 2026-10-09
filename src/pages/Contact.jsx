@@ -16,7 +16,7 @@ function Contact() {
   const faqData = [
     {
       question: "When does the next CHHA class start?",
-      answer: "The CHHA program is offered through Manicare Home Health. Visit the Manicare Home Health website (manicarehomehealth.com) for upcoming class dates and to complete your registration."
+      answer: "The CHHA program is offered through Manicare Home Health. Visit the HHA Training page on the Manicare Home Health website (manicarehomehealth.com/hha-training) to apply, pay, and see upcoming class dates."
     },
     {
       question: "How long does the CHHA program take to complete?",

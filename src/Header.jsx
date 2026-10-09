@@ -55,7 +55,7 @@ const PROGRAM_GROUPS = [
     title: 'Healthcare Career Programs',
     icon: Stethoscope,
     links: [
-      { label: 'Certified Home Health Aide (CHHA)', to: '/chha-program', badge: 'Enrolling' },
+      { label: 'Certified Home Health Aide (CHHA)', to: '/chha-program', badge: 'Via Manicare' },
       { label: 'Medical Assistant (MA)', to: '/ma-program', soon: true },
       { label: 'Certified Medication Aide (CMA)', to: '/cma-program', soon: true },
       { label: 'Certified Nurse Assistant (CNA)', to: '/cna-program', soon: true },

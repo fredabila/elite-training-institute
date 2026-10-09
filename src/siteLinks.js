@@ -2,5 +2,5 @@
 export const MYELITE_URL = 'https://myelite.site'
 export const APPLY_URL = 'https://myelite.site/apply'
 
-// CHHA/HHA enrollment and payment are handled by Manicare Home Health
-export const MANICARE_URL = 'https://www.manicarehomehealth.com/'
+// CHHA/HHA applications and payment happen only on Manicare Home Health's HHA Training page
+export const MANICARE_URL = 'https://manicarehomehealth.com/hha-training'
