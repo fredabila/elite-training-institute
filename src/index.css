@@ -32,7 +32,7 @@ body {
   margin: 0; 
   min-width: 320px; 
   min-height: 100vh; 
-  padding-top: 122px; /* utility bar (38px) + main header bar (84px) */
+  padding-top: 130px; /* utility bar (46px) + main header bar (84px) */
 }
 
 /* Mobile adjustments */

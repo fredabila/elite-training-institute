@@ -8,6 +8,7 @@ import Courses from './pages/Courses'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import StudentPortal from './pages/StudentPortal'
+import Giving from './pages/Giving'
 import Blog from './pages/Blog'
 import BLSCourse from './pages/BLSCourse'
 import ACLSCourse from './pages/ACLSCourse'
@@ -44,6 +45,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/student-portal" element={<StudentPortal />} />
+          <Route path="/giving" element={<Giving />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/bls-course" element={<BLSCourse />} />
           <Route path="/acls-course" element={<ACLSCourse />} />

@@ -16,11 +16,11 @@ function Contact() {
   const faqData = [
     {
       question: "When does the next CHHA class start?",
-      answer: "Contact us for more details on the next class schedule. Contact us to reserve your seat!"
+      answer: "The CHHA program is offered through Manicare Home Health. Visit the Manicare Home Health website (manicarehomehealth.com) for upcoming class dates and to complete your registration."
     },
     {
       question: "How long does the CHHA program take to complete?",
-      answer: "Our CHHA program can be completed in as little as 2 weeks, depending on the class schedule and your attendance."
+      answer: "The CHHA program is a 3-week hybrid program: 60 hours of online instruction and 16 hours of in-person clinicals."
     },
     {
       question: "Do you offer job placement assistance to graduates who have completed a course?",

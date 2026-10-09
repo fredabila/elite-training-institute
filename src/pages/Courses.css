@@ -1220,3 +1220,9 @@
 .courses-page .aha-provider-section .card-info .price-label {
   white-space: nowrap;
 }
+
+.courses-page .card-info a.register-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}

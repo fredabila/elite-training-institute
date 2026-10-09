@@ -1,0 +1,151 @@
+/* Donations & Giving page */
+
+.giving-page {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f7faf8 0%, #e3ece6 100%);
+}
+
+.giving-page .giving-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.giving-page .giving-hero {
+  padding: 64px 0 56px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(187, 144, 65, 0.25), transparent 45%),
+    linear-gradient(135deg, #144129 0%, #0c2e1b 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.giving-page .giving-breadcrumb {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.giving-page .giving-breadcrumb a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.giving-page .giving-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.giving-page .giving-hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+}
+
+.giving-page .giving-hero p {
+  margin: 0 auto;
+  max-width: 620px;
+  font-size: 18px;
+  color: #f3e7c9;
+}
+
+.giving-page .giving-body {
+  padding: 56px 0 72px;
+}
+
+.giving-page .giving-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.giving-page .giving-card {
+  padding: 36px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 12px 36px rgba(12, 46, 27, 0.1);
+}
+
+.giving-page .giving-card h2 {
+  margin: 0 0 14px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #134a2a;
+}
+
+.giving-page .giving-card p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5a51;
+}
+
+.giving-page .giving-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #a37a30, #c9a14a);
+  color: #ffffff;
+}
+
+.giving-page .giving-card--contact {
+  border-top: 4px solid #bb9041;
+}
+
+.giving-page .giving-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0 18px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: #134a2a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.giving-page .giving-button:hover {
+  background: #0f3a21;
+  color: #ffffff;
+}
+
+.giving-page .giving-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #134a2a;
+}
+
+.giving-page .giving-line svg {
+  color: #bb9041;
+}
+
+.giving-page .giving-link {
+  display: block;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #86632a;
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .giving-page .giving-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .giving-page .giving-card {
+    padding: 26px 22px;
+  }
+}

@@ -32,7 +32,7 @@
   max-width: 1280px;
   margin: 0 auto;
   /* ~1280x500 banner that shrinks with the viewport and keeps the quick links band in view */
-  height: clamp(400px, min(39vw, calc(100vh - 122px - 150px)), 500px);
+  height: clamp(400px, min(39vw, calc(100vh - 130px - 150px)), 500px);
   overflow: hidden;
   background: var(--cream);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
@@ -248,7 +248,7 @@
 /* ===== Quick links band ===== */
 .hero .quicklinks {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   max-width: 1280px;
   margin: 0 auto;
   padding: 26px 64px 30px;
@@ -338,7 +338,7 @@
   }
 
   .hero .quicklinks {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 4px;
     padding: 18px 12px 22px;
   }

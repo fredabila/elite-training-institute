@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {
   ArrowRight,
@@ -10,20 +10,21 @@ import {
   HeartPulse,
   Instagram,
   Linkedin,
-  LogIn,
   Mail,
   MapPin,
   Menu,
   Phone,
+  Search,
   Stethoscope,
   X,
 } from 'lucide-react'
+import SiteSearch from './SiteSearch'
+import { APPLY_URL, MYELITE_URL } from './siteLinks'
 import './Header.css'
 
 const PHONE_DISPLAY = '(848) 280-1169'
 const PHONE_HREF = 'tel:18482801169'
 const EMAIL = 'info@trainatelite.com'
-const PORTAL_URL = 'https://trainatelite.talentlms.com/'
 
 const SOCIAL = [
   { label: 'Facebook', icon: Facebook, href: 'https://web.facebook.com/profile.php?id=61577615826915' },
@@ -97,7 +98,7 @@ const MENUS = {
     ctas: [
       { label: 'View All Courses', to: '/courses' },
       { label: 'Request Information', to: '/contact' },
-      { label: 'Student Portal', href: PORTAL_URL },
+      { label: 'MyElite', href: MYELITE_URL },
     ],
   },
   about: {
@@ -152,7 +153,15 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileSection, setMobileSection] = useState(null)
+  const [searchOpen, setSearchOpen] = useState(false)
   const navRef = useRef(null)
+
+  const openSearch = () => {
+    setOpenMenu(null)
+    setMobileOpen(false)
+    setSearchOpen(true)
+  }
+  const closeSearch = useCallback(() => setSearchOpen(false), [])
 
   // Close everything whenever the route changes
   useEffect(() => {
@@ -199,28 +208,34 @@ const Header = () => {
         <div className="header-container utility-inner">
           <div className="utility-contact">
             <a href={PHONE_HREF}>
-              <Phone size={14} aria-hidden="true" /> {PHONE_DISPLAY}
+              <Phone size={16} aria-hidden="true" /> {PHONE_DISPLAY}
             </a>
-            <a href={`mailto:${EMAIL}`}>
-              <Mail size={14} aria-hidden="true" /> {EMAIL}
+            <a href={`mailto:${EMAIL}`} className="utility-email">
+              <Mail size={16} aria-hidden="true" /> {EMAIL}
             </a>
             <span className="utility-address">
-              <MapPin size={14} aria-hidden="true" /> Union, NJ
+              <MapPin size={16} aria-hidden="true" /> Union, NJ
+            </span>
+            <span className="utility-social">
+              {SOCIAL.map((social) => (
+                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                  <social.icon size={16} aria-hidden="true" />
+                </a>
+              ))}
             </span>
           </div>
           <div className="utility-links">
             <Link to="/courses">Course Catalog</Link>
             <Link to="/blog">News</Link>
-            <a href={PORTAL_URL} target="_blank" rel="noopener noreferrer" className="utility-portal">
-              <LogIn size={14} aria-hidden="true" /> Student Portal
+            <a href={MYELITE_URL} target="_blank" rel="noopener noreferrer" className="utility-myelite" aria-label="MyElite">
+              <img src="/myelite-logo.png" alt="MyElite" />
             </a>
-            <span className="utility-social">
-              {SOCIAL.map((social) => (
-                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                  <social.icon size={14} aria-hidden="true" />
-                </a>
-              ))}
-            </span>
+            <button type="button" className="utility-search" onClick={openSearch}>
+              <Search size={16} aria-hidden="true" /> Search
+            </button>
+            <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="utility-apply">
+              Apply
+            </a>
           </div>
         </div>
       </div>
@@ -252,9 +267,14 @@ const Header = () => {
 
             <Link to="/blog" className={topLinkClass('/blog')}>Blog</Link>
             <Link to="/contact" className={topLinkClass('/contact')}>Contact</Link>
+            <Link to="/giving" className={topLinkClass('/giving')}>Donations &amp; Giving</Link>
 
             <Link to="/contact" className="nav-cta">Request Info</Link>
           </nav>
+
+          <button type="button" className="mobile-search" aria-label="Search the site" onClick={openSearch}>
+            <Search size={22} />
+          </button>
 
           <button
             type="button"
@@ -358,12 +378,16 @@ const Header = () => {
 
           <Link to="/blog" className={`mobile-link${pathname === '/blog' ? ' is-active' : ''}`}>Blog</Link>
           <Link to="/contact" className={`mobile-link${pathname === '/contact' ? ' is-active' : ''}`}>Contact</Link>
-          <a href={PORTAL_URL} target="_blank" rel="noopener noreferrer" className="mobile-link">
-            Student Portal
+          <Link to="/giving" className={`mobile-link${pathname === '/giving' ? ' is-active' : ''}`}>Donations &amp; Giving</Link>
+          <a href={MYELITE_URL} target="_blank" rel="noopener noreferrer" className="mobile-link mobile-link--myelite" aria-label="MyElite">
+            <img src="/myelite-logo.png" alt="MyElite" />
           </a>
         </nav>
 
         <div className="mobile-footer">
+          <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="mega-cta mobile-apply">
+            Apply Now <ArrowRight size={16} aria-hidden="true" />
+          </a>
           <Link to="/contact" className="mega-cta">
             Request Information <ArrowRight size={16} aria-hidden="true" />
           </Link>
@@ -375,6 +399,8 @@ const Header = () => {
           </a>
         </div>
       </aside>
+
+      <SiteSearch open={searchOpen} onClose={closeSearch} />
     </header>
   )
 }

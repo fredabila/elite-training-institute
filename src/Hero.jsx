@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronLeft, ChevronRight, ClipboardList, GraduationCap, HeartPulse, LogIn } from 'lucide-react'
+import { ChevronLeft, ChevronRight, ClipboardList, GraduationCap, HandHeart, HeartPulse, LogIn } from 'lucide-react'
 import ContactModal from './ContactModal'
+import { MYELITE_URL } from './siteLinks'
 import './Hero.css'
 
 const AUTOPLAY_MS = 6000
@@ -50,7 +51,8 @@ const quickLinks = [
   { label: 'Programs', icon: GraduationCap, to: '/courses' },
   { label: 'AHA Certification', icon: HeartPulse, to: '/bls-course' },
   { label: 'Request Info', icon: ClipboardList, modal: true },
-  { label: 'Student Portal', icon: LogIn, href: 'https://trainatelite.talentlms.com/' },
+  { label: 'MyElite', icon: LogIn, href: MYELITE_URL },
+  { label: 'Donations & Giving', icon: HandHeart, to: '/giving' },
 ]
 
 const prefersReducedMotion = () =>

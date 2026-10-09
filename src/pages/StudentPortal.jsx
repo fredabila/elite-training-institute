@@ -1,20 +1,19 @@
 import { ArrowRight, LogIn, Phone } from 'lucide-react'
+import { MYELITE_URL } from '../siteLinks'
 import './StudentPortal.css'
-
-const PORTAL_URL = 'https://trainatelite.talentlms.com/'
 
 function StudentPortal() {
   return (
     <main className="student-portal-page">
       <div className="portal-card">
-        <img src="/elite-crest-green.png" alt="" className="portal-crest" />
-        <h1 className="portal-title">Student Portal</h1>
+        <img src="/myelite-logo.png" alt="MyElite" className="portal-logo" />
+        <h1 className="portal-title">Welcome to MyElite</h1>
         <p className="portal-text">
-          Access your courses, learning materials, and progress in our online learning platform.
+          Access your courses, learning materials, and progress in MyElite, our student portal.
         </p>
-        <a href={PORTAL_URL} target="_blank" rel="noopener noreferrer" className="portal-button">
+        <a href={MYELITE_URL} target="_blank" rel="noopener noreferrer" className="portal-button">
           <LogIn size={18} aria-hidden="true" />
-          Sign in to the Student Portal
+          Go to MyElite
           <ArrowRight size={18} aria-hidden="true" />
         </a>
         <p className="portal-help">

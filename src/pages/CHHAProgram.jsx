@@ -1,12 +1,20 @@
-import { useState } from 'react'
 import './CHHAProgram.css'
-import EnrollmentModal from '../EnrollmentModal'
+import { MANICARE_URL } from '../siteLinks'
+
+function ApplyAtManicare({ className }) {
+  return (
+    <a href={MANICARE_URL} target="_blank" rel="noopener noreferrer" className={className}>
+      APPLY AT MANICARE
+      <svg className="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+        <polyline points="15,3 21,3 21,9"/>
+        <line x1="10" y1="14" x2="21" y2="3"/>
+      </svg>
+    </a>
+  )
+}
 
 function CHHAProgram() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const openModal = () => setIsModalOpen(true)
-  const closeModal = () => setIsModalOpen(false)
   return (
     <main className="chha-program-page">
       {/* Hero Section */}
@@ -25,19 +33,16 @@ function CHHAProgram() {
             
             <div className="hero-main">
               <div className="special-badge">
-                <span className="badge-text">LIMITED TIME: $499</span>
-                <span className="badge-savings">(Save $150!)</span>
+                <span className="badge-text">Offered through Manicare Home Health</span>
+                <span className="badge-savings">Accredited by CAHC</span>
               </div>
               <h1 className="hero-title">Certified Home Health Aide (CHHA) Program</h1>
               <p className="hero-subtitle">Compassionate care training for New Jersey's home healthcare professionals</p>
               
-              {/* Top Enroll Button */}
+              {/* Applications are completed on the Manicare Home Health website */}
               <div className="hero-cta">
-                <button className="hero-enroll-btn" onClick={openModal}>ENROLL NOW</button>
-                <div className="hero-pricing">
-                  <span className="hero-price-original">Regular: $649</span>
-                  <span className="hero-price-current">Now: $499</span>
-                </div>
+                <ApplyAtManicare className="hero-enroll-btn" />
+                <p className="hero-redirect-note">You'll be redirected to the Manicare Home Health website to register.</p>
               </div>
             </div>
           </div>
@@ -50,7 +55,13 @@ function CHHAProgram() {
           <div className="overview-content">
             <div className="intro-paragraph">
               <p>
-                At Elite Training Institute, our CHHA program is designed to prepare students to provide compassionate and competent care to patients in their homes. The program aligns with the New Jersey Board of Nursing standards, ensuring that our graduates are equipped with the necessary skills and knowledge to excel in the home health care field.
+                The Home Health Aide (HHA) program is offered through Manicare Home Health, a state-approved agency authorized to provide home health aide training and services.
+              </p>
+              <p>
+                The program prepares students with the knowledge, skills, and hands-on training needed to provide safe, compassionate, and competent care to individuals in their homes. Manicare Home Health is Accredited by CAHC.
+              </p>
+              <p>
+                To begin the enrollment process, you will be redirected to the Manicare Home Health website, where you can complete your registration and access additional program information.
               </p>
             </div>
 
@@ -58,7 +69,7 @@ function CHHAProgram() {
             <div className="program-format">
               <h2 className="section-title">Program Format</h2>
               <div className="format-grid">
-                {/* Left Column - In-Person Training */}
+                {/* Left Column - Hybrid Training */}
                 <div className="format-column">
                   <div className="format-card">
                     <div className="format-header">
@@ -68,7 +79,7 @@ function CHHAProgram() {
                           <circle cx="9" cy="7" r="4"/>
                         </svg>
                       </div>
-                      <h3>In-Person Training Program</h3>
+                      <h3>Hybrid Training Program</h3>
                     </div>
                     
                     <div className="learning-component">
@@ -80,9 +91,10 @@ function CHHAProgram() {
                             <path d="M12 17v4"/>
                           </svg>
                         </div>
-                        <h4>Classroom Instruction</h4>
+                        <h4>Online Instruction</h4>
+                        <span className="hours-badge">60 hours</span>
                       </div>
-                      <p>Students engage in comprehensive classroom sessions covering:</p>
+                      <p>Students complete comprehensive online coursework covering:</p>
                       <ul className="topics-list">
                         <li>Personal care</li>
                         <li>Patient rights</li>
@@ -103,7 +115,8 @@ function CHHAProgram() {
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                           </svg>
                         </div>
-                         <h4>In-Person Clinical Training</h4>
+                         <h4>In-Person Clinicals</h4>
+                         <span className="hours-badge">16 hours</span>
                       </div>
                       <p>Supervised hands-on experience in a clinical setting, practicing patient care tasks such as bathing, feeding, mobility assistance, and vital signs under the guidance of licensed professionals.</p>
                     </div>
@@ -125,16 +138,16 @@ function CHHAProgram() {
                     
                     <div className="timeline">
                       <div className="timeline-item">
-                        <div className="timeline-duration">2 weeks</div>
-                        <div className="timeline-description">Complete program combining in-person theory and practical training</div>
+                        <div className="timeline-duration">3 weeks</div>
+                        <div className="timeline-description">Hybrid program combining online theory with in-person clinical training</div>
                       </div>
                       <div className="timeline-breakdown">
                         <div className="breakdown-item">
-                          <span className="breakdown-label">Classroom Theory:</span>
+                          <span className="breakdown-label">Online:</span>
                           <span className="breakdown-value">60 hours</span>
                         </div>
                         <div className="breakdown-item">
-                          <span className="breakdown-label">Clinical Practice:</span>
+                          <span className="breakdown-label">In-person Clinicals:</span>
                           <span className="breakdown-value">16 hours</span>
                         </div>
                         <div className="breakdown-item">
@@ -151,7 +164,7 @@ function CHHAProgram() {
             {/* Eligibility Section */}
             <div className="eligibility-section">
               <h2 className="section-title">Student Eligibility & Prerequisites</h2>
-              <p className="section-subtitle">To enroll in the CHHA program at Elite, applicants must:</p>
+              <p className="section-subtitle">To enroll in the program, applicants must:</p>
               <div className="checklist">
                 <div className="checklist-item">
                   <div className="check-icon">
@@ -245,7 +258,7 @@ function CHHAProgram() {
                     </svg>
                   </div>
                   <h3>Comprehensive Training</h3>
-                  <p>Structured classroom theory and in-person clinical skills training</p>
+                  <p>Structured online theory and in-person clinical skills training</p>
                 </div>
                 <div className="benefit-item">
                   <div className="benefit-icon">
@@ -265,7 +278,7 @@ function CHHAProgram() {
                     </svg>
                   </div>
                   <h3>Accelerated Program</h3>
-                  <p>2-week program for fast entry into the workforce</p>
+                  <p>3-week program for fast entry into the workforce</p>
                 </div>
                 <div className="benefit-item">
                   <div className="benefit-icon">
@@ -299,31 +312,30 @@ function CHHAProgram() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Enrollment Section */}
       <section className="pricing-section">
         <div className="container">
           <div className="pricing-content">
             <div className="pricing-card">
               <div className="pricing-header">
-                <h2>Program Pricing</h2>
-                <div className="pricing-badges">
-                  <div className="original-price">Regular: $649.00</div>
-                  <div className="current-price">NOW: $499.00</div>
-                  <div className="urgency-text">Until December 31, 2025</div>
-                </div>
+                <h2>Apply at Manicare</h2>
+                <p className="pricing-intro">
+                  Registration and payment for the Home Health Aide program are completed on the Manicare Home Health
+                  website, where you can also find additional program information.
+                </p>
               </div>
-              
+
               <div className="pricing-details">
                 <div className="includes-section">
-                  <h3>Includes:</h3>
+                  <h3>Program at a glance:</h3>
                   <ul>
-                    <li>All training materials</li>
-                    <li>Registration fees</li>
-                    <li>Clinical practice</li>
-                    <li>Certification preparation</li>
+                    <li>3-week hybrid program</li>
+                    <li>60 hours online instruction</li>
+                    <li>16 hours in-person clinicals</li>
+                    <li>Offered through Manicare Home Health (CAHC accredited)</li>
                   </ul>
                 </div>
-                
+
                 <div className="contact-info">
                   <div className="contact-item">
                     <div className="contact-icon">
@@ -338,24 +350,14 @@ function CHHAProgram() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="action-buttons">
-                <button className="enroll-btn" onClick={openModal}>ENROLL NOW</button>
-                <a href="https://app.autobooks.co/pay/elite-training-institute" target="_blank" rel="noopener noreferrer" className="pay-btn">
-                  <span>PAY HERE</span>
-                  <svg className="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15,3 21,3 21,9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
+                <ApplyAtManicare className="enroll-btn" />
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-      <EnrollmentModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   )
 }

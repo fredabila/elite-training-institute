@@ -21,10 +21,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.student-portal-page .portal-crest {
-  width: 96px;
-  height: 96px;
+.student-portal-page .portal-logo {
+  display: block;
+  height: 72px;
+  width: auto;
   margin: 0 auto 20px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 4px #134a2a, 0 8px 20px rgba(12, 46, 27, 0.18);
 }
 
 .student-portal-page .portal-title {

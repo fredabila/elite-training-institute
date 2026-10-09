@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ContactModal from '../ContactModal'
 import './Courses.css'
+import { MANICARE_URL } from '../siteLinks'
 
 function Courses() {
   const [activeFilter, setActiveFilter] = useState('All Courses')
@@ -25,7 +26,7 @@ function Courses() {
     { id: 'bls-instructor-initial', title: 'BLS/CPR Instructor - Initial', category: 'AHA Certifications', status: 'available', price: 549, duration: '2-3 weeks' },
     { id: 'bls-instructor-renewal', title: 'BLS/CPR Instructor - Renewal', category: 'AHA Certifications', status: 'available', price: 349, duration: '1 day' },
     // Medical Programs
-    { id: 'chha', title: 'Certified Home Health Aide (CHHA)', category: 'Medical Programs', status: 'available', price: 499, duration: '2 weeks' },
+    { id: 'chha', title: 'Certified Home Health Aide (CHHA)', category: 'Medical Programs', status: 'available', price: 0, duration: '3 weeks' },
     { id: 'ma', title: 'Medical Assistant (MA)', category: 'Medical Programs', status: 'coming-soon', price: 0, duration: '5 months' },
     { id: 'cma', title: 'Certified Medication Aide (CMA)', category: 'Medical Programs', status: 'coming-soon', price: 0, duration: '2 weeks' },
     { id: 'cna', title: 'Certified Nurse Assistant (CNA)', category: 'Medical Programs', status: 'coming-soon', price: 0, duration: '4 weeks' },
@@ -259,20 +260,22 @@ function Courses() {
             {shouldShowCourse('chha') && (
             <div className="medical-card available clickable" onClick={() => navigate('/chha-program')}>
               <div className="card-background">
-                <img src="https://i.ibb.co/dd48ckY/HHA-program-cover.png" alt="Certified Home Health Aide (CHHA) Program" className="background-image" />
+                <img src="/covers/cover-hha.jpg" alt="Certified Home Health Aide (CHHA) Program" className="background-image" />
               </div>
               <div className="card-info">
-                <div className="program-info">CHHA: 2 Weeks | In-Person Training</div>
+                <div className="program-info">CHHA: 3 Weeks | Hybrid Training</div>
                 <div className="price-info chha-pricing">
-                  <div className="price-row">
-                    <span className="price-label">Regular: $649.00</span>
-                  </div>
-                  <div className="price-row">
-                    <span className="price-label">Now: $499.00</span>
-                    <span className="price-note">(Until December 31, 2025)</span>
-                  </div>
+                  <span className="price-label">Offered through Manicare Home Health</span>
                 </div>
-                <button className="register-btn">ENROLL NOW</button>
+                <a
+                  href={MANICARE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="register-btn"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  APPLY AT MANICARE
+                </a>
               </div>
             </div>
             )}
@@ -281,7 +284,7 @@ function Courses() {
             {shouldShowCourse('ma') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="/MA.svg" alt="Medical Assistant (MA) Program" className="background-image" />
+                <img src="/covers/cover-ma.jpg" alt="Medical Assistant (MA) Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">MA: 5 Months | Hybrid Learning</div>
@@ -294,7 +297,7 @@ function Courses() {
             {shouldShowCourse('cma') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="/CMA.svg" alt="Certified Medication Aide (CMA) Program" className="background-image" />
+                <img src="/covers/cover-cma.jpg" alt="Certified Medication Aide (CMA) Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">CMA: 2 Weeks | Hybrid Learning</div>
@@ -307,7 +310,7 @@ function Courses() {
             {shouldShowCourse('cna') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="/CNA.svg" alt="Certified Nursing Assistant (CNA) Program" className="background-image" />
+                <img src="/covers/cover-cna.jpg" alt="Certified Nursing Assistant (CNA) Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">CNA: 4 Weeks | Hybrid Learning</div>
@@ -320,7 +323,7 @@ function Courses() {
             {shouldShowCourse('pct') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="/PCT.svg" alt="Patient Care Technician (PCT) Program" className="background-image" />
+                <img src="/covers/cover-pct.jpg" alt="Patient Care Technician (PCT) Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">PCT: 5 Months | Hybrid Learning</div>
@@ -333,7 +336,7 @@ function Courses() {
             {shouldShowCourse('phlebotomy') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="/Phlebotomy.svg" alt="Phlebotomy Technician Program" className="background-image" />
+                <img src="/covers/cover-phlebotomy.jpg" alt="Phlebotomy Technician Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">Phlebotomy: 2 Months | Hybrid Learning</div>
@@ -346,7 +349,7 @@ function Courses() {
             {shouldShowCourse('ekg') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="/EKG.svg" alt="EKG Technician Program" className="background-image" />
+                <img src="/covers/cover-ekg.jpg" alt="EKG Technician Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">EKG: 2 Months | Hybrid Learning</div>
@@ -359,7 +362,7 @@ function Courses() {
             {shouldShowCourse('pharmacy') && (
             <div className="medical-card coming-soon">
               <div className="card-background">
-                <img src="/Pharmacy.svg" alt="Pharmacy Technician Program" className="background-image" />
+                <img src="/covers/cover-pharmacy.jpg" alt="Pharmacy Technician Program" className="background-image" />
               </div>
               <div className="card-info">
                 <div className="program-info">Pharmacy: 4 Months | Hybrid Learning</div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './CourseGrid.css'
+import { MANICARE_URL } from './siteLinks'
 
 const courses = [
   { key: 'bls', title: 'Basic Life Support (BLS) Course', type: 'aha', cta: 'REGISTER', route: '/bls-course' },
@@ -8,7 +9,7 @@ const courses = [
   { key: 'heartsaver', title: 'Heart Saver First Aid CPR AED', type: 'aha', cta: 'REGISTER', route: '/heartsaver-course' },
   { key: 'instructor', title: 'BLS/CPR Instructor', type: 'aha', cta: 'REGISTER', route: '/bls-instructor-initial' },
   { key: 'instructor-renewal', title: 'BLS/CPR Instructor Renewal', type: 'aha', cta: 'REGISTER', route: '/bls-instructor-renewal' },
-  { key: 'chha', title: 'Certified Home Health Aide (CHHA)', type: 'chha', cta: 'ENROLL NOW', pulse: true, route: '/chha-program' },
+  { key: 'chha', title: 'Certified Home Health Aide (CHHA)', type: 'chha', cta: 'APPLY AT MANICARE', pulse: true, href: MANICARE_URL },
   { key: 'ma', title: 'Medical Assistant', type: 'soon', cta: 'COMING SOON', badge: 'Launching soon', route: '/ma-program' },
   { key: 'cma', title: 'Certified Medication Aide (CMA)', type: 'soon', cta: 'COMING SOON', badge: 'Launching soon', route: '/cma-program' },
   { key: 'cna', title: 'Certified Nursing Assistant (CNA)', type: 'soon', cta: 'COMING SOON', badge: 'Launching soon', route: '/cna-program' },
@@ -123,8 +124,8 @@ function CourseGrid() {
                 {c.key === 'chha' && (
                   <div className="card-background">
                     <img 
-                      src="https://i.ibb.co/dd48ckY/HHA-program-cover.png" 
-                      alt="Certified Home Health Aide (CHHA) Program" 
+                      src="/covers/cover-hha.jpg" 
+                      alt="Home Health Aide (HHA) Program at Manicare Home Health" 
                       className="background-image"
                     />
                   </div>
@@ -132,7 +133,7 @@ function CourseGrid() {
                 {c.key === 'ma' && (
                   <div className="card-background">
                     <img 
-                      src="https://i.ibb.co/ynW08jQ6/Program-Covers-images-1.jpg" 
+                      src="/covers/cover-ma.jpg" 
                       alt="Medical Assistant (MA) Program" 
                       className="background-image"
                     />
@@ -141,7 +142,7 @@ function CourseGrid() {
                 {c.key === 'cma' && (
                   <div className="card-background">
                     <img 
-                      src="https://i.ibb.co/MxC7vpTy/Program-Covers-images-2.jpg" 
+                      src="/covers/cover-cma.jpg" 
                       alt="Certified Medication Aide (CMA) Program" 
                       className="background-image"
                     />
@@ -150,7 +151,7 @@ function CourseGrid() {
                 {c.key === 'cna' && (
                   <div className="card-background">
                     <img 
-                      src="https://i.ibb.co/QvHBqbNQ/Program-Covers-images-3.jpg" 
+                      src="/covers/cover-cna.jpg" 
                       alt="Certified Nursing Assistant (CNA) Program" 
                       className="background-image"
                     />
@@ -159,7 +160,7 @@ function CourseGrid() {
                 {c.key === 'pct' && (
                   <div className="card-background">
                     <img 
-                      src="https://i.ibb.co/GQw4ytVp/Program-Covers-images-4.jpg" 
+                      src="/covers/cover-pct.jpg" 
                       alt="Patient Care Technician (PCT) Program" 
                       className="background-image"
                     />
@@ -168,7 +169,7 @@ function CourseGrid() {
                 {c.key === 'phlebotomy' && (
                   <div className="card-background">
                     <img 
-                      src="https://i.ibb.co/qMbnhY2j/Program-Covers-images-5.jpg" 
+                      src="/covers/cover-phlebotomy.jpg" 
                       alt="Phlebotomy Technician Program" 
                       className="background-image"
                     />
@@ -177,7 +178,7 @@ function CourseGrid() {
                 {c.key === 'ekg' && (
                   <div className="card-background">
                     <img 
-                      src="https://i.ibb.co/8DbSM0RD/Program-Covers-images-6.jpg" 
+                      src="/covers/cover-ekg.jpg" 
                       alt="EKG Technician Program" 
                       className="background-image"
                     />
@@ -186,7 +187,7 @@ function CourseGrid() {
                 {c.key === 'pharmacy' && (
                   <div className="card-background">
                     <img 
-                      src="https://i.ibb.co/4RpYHTb8/Program-Covers-images-7.jpg" 
+                      src="/covers/cover-pharmacy.jpg" 
                       alt="Pharmacy Technician Program" 
                       className="background-image"
                     />
@@ -224,6 +225,10 @@ function CourseGrid() {
                   <div className="card-link-wrapper disabled">
                     {CardContent}
                   </div>
+                ) : c.href ? (
+                  <a href={c.href} target="_blank" rel="noopener noreferrer" className="card-link-wrapper">
+                    {CardContent}
+                  </a>
                 ) : (
                   <Link to={c.route} className="card-link-wrapper">
                     {CardContent}
